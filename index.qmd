@@ -1,3 +1,26 @@
+---
+title: "What we've learned from a year of building with LLMs"
+sidebar: false
+toc: true
+date: 2023-06-08
+author:
+    - name: "Eugene Yan"
+      url: "https://eugeneyan.com"
+    - name: Bryan Bischof
+      url: "https://www.linkedin.com/in/bryan-bischof/"
+    - name: "Charles Frye"
+      url: "https://www.linkedin.com/in/charles-frye-38654abb/"
+    - name: "Hamel Husain"
+      url: "https://hamel.dev"
+    - name: "Shreya Shankar"
+      url: "https://www.sh-reya.com/"
+    - name: "Jason Liu"
+      url: "https://jxnl.co/"
+format:
+  html:
+    anchor-sections: true
+---
+
 It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications.  The pace of improvements in LLMs, coupled with a parade of demos on social media, will fuel an estimated [$200B investment in AI by 2025](https://www.google.com/url?q=https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html). LLMs are also broadly accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. While the barrier to entry for building AI products has been lowered, creating ones that are effective beyond a demo remains deceptively difficult.
 
 We've identified some crucial, yet often neglected, lessons and methodologies informed by machine learning that are essential for developing products based on large language models (LLMs). Awareness of these ideas can give you a competitive advantage against most others in the field without requiring ML expertise! Over the past year, the six of us have been building real-world applications on top of LLMs. We realized that there was a need to distill these lessons in one place for the benefit of the community.
@@ -562,7 +585,7 @@ Aside from this, you need a domain expert at all times. At small companies, this
 --- 
 
 ### Contact Us
-We would love to hear your thoughts on this post.  You can contact us at [contact@applied-llms.org](mailto:contact@applied-llms.org).  Many of us are open to various forms of consulting and advisory.  We will route you to the correct expert(s) upon contact with us if appropriate.
+We would love to hear your thoughts on this post.  You can contact us at [contact@applied-llms.org](mailto:contact@applied-llms.org).  Many of us are open to various forms of consulting and advisory.  You can also find our individual contact information on our [about page](about.qmd).
 
 ### Acknowledgements
 This series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far. 
@@ -573,23 +596,13 @@ Finally, we would like to thank all the teams who so generously shared your chal
 
 ### About the authors
 
-**Eugene Yan** designs, builds, and operates machine learning systems that serve customers at scale. He's currently a Senior Applied Scientist at Amazon where he builds [RecSys for millions worldwide](https://eugeneyan.com/speaking/recsys2022-keynote/){:target="_blank"} worldwide and applies [LLMs to serve customers better](https://eugeneyan.com/speaking/ai-eng-summit/){:target="_blank"}. Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at [eugeneyan.com](https://eugeneyan.com/){:target="_blank"} and [ApplyingML.com](https://applyingml.com/){:target="_blank"}.
-
-**Bryan Bischof** is the Head of AI at Hex, where he leads the team of engineers building Magic – the data science and analytics copilot. Bryan has worked all over the data stack leading teams in analytics, machine learning engineering, data platform engineering, and AI engineering. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D. is in pure mathematics. 
-
-**Charles Frye** teaches people to build AI applications. After publishing research in [psychopharmacology](https://pubmed.ncbi.nlm.nih.gov/24316346/){:target="_blank"} and [neurobiology](https://journals.physiology.org/doi/full/10.1152/jn.00172.2016){:target="_blank"}, he got his Ph.D. at the University of California, Berkeley, for dissertation work on [neural network optimization](https://arxiv.org/abs/2003.10397){:target="_blank"}. He has taught thousands the entire stack of AI application development, from linear algebra fundamentals to GPU arcana and building defensible businesses, through educational and consulting work at Weights and Biases, [Full Stack Deep Learning](https://fullstackdeeplearning.com){:target="_blank"}, and Modal.
-
-**Hamel Husain** is a machine learning engineer with over 25 years of [experience](https://www.linkedin.com/in/hamelhusain/){:target="_blank"}. He has worked with innovative companies such as Airbnb and GitHub, which included <a href="https://openai.com/index/introducing-text-and-code-embeddings#:~:text=models%20on%20the-,CodeSearchNet,),-evaluation%20suite%20where">early LLM research used by OpenAI</a> for code understanding. He has also led and contributed to numerous popular [open-source machine-learning tools](https://hamel.dev/oss/opensource.html){:target="_blank"}. Hamel is currently an [independent consultant](https://hamel.dev/hire.html){:target="_blank"} helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.
-
-**Jason Liu** is a distinguished machine learning [consultant](https://jxnl.co/services/){:target="_blank"} known for leading teams to successfully ship AI products. Jason's technical expertise covers personalization algorithms, search optimization, synthetic data generation, and MLOps systems. His experience includes companies like Stitchfix, where he created a recommendation framework and observability tools that handled 350 million daily requests. Additional roles have included Meta, NYU, and startups such as Limitless AI and Trunk Tools. 
-
-**Shreya Shankar** is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW.  
+See the [about page](about.qmd) for more information on the authors.
 
 ## Backstory
 
-A [couple friends](#about-the-authors) and I threw around the idea of writing about our experience with LLMs and AI Engineering (image below). One thing led to another and that's how this three-part series came about. Here, we share our hard-won lessons, and advice to make it easier. This is also cross-posted on O'Reilly. We hope you'll find it useful!
+A [couple of friends](about.qmd) and I threw around the idea of writing about our experience with LLMs and AI Engineering (image below). One thing led to another and that's how this three-part series came about. Here, we share our hard-won lessons, and advice to make it easier. This is also cross-posted on O'Reilly. We hope you'll find it useful!
 
-![](how-it-started.jpg)
+![](images/how-it-started.jpg){width=50%}
 
 <br>
 
@@ -609,3 +622,4 @@ or
   url     = {https://applied-llms.org/lessons/}
 }
 ```
+

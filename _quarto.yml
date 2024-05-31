@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "Applied LLMs"
+  open-graph: true
+  navbar:
+    left:
+      - text: About The Authors
+        file: about.qmd
+  repo-url: https://github.com/parlance-labs/applied-llms
+  site-url: https://applied-llms.org
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
