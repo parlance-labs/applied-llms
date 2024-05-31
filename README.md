@@ -14,3 +14,14 @@ You can deploy the site to GitHub pages with:
 ```bash
 quarto publish
 ```
+
+
+# TODOS
+
+- [ ] Add pictures to about page
+- [ ] Setup Domain (Hamel)
+- [ ] Proofread
+- [ ] Mailing list
+- [ ] Cover Image
+- [ ] Favicon
+- [ ] Consulting & Offerings
