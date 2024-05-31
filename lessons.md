@@ -603,7 +603,7 @@ or
 @article{lessons,
   title   = {What We've Learned From A Year of Building with LLMs},
   author  = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Liu, Jason and Shankar, Shreya},
-  journal = {eugeneyan.com},
+  journal = {applied-llms.org},
   year    = {2024},
   month   = {May},
   url     = {https://applied-llms.org/lessons/}
