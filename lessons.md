@@ -589,8 +589,7 @@ Finally, we would like to thank all the teams who so generously shared your chal
 
 A [couple friends](#about-the-authors) and I threw around the idea of writing about our experience with LLMs and AI Engineering (image below). One thing led to another and that's how this three-part series came about. Here, we share our hard-won lessons, and advice to make it easier. This is also cross-posted on O'Reilly. We hope you'll find it useful!
 
-<img style="max-width: 60%" src="{{ site.baseurl }}/assets/how-it-started.jpg" loading="lazy" title="Behind the scenes of how this write-up started" alt="Behind the scenes of how this write-up started"/>
-<p class="image-caption">Behind the scenes of how this write-up started</p>
+![](how-it-started.jpg)
 
 <br>
 
