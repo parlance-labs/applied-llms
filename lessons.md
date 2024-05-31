@@ -595,7 +595,7 @@ A [couple friends](#about-the-authors) and I threw around the idea of writing ab
 
 If you found this useful, please cite this write-up as:
 
-> Yan et al. (May 2024). What We've Learned From A Year of Building with LLMs. eugeneyan.com. http://localhost:4000/writing/prompting/.
+> Yan et al. (May 2024). What We've Learned From A Year of Building with LLMs. eugeneyan.com. applied-llms.org.
 
 or
 
@@ -606,6 +606,6 @@ or
   journal = {eugeneyan.com},
   year    = {2024},
   month   = {May},
-  url     = {https://eugeneyan.com/writing/llm-lessons/}
+  url     = {https://applied-llms.org/lessons/}
 }
 ```
