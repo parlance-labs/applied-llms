@@ -1,7 +1,5 @@
 # Quarto
 _site/
-_mkdocs/site
-!_mkdocs/site/assets/images/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
