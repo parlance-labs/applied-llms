@@ -19,7 +19,7 @@ quarto publish
 # TODOS
 
 - [ ] Add pictures to about page
-- [ ] Setup Domain (Hamel)
+- [x] Setup Domain (Hamel)
 - [ ] Proofread
 - [ ] Mailing list
 - [ ] Cover Image
