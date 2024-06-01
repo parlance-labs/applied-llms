@@ -1,5 +1,5 @@
 ---
-title: "What we've learned from a year of building with LLMs"
+title: "What We've Learned From A Year of Building with LLMs"
 description: A practical guide to building successful LLM products.
 sidebar: false
 image: images/mkdocs_social_card.png
