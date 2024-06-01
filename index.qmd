@@ -365,7 +365,7 @@ While some models achieve near-perfect recall, it's questionable whether NIAH tr
 
 Here’s an example of a [practical NIAH eval](https://observablehq.com/@shreyashankar/needle-in-the-real-world-experiments). Using [transcripts of doctor-patient video calls](https://github.com/wyim/aci-bench/tree/main/data/challenge_data), the LLM is queried about the patient's medication. It also includes a more challenging NIAH, inserting a phrase for random ingredients for pizza toppings, such as "_The secret ingredients needed to build the perfect pizza are: Espresso-soaked dates, Lemon and Goat cheese._". Recall was around 80% on the medication task and 30% on the pizza task.
 
-<<Average Recall of Reference Answer Image>>
+![](images/niah.png){width=80%}
 
 Tangentially, an overemphasis on NIAH evals can lead to lower performance on extraction and summarization tasks. Because these LLMs are so finetuned to attend to every sentence, they may start to treat irrelevant details and distractors as important, thus including them in the final output (when they shouldn't!)
 
@@ -531,7 +531,7 @@ For example, [this write-up](https://hamel.dev/blog/posts/prompt/) discusses how
 
 In addition to accidental complexity, tools are often underspecified. For example, there is a growing industry of LLM evaluation tools that offer “LLM Evaluation In A Box” with generic evaluators for toxicity, conciseness, tone, etc. We have seen many teams adopt these tools without thinking critically about the specific failure modes of their domains. Contrast this to EvalGen. It focuses on teaching users the process of creating domain-specific evals by deeply involving the user each step of the way, from specifying criteria, to labeling data, to checking evals. The software leads the user through a workflow that looks like this:
 
-![](https://lh7-us.googleusercontent.com/rXa23_cY-uZYDDieFvL3gUAAi6dDywjKbh0rrG_Uo27WRKIIuTbrZtZmiDcu0guvdG9mGSDPXg11m03GkolVcGgIgTu9_clxhmWbUlcefebVPeHmce-VvebabsZiz8ZGMsUqR8743wONZQlT_niKLQs)
+![](images/evalgen.png)
 
 [Shankar, S., et al. (2024). Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences. Retrieved from https://arxiv.org/abs/2404.12272](https://arxiv.org/abs/2404.12272)
 
@@ -585,6 +585,8 @@ Here is a rough progression of the types of roles you need, and when you’ll ne
 Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., [hiring an MLE too early](https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/)) or building in the wrong order is a waste of time and money, and causes churn.  Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations. 
 
 ## Strategic: Long-term business strategy (pending)
+
+PENDING RELEASE (tentatively 6th June)
 
 --- 
 
