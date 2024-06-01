@@ -4,6 +4,7 @@ project:
 website:
   title: "Applied LLMs"
   image: images/mkdocs_social_card.png
+  twitter-card: true
   open-graph: true
   navbar:
     left:
