@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Applied LLMs</title>
+<link>https://applied-llms.org/</link>
+<atom:link href="https://applied-llms.org/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.4.533</generator>
+<lastBuildDate>Fri, 31 May 2024 19:59:46 GMT</lastBuildDate>
+<item>
+  <title>About</title>
+  <link>https://applied-llms.org/about.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>About this site</p>
+
+
+
+ ]]></description>
+  <guid>https://applied-llms.org/about.html</guid>
+  <pubDate>Fri, 31 May 2024 19:59:46 GMT</pubDate>
+</item>
+</channel>
+</rss>

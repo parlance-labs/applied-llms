@@ -4,7 +4,49 @@
     "href": "about.html",
     "title": "About The Authors",
     "section": "",
-    "text": "Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He’s currently a Senior Applied Scientist at Amazon where he builds RecSys for millions worldwide worldwide and applies LLMs to serve customers better. Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at eugeneyan.com and ApplyingML.com.\nBryan Bischof is the Head of AI at Hex, where he leads the team of engineers building Magic – the data science and analytics copilot. Bryan has worked all over the data stack leading teams in analytics, machine learning engineering, data platform engineering, and AI engineering. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D. is in pure mathematics.\nCharles Frye teaches people to build AI applications. After publishing research in psychopharmacology and neurobiology, he got his Ph.D. at the University of California, Berkeley, for dissertation work on neural network optimization. He has taught thousands the entire stack of AI application development, from linear algebra fundamentals to GPU arcana and building defensible businesses, through educational and consulting work at Weights and Biases, Full Stack Deep Learning, and Modal.\nHamel Husain is a machine learning engineer with over 25 years of experience. He has worked with innovative companies such as Airbnb and GitHub, which included early LLM research used by OpenAI for code understanding. He has also led and contributed to numerous popular open-source machine-learning tools. Hamel is currently an independent consultant helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.\nJason Liu is a distinguished machine learning consultant known for leading teams to successfully ship AI products. Jason’s technical expertise covers personalization algorithms, search optimization, synthetic data generation, and MLOps systems. His experience includes companies like Stitchfix, where he created a recommendation framework and observability tools that handled 350 million daily requests. Additional roles have included Meta, NYU, and startups such as Limitless AI and Trunk Tools.\nShreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW."
+    "text": "Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He’s currently a Senior Applied Scientist at Amazon where he builds RecSys for millions worldwide worldwide and applies LLMs to serve customers better. Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at eugeneyan.com and ApplyingML.com."
+  },
+  {
+    "objectID": "about.html#eugene-yan",
+    "href": "about.html#eugene-yan",
+    "title": "About The Authors",
+    "section": "",
+    "text": "Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He’s currently a Senior Applied Scientist at Amazon where he builds RecSys for millions worldwide worldwide and applies LLMs to serve customers better. Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at eugeneyan.com and ApplyingML.com."
+  },
+  {
+    "objectID": "about.html#bryan-bischof",
+    "href": "about.html#bryan-bischof",
+    "title": "About The Authors",
+    "section": "Bryan Bischof",
+    "text": "Bryan Bischof\n\nBryan Bischof is the Head of AI at Hex, where he leads the team of engineers building Magic – the data science and analytics copilot. Bryan has worked all over the data stack leading teams in analytics, machine learning engineering, data platform engineering, and AI engineering. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D. is in pure mathematics."
+  },
+  {
+    "objectID": "about.html#charles-frye",
+    "href": "about.html#charles-frye",
+    "title": "About The Authors",
+    "section": "Charles Frye",
+    "text": "Charles Frye\n\nCharles Frye teaches people to build AI applications. After publishing research in psychopharmacology and neurobiology, he got his Ph.D. at the University of California, Berkeley, for dissertation work on neural network optimization. He has taught thousands the entire stack of AI application development, from linear algebra fundamentals to GPU arcana and building defensible businesses, through educational and consulting work at Weights and Biases, Full Stack Deep Learning, and Modal."
+  },
+  {
+    "objectID": "about.html#hamel-husain",
+    "href": "about.html#hamel-husain",
+    "title": "About The Authors",
+    "section": "Hamel Husain",
+    "text": "Hamel Husain\n\nHamel Husain is a machine learning engineer with over 25 years of experience. He has worked with innovative companies such as Airbnb and GitHub, which included early LLM research used by OpenAI for code understanding. He has also led and contributed to numerous popular open-source machine-learning tools. Hamel is currently an independent consultant helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey."
+  },
+  {
+    "objectID": "about.html#jason-liu",
+    "href": "about.html#jason-liu",
+    "title": "About The Authors",
+    "section": "Jason Liu",
+    "text": "Jason Liu\n\nJason Liu is a distinguished machine learning consultant known for leading teams to successfully ship AI products. Jason’s technical expertise covers personalization algorithms, search optimization, synthetic data generation, and MLOps systems. His experience includes companies like Stitchfix, where he created a recommendation framework and observability tools that handled 350 million daily requests. Additional roles have included Meta, NYU, and startups such as Limitless AI and Trunk Tools."
+  },
+  {
+    "objectID": "about.html#shreya-shankar",
+    "href": "about.html#shreya-shankar",
+    "title": "About The Authors",
+    "section": "Shreya Shankar",
+    "text": "Shreya Shankar\n\nShreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW."
   },
   {
     "objectID": "index.html",
@@ -81,7 +123,7 @@
     "href": "index.html#strategic-long-term-business-strategy-pending",
     "title": "What We’ve Learned From A Year of Building with LLMs",
     "section": "Strategic: Long-term business strategy (pending)",
-    "text": "Strategic: Long-term business strategy (pending)\nPENDING RELEASE (tentatively 6th June)\n\n\nContact Us\nWe would love to hear your thoughts on this post. You can contact us at contact@applied-llms.org. Many of us are open to various forms of consulting and advisory. You can also find our individual contact information on our about page.\n\n\nAcknowledgements\nThis series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far.\nThe authors would like to thank Eugene for leading the bulk of the document integration and overall structure in addition to a large proportion of the lessons. Additionally, for primary editing responsibilities and document direction. The authors would like to thank Bryan for the spark that led to this writeup, restructuring the write-up into tactical, operational, and strategic sections and their intros, and for pushing us to think bigger on how we could reach and help the community. The authors would like to thank Charles for his deep dives on cost and LLMOps, as well as weaving the lessons to make them more coherent and tighter—you have him to thank for this being 30 instead of 40 pages! The authors thank Hamel and Jason for their insights from advising clients and being on the front lines, for their broad generalizable learnings from clients, and for deep knowledge of tools. And finally, thank you Shreya for reminding us of the importance of evals and rigorous production practices and for bringing her research and original results.\nFinally, we would like to thank all the teams who so generously shared your challenges and lessons in your own write-ups which we’ve referenced throughout this series, along with the AI communities for your vibrant participation and engagement with this group.\n\n\nAbout the authors\nSee the about page for more information on the authors."
+    "text": "Strategic: Long-term business strategy (pending)\nPENDING RELEASE (tentatively 6th June)\n\n\nStay In Touch\nWe would love to stay in touch with you regarding future blog posts, courses, and activitis. You can subscribe to your newsletter below:\n\nYou can also find our individual contact information on our about page.\n\n\nAcknowledgements\nThis series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far.\nThe authors would like to thank Eugene for leading the bulk of the document integration and overall structure in addition to a large proportion of the lessons. Additionally, for primary editing responsibilities and document direction. The authors would like to thank Bryan for the spark that led to this writeup, restructuring the write-up into tactical, operational, and strategic sections and their intros, and for pushing us to think bigger on how we could reach and help the community. The authors would like to thank Charles for his deep dives on cost and LLMOps, as well as weaving the lessons to make them more coherent and tighter—you have him to thank for this being 30 instead of 40 pages! The authors thank Hamel and Jason for their insights from advising clients and being on the front lines, for their broad generalizable learnings from clients, and for deep knowledge of tools. And finally, thank you Shreya for reminding us of the importance of evals and rigorous production practices and for bringing her research and original results.\nFinally, we would like to thank all the teams who so generously shared your challenges and lessons in your own write-ups which we’ve referenced throughout this series, along with the AI communities for your vibrant participation and engagement with this group.\n\n\nAbout the authors\nSee the about page for more information on the authors."
   },
   {
     "objectID": "index.html#backstory",
