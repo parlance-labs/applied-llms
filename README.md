@@ -34,10 +34,10 @@ The social card will be saved to [images/mkdocs_social_card.png](images/mkdocs_s
 
 # TODOS
 
-- [ ] Add pictures to About page
+- [ ] Add pictures to About page - waiting on Jason, Shreya, Bryan, Charles
 - [x] Setup Domain (Hamel)
 - [ ] Proofread
 - [x] Mailing list
 - [x] Cover Image
-- [ ] Favicon
+- [x] Favicon
 - [ ] Consulting & Offerings
