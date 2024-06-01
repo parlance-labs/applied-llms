@@ -23,98 +23,17 @@ format:
     anchor-sections: true
 ---
 
-It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications.  The pace of improvements in LLMs, coupled with a parade of demos on social media, will fuel an estimated [$200B investment in AI by 2025](https://www.google.com/url?q=https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html). LLMs are also broadly accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. While the barrier to entry for building AI products has been lowered, creating ones that are effective beyond a demo remains deceptively difficult.
+It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they're getting better and cheaper every year.  Coupled with a parade of demos on social media, there will be an [estimated $200B investment in AI by 2025](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html){target="_blank}. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.
 
-We've identified some crucial, yet often neglected, lessons and methodologies informed by machine learning that are essential for developing products based on large language models (LLMs). Awareness of these ideas can give you a competitive advantage against most others in the field without requiring ML expertise! Over the past year, the six of us have been building real-world applications on top of LLMs. We realized that there was a need to distill these lessons in one place for the benefit of the community.
+We've spent the past year building, and have discovered many sharp edges along the way. While we don't claim to speak for the entire industry, we'd like to share what we've learned to help you avoid our mistakes and iterate faster. These are organized into three sections:
 
-We come from a variety of backgrounds and play different roles, but we’ve all experienced firsthand the challenges that come with using this new technology. Two of us are independent consultants who’ve helped numerous clients take LLM projects from initial concept to successful product, seeing the patterns determining success or failure. One of us is a researcher studying how ML/AI teams work, and how to improve their workflows. Two of us are leaders on applied AI teams, one at a tech giant and one at a startup. Finally, one of us has taught deep learning to thousands and now works on making AI tooling and infrastructure easier to use. Despite our differing experiences, we were struck by the consistent themes in the lessons we learned, and we're surprised these insights aren't more widely discussed. 
+- [Tactical](#tactical-nuts--bolts-of-working-with-llms): Some practices for prompting, RAG, flow engineering, evals, and monitoring. Whether you're a practitioner building with LLMs, or hacking on weekend projects, this section was written for you.
+- [Operational](#operation-day-to-day-and-org-concerns): The organizational, day-to-day concerns of shipping products, and how to build an effective team. For product/technical leaders looking to deploy sustainably and reliably.
+- Strategic: The long-term, big-picture view, with opinionated takes such as "no GPU before PMF" and "focus on the system not the model", and how to iterate. Written with founders and executives in mind.
 
-We’ve spent the past year getting our hands dirty and gaining valuable lessons, often the hard way. While we don’t claim to speak for the entire industry, we want to share what we’ve learned to help you avoid missteps and stay on the path to success. 
-
-Here, we share some advice and lessons for anyone building products with LLMs, organized into three sections:
-- Tactical: The nuts and bolts of working with LLMs. We share best practices and common pitfalls around prompting, setting up retrieval-augmented generation, applying flow engineering, and evaluation and monitoring. Whether you’re a practitioner building with LLMs or a hacker working on weekend projects, this section was written for you.
-- Operational: Next, we take a step back and discuss the day-to-day concerns and organizational aspects of building with LLMs. We share how we think about data (a lot!), our mental model for working with models and designing products, and how to build a team that can wield LLMs effectively. If you’re a product/technical leader or a practitioner looking to deploy sustainably and reliably, this section is for you.
-- Strategic: Finally, we take a long-term view and consider where the business should invest. We share our early thinking on when to use model APIs vs. when to finetune and self-host models, how we think about the LLM product lifecycle, infrastructure investments, and how we think about risk and scaling from 1 to N. This is written for founders and senior leaders looking to the future.
-
-Our goal is to make this a practical guide to building successful products around LLMs, drawing from our own experiences and pointing to examples from around the industry.
+Our intent is to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.
 
 Ready to ~~delve~~ dive in? Let’s go.
-
-## Table of contents
-
-### [Tactical: Nuts & bolts of working with LLMs](#tactical-nuts--bolts-of-working-with-llms)
-
-#### [Prompting](#prompting)  
-
-- [Focus on getting the most out of fundamental prompting techniques](#focus-on-getting-the-most-out-of-fundamental-prompting-techniques)
-- [Structure your inputs and outputs](#structure-your-inputs-and-outputs)
-- [Have small prompts that do one thing, and only one thing, well](#have-small-prompts-that-do-one-thing-and-only-one-thing-well)
-- [Craft your context tokens](#craft-your-context-tokens)
-
-#### [Information Retrieval / RAG](#information-retrieval--rag)
-- [RAG is only as good as the retrieved documents' relevance, density, and detail](#the-quality-of-your-rags-output-is-dependent-on-the-quality-of-retrieved-documents-which-in-turn-can-be-considered-along-a-few-factors)
-- [Don’t forget keyword search; use it as a baseline and in hybrid search](#dont-forget-keyword-search-use-it-as-a-baseline-and-in-hybrid-search)
-- [Prefer RAG over fine-tuning for new knowledge](#prefer-rag-over-fine-tuning-for-new-knowledge)
-- [Long-context models won't make RAG obsolete](#long-context-models-wont-make-rag-obsolete)
-
-#### [Tuning and optimizing workflows](#tuning-and-optimizing-workflows)
-- [Step-by-step, multi-turn “flows” can give large boosts](#step-by-step-multi-turn-flows-can-give-large-boosts)
-- [Prioritize deterministic workflows for now](#prioritize-deterministic-workflows-for-now)
-- [Getting more diverse outputs beyond temperature](#getting-more-diverse-outputs-beyond-temperature)
-- [Caching is underrated](#caching-is-underrated)
-- [When to finetune](#when-to-finetune)
-
-#### [Evaluation & Monitoring](#evaluation--monitoring)
-- [Create a few assertion-based unit tests from real input/output samples](#create-a-few-assertion-based-unit-tests-from-real-inputoutput-samples)
-- [LLM-as-Judge can work (somewhat), but it's not a silver bullet](#llm-as-judge-can-work-somewhat-but-its-not-a-silver-bullet)
-- [The “intern test” for evaluating generations](#the-intern-test-for-evaluating-generations)
-- [Overemphasizing certain evals can hurt overall performance](#overemphasizing-certain-evals-can-hurt-overall-performance)
-- [Simplify annotation to binary tasks or pairwise comparisons](#simplify-annotation-to-binary-tasks-or-pairwise-comparisons)
-- [(Reference-free) evals and guardrails can be used interchangeably](#reference-free-evals-and-guardrails-can-be-used-interchangeably)
-- [LLMs will return output even when they shouldn't](#llms-will-return-output-even-when-they-shouldnt)
-- [Hallucinations are a stubborn problem](#hallucinations-are-a-stubborn-problem)
-
-### [Operation: Day-to-day and org concerns](#operation-day-to-day-and-org-concerns)
-
-#### [Data](#data)
-- [Check for development-prod skew](#check-for-development-prod-skew)
-- [Look at samples of LLM inputs and outputs every day](#look-at-samples-of-llm-inputs-and-outputs-every-day)
-
-#### [Working with models](#working-with-models)
-- [Generate structured output to ease downstream integration](#generate-structured-output-to-ease-downstream-integration)
-- [Migrating prompts across models is a pain in the ass](#migrating-prompts-across-models-is-a-pain-in-the-ass)
-- [Version and pin your models](#version-and-pin-your-models)
-- [Choose the smallest model that gets the job done](#choose-the-smallest-model-that-gets-the-job-done)
-
-#### [Product](#product)
-- [Involve design early and often](#choose-the-smallest-model-that-gets-the-job-done)
-- [Design your UX for Human-In-The-Loop](#design-your-ux-for-human-in-the-loop)
-- [Prioritize your hierarchy of needs ruthlessly](#prioritize-your-hierarchy-of-needs-ruthlessly)
-- [Calibrate your risk tolerance based on the use case](#calibrate-your-risk-tolerance-based-on-the-use-case)
-
-#### [Team & Roles](#team--roles)
-- [Focus on Process, Not Tools](#focus-on-process-not-tools)
-- [Always be experimenting](#always-be-experimenting)
-- [Empower everyone to use new AI technology](#empower-everyone-to-use-new-ai-technology)
-- [Don’t fall into the trap of “AI Engineering is all I need”](#dont-fall-into-the-trap-of-ai-engineering-is-all-i-need)
-
-### Strategic	
-
-#### No GPUs before PMF
-- Training from scratch (almost) never makes sense
-- Start with inference APIs, but don’t be afraid of self-hosting
-
-#### Iterate to something great	
-- The model isn’t the product, the system around it is	
-- Build trust by starting small	
-- Build LLMOps, but build it for the right reason: faster iteration	
-
-#### Start with prompting, evals, and data collection	 
-- Prompt engineering comes first	
-- Build evals and kickstart a data flywheel	
-- The high-level trend of low-cost cognition
-
-### Enough 0 to 1 demos, it’s time for 1 to N products
 
 --- 
 
