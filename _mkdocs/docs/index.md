@@ -1,6 +1,8 @@
 ---
 title: "What we've learned from a year of building with LLMs"
+description: A practical guide to building successful LLM products, written by Eugene Yan, Bryan Bischof, Charles Frye, Hamel Husain, Shreya Shankar, and Jason Liu.
 sidebar: false
+image: images/mkdocs_social_card.png
 toc: true
 date: 2023-06-08
 author:
