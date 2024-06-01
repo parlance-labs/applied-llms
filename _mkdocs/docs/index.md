@@ -1,5 +1,5 @@
 ---
-title: "What we've learned from a year of building with LLMs"
+title: "What We've Learned From A Year of Building with LLMs"
 description: A practical guide to building successful LLM products.
 sidebar: false
 image: images/mkdocs_social_card.png
@@ -23,96 +23,17 @@ format:
     anchor-sections: true
 ---
 
-It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications.  The pace of improvements in LLMs, coupled with a parade of demos on social media, will fuel an estimated [$200B investment in AI by 2025](https://www.google.com/url?q=https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html). LLMs are also broadly accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. While the barrier to entry for building AI products has been lowered, creating ones that are effective beyond a demo remains deceptively difficult.
+It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they're getting better and cheaper every year.  Coupled with a parade of demos on social media, there will be an [estimated $200B investment in AI by 2025](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html){target="_blank}. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.
 
-We've identified some crucial, yet often neglected, lessons and methodologies informed by machine learning that are essential for developing products based on large language models (LLMs). Awareness of these ideas can give you a competitive advantage against most others in the field without requiring ML expertise! Over the past year, the six of us have been building real-world applications on top of LLMs. We realized that there was a need to distill these lessons in one place for the benefit of the community.
+We've spent the past year building, and have discovered many sharp edges along the way. While we don't claim to speak for the entire industry, we'd like to share what we've learned to help you avoid our mistakes and iterate faster. These are organized into three sections:
 
-We come from a variety of backgrounds and play different roles, but we’ve all experienced firsthand the challenges that come with using this new technology. Two of us are independent consultants who’ve helped numerous clients take LLM projects from initial concept to successful product, seeing the patterns determining success or failure. One of us is a researcher studying how ML/AI teams work, and how to improve their workflows. Two of us are leaders on applied AI teams, one at a tech giant and one at a startup. Finally, one of us has taught deep learning to thousands and now works on making AI tooling and infrastructure easier to use. Despite our differing experiences, we were struck by the consistent themes in the lessons we learned, and we're surprised these insights aren't more widely discussed. 
+- [Tactical](#tactical-nuts--bolts-of-working-with-llms): Some practices for prompting, RAG, flow engineering, evals, and monitoring. Whether you're a practitioner building with LLMs, or hacking on weekend projects, this section was written for you.
+- [Operational](#operation-day-to-day-and-org-concerns): The organizational, day-to-day concerns of shipping products, and how to build an effective team. For product/technical leaders looking to deploy sustainably and reliably.
+- Strategic: The long-term, big-picture view, with opinionated takes such as "no GPU before PMF" and "focus on the system not the model", and how to iterate. Written with founders and executives in mind.
 
-We’ve spent the past year getting our hands dirty and gaining valuable lessons, often the hard way. While we don’t claim to speak for the entire industry, we want to share what we’ve learned to help you avoid missteps and stay on the path to success. 
-
-Here, we share some advice and lessons for anyone building products with LLMs, organized into three sections:
-- Tactical: The nuts and bolts of working with LLMs. We share best practices and common pitfalls around prompting, setting up retrieval-augmented generation, applying flow engineering, and evaluation and monitoring. Whether you’re a practitioner building with LLMs or a hacker working on weekend projects, this section was written for you.
-- Operational: Next, we take a step back and discuss the day-to-day concerns and organizational aspects of building with LLMs. We share how we think about data (a lot!), our mental model for working with models and designing products, and how to build a team that can wield LLMs effectively. If you’re a product/technical leader or a practitioner looking to deploy sustainably and reliably, this section is for you.
-- Strategic: Finally, we take a long-term view and consider where the business should invest. We share our early thinking on when to use model APIs vs. when to finetune and self-host models, how we think about the LLM product lifecycle, infrastructure investments, and how we think about risk and scaling from 1 to N. This is written for founders and senior leaders looking to the future.
-
-Our goal is to make this a practical guide to building successful products around LLMs, drawing from our own experiences and pointing to examples from around the industry.
+Our intent is to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.
 
 Ready to ~~delve~~ dive in? Let’s go.
-
-## Table of contents
-
-### [Tactical: Nuts & bolts of working with LLMs](#tactical-nuts--bolts-of-working-with-llms)
-
-[Prompting](#prompting)
-- Focus on getting the most out of fundamental prompting techniques
-- Structure your inputs and outputs
-- Have small prompts that do one thing, and only one thing, well
-- Craft your context tokens
-
-[Information Retrieval / RAG](#information-retrieval--rag)
-- RAG is only as good as the retrieved documents' relevance, density, and detail
-- Don’t forget keyword search; use it as a baseline and in hybrid search
-- Prefer RAG over fine-tuning for new knowledge	
-- Long-context models won't make RAG obsolete	
-
-[Tuning and optimizing workflows](#tuning-and-optimizing-workflows)
-- Step-by-step, multi-turn “flows” can give large boosts	
-- Prioritize deterministic workflows for now	
-- Getting more diverse outputs beyond temperature	
-- Caching is underrated.	
-- When to finetune	
-
-[Evaluation & Monitoring](#evaluation--monitoring)
-- Create a few assertion-based unit tests from real input/output samples	
-- LLM-as-Judge can work (somewhat), but it's not a silver bullet	
-- The “intern test” for evaluating generations	
-- Overemphasizing certain evals can hurt overall performance	
-- Simplify annotation to binary tasks or pairwise comparisons	
-- (Reference-free) evals and guardrails can be used interchangeably	
-- LLMs will return output even when they shouldn't	
-- Hallucinations are a stubborn problem.	
-
-### [Operation: Day-to-day and org concerns](#operation-day-to-day-and-org-concerns)
-
-[Data](#data)
-- Check for development-prod skew	
-- Look at samples of LLM inputs and outputs every day	
-
-[Working with models](#working-with-models)
-- Generate structured output to ease downstream integration	
-- Migrating prompts across models is a pain in the ass	
-- Version and pin your models	
-- Choose the smallest model that gets the job done	
-
-[Product](#product)
-- Involve design early and often	
-- Design your UX for Human-In-The-Loop	
-- Prioritize your hierarchy of needs ruthlessly	
-- Calibrate your risk tolerance based on the use case	
-
-[Team & Roles](#team--roles)
-- Focus on Process, Not Tools	
-- Always be experimenting	
-- Empower everyone to use new AI technology	
-- Don’t fall into the trap of “AI Engineering is all I need”	
-
-### Strategic	
-No GPUs before PMF
-- Training from scratch (almost) never makes sense
-- Start with inference APIs, but don’t be afraid of self-hosting
-
-Iterate to something great	
-- The model isn’t the product, the system around it is	
-- Build trust by starting small	
-- Build LLMOps, but build it for the right reason: faster iteration	
-
-Start with prompting, evals, and data collection	
-- Prompt engineering comes first	
-- Build evals and kickstart a data flywheel	
-- The high-level trend of low-cost cognition
-
-### Enough 0 to 1 demos, it’s time for 1 to N products
 
 --- 
 
@@ -193,7 +114,7 @@ The other key optimization is the structure of your context. Your bag-of-docs re
 Beyond prompting, another effective way to steer an LLM is by providing knowledge as part of the prompt. This grounds the LLM on the provided context which is then used for in-context learning. This is known as retrieval-augmented generation (RAG). Practitioners have found RAG effective at providing knowledge and improving output, while requiring far less effort and cost compared to finetuning.
 RAG is only as good as the retrieved documents' relevance, density, and detail
 
-### The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors.
+### The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors
 
 The first and most obvious metric is relevance. This is typically quantified via ranking metrics such as [Mean Reciprocal Rank (MRR)](https://en.wikipedia.org/wiki/Mean_reciprocal_rank) or [Normalized Discounted Cumulative Gain (NDCG)](https://en.wikipedia.org/wiki/Discounted_cumulative_gain). MRR evaluates how well a system places the first relevant result in a ranked list while NDCG considers the relevance of all the results and their positions. They measure how good the system is at ranking relevant documents higher and irrelevant documents lower. For example, if we're retrieving user summaries to generate movie review summaries, we'll want to rank reviews for the specific movie higher while excluding reviews for other movies.
 
@@ -203,7 +124,7 @@ Second, we also want to consider information density. If two documents are equal
 
 Finally, consider the level of detail provided in the document. Imagine we're building a RAG system to generate SQL queries from natural language. We could simply provide table schemas with column names as context. But, what if we include column descriptions and some representative values? The additional detail could help the LLM better understand the semantics of the table and thus generate more correct SQL.
 
-### Don’t forget keyword search; use it as a baseline and in hybrid search.
+### Don’t forget keyword search; use it as a baseline and in hybrid search
 
 Given how prevalent the embedding-based RAG demo is, it's easy to forget or overlook the decades of research and solutions in information retrieval.
 
@@ -245,7 +166,7 @@ So don't throw your RAGs in the trash just yet. This pattern will remain useful 
 ## Tuning and optimizing workflows
 Prompting an LLM is just the beginning. To get the most juice out of them, we need to think beyond a single prompt and embrace workflows. For example, how could we split a single complex task into multiple simpler tasks? When is finetuning or caching helpful with increasing performance and reducing latency/cost? In this section, we share proven strategies and real-world examples to help you optimize and build reliable LLM workflows.
 
-### Step-by-step, multi-turn “flows” can give large boosts.
+### Step-by-step, multi-turn “flows” can give large boosts
 
 We already know that by decomposing a single big prompt into multiple smaller prompts, we can achieve better results. An example of this is [AlphaCodium](https://arxiv.org/abs/2401.08500): By switching from a single prompt to a multi-step workflow, they increased GPT-4 accuracy (pass@5) on CodeContests from 19% to 44%. The workflow includes:
 - Reflecting on the problem
@@ -289,7 +210,7 @@ In other words, increasing temperature does not guarantee that the LLM will samp
 
 Additionally, keeping a short list of recent outputs can help prevent redundancy. In our recommended products example, by instructing the LLM to avoid suggesting items from this recent list, or by rejecting and resampling outputs that are similar to recent suggestions, we can further diversify the responses. Another effective strategy is to vary the phrasing used in the prompts. For instance, incorporating phrases like "pick an item that the user would love using regularly" or "select a product that the user would likely recommend to friends" can shift the focus and thereby influence the variety of recommended products.
 
-### Caching is underrated.
+### Caching is underrated
 
 Caching saves cost and eliminates generation latency by removing the need to recompute responses for the same input. Furthermore, if a response has previously been guardrailed, we can serve these vetted responses and reduce the risk of serving harmful or inappropriate content.
 
@@ -363,7 +284,7 @@ While some models achieve near-perfect recall, it's questionable whether NIAH tr
 
 Here’s an example of a [practical NIAH eval](https://observablehq.com/@shreyashankar/needle-in-the-real-world-experiments). Using [transcripts of doctor-patient video calls](https://github.com/wyim/aci-bench/tree/main/data/challenge_data), the LLM is queried about the patient's medication. It also includes a more challenging NIAH, inserting a phrase for random ingredients for pizza toppings, such as "_The secret ingredients needed to build the perfect pizza are: Espresso-soaked dates, Lemon and Goat cheese._". Recall was around 80% on the medication task and 30% on the pizza task.
 
-<<Average Recall of Reference Answer Image>>
+![](images/niah.png){width=80%}
 
 Tangentially, an overemphasis on NIAH evals can lead to lower performance on extraction and summarization tasks. Because these LLMs are so finetuned to attend to every sentence, they may start to treat irrelevant details and distractors as important, thus including them in the final output (when they shouldn't!)
 
@@ -395,7 +316,7 @@ While careful prompt engineering can help to some extent, we should complement i
 
 A corollary here is that LLMs may fail to produce outputs when they are expected to. This can happen for various reasons, from straightforward issues like long tail latencies from API providers to more complex ones such as outputs being blocked by content moderation filters. As such, it’s important to consistently log inputs and (potentially a lack of) outputs for debugging and monitoring.
 
-### Hallucinations are a stubborn problem.
+### Hallucinations are a stubborn problem
 
 Unlike content safety or PII defects which have a lot of attention and thus seldom occur, factual inconsistencies are stubbornly persistent and more challenging to detect. They're more common and occur at a baseline rate of 5 - 10%, and from what we've learned from LLM providers, it can be challenging to get it below 2%, even on simple tasks such as summarization.
 
@@ -529,7 +450,7 @@ For example, [this write-up](https://hamel.dev/blog/posts/prompt/) discusses how
 
 In addition to accidental complexity, tools are often underspecified. For example, there is a growing industry of LLM evaluation tools that offer “LLM Evaluation In A Box” with generic evaluators for toxicity, conciseness, tone, etc. We have seen many teams adopt these tools without thinking critically about the specific failure modes of their domains. Contrast this to EvalGen. It focuses on teaching users the process of creating domain-specific evals by deeply involving the user each step of the way, from specifying criteria, to labeling data, to checking evals. The software leads the user through a workflow that looks like this:
 
-![](https://lh7-us.googleusercontent.com/rXa23_cY-uZYDDieFvL3gUAAi6dDywjKbh0rrG_Uo27WRKIIuTbrZtZmiDcu0guvdG9mGSDPXg11m03GkolVcGgIgTu9_clxhmWbUlcefebVPeHmce-VvebabsZiz8ZGMsUqR8743wONZQlT_niKLQs)
+![](images/evalgen.png)
 
 [Shankar, S., et al. (2024). Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences. Retrieved from https://arxiv.org/abs/2404.12272](https://arxiv.org/abs/2404.12272)
 
@@ -583,6 +504,8 @@ Here is a rough progression of the types of roles you need, and when you’ll ne
 Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., [hiring an MLE too early](https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/)) or building in the wrong order is a waste of time and money, and causes churn.  Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations. 
 
 ## Strategic: Long-term business strategy (pending)
+
+PENDING RELEASE (tentatively 6th June)
 
 --- 
 
