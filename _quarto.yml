@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Applied LLMs"
+  image: images/mkdocs_social_card.png
   open-graph: true
   navbar:
     left:
