@@ -17,6 +17,9 @@ quarto publish
 
 # Generating Social Card
 
+>[!Important]
+> You need docker installed to run this step
+
 To generate a [mkdocs-material social card](https://squidfunk.github.io/mkdocs-material/tutorials/social/basic/), run:
 
 ```bash
