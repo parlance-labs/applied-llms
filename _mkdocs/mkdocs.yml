@@ -3,4 +3,6 @@ site_name: applied-llms.org
 theme:
   name: material
 plugins:
-  - social
+  - social:
+      cards_layout_options:
+        background_color: black
