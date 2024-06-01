@@ -1,5 +1,5 @@
 # applied-llms
-Website for Applied-LLMs work
+Source code for [https://applied-llms.org](https://applied-llms.org)
 
 # Running Locally
 
