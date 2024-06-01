@@ -1,1 +1,15 @@
 /* css styles */
+
+.margin-subscribe {
+    border-style: solid;
+    border-color: #8b8b91 !important;
+}
+
+div[data-style="clean"] {
+    /* Your CSS styles here */
+    padding: 10px!important;
+ }
+
+ .img-fluid {
+    margin-right: 5px;
+ }

@@ -509,8 +509,13 @@ PENDING RELEASE (tentatively 6th June)
 
 --- 
 
-### Contact Us
-We would love to hear your thoughts on this post.  You can contact us at [contact@applied-llms.org](mailto:contact@applied-llms.org).  Many of us are open to various forms of consulting and advisory.  You can also find our individual contact information on our [about page](about.qmd).
+### Stay In Touch
+
+We would love to stay in touch with you regarding future blog posts, courses, and activitis.  You can subscribe to your newsletter below:
+
+<script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+
+You can also find our individual contact information on our [about page](about.qmd).
 
 ### Acknowledgements
 This series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far. 

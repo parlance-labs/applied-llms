@@ -34,10 +34,10 @@ The social card will be saved to [images/mkdocs_social_card.png](images/mkdocs_s
 
 # TODOS
 
-- [ ] Add pictures to about page
+- [ ] Add pictures to About page
 - [x] Setup Domain (Hamel)
 - [ ] Proofread
-- [ ] Mailing list
+- [x] Mailing list
 - [x] Cover Image
 - [ ] Favicon
 - [ ] Consulting & Offerings

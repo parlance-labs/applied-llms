@@ -5,6 +5,12 @@ website:
   title: "Applied LLMs"
   image: images/mkdocs_social_card.png
   twitter-card: true
+  margin-footer: |
+    <script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+  # <center id="toc-title">Subscribe</center>
+  # <div class="margin-subscribe">
+  # <script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+  # </div>
   open-graph: true
   navbar:
     left:
@@ -15,6 +21,7 @@ website:
 
 format:
   html:
+    linkcolor: blue
     theme: 
       light: flatly
       dark: darkly
