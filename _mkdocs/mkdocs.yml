@@ -1,0 +1,6 @@
+site_url: https://applied-llms.org
+site_name: applied-llms.org
+theme:
+  name: material
+plugins:
+  - social

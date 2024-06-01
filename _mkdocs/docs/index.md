@@ -1,7 +1,6 @@
 ---
 title: "What we've learned from a year of building with LLMs"
 sidebar: false
-image: images/mkdocs_social_card.png
 toc: true
 date: 2023-06-08
 author:
