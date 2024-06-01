@@ -44,70 +44,72 @@ Ready to ~~delve~~ dive in? Let’s go.
 
 ### [Tactical: Nuts & bolts of working with LLMs](#tactical-nuts--bolts-of-working-with-llms)
 
-[Prompting](#prompting)
-- Focus on getting the most out of fundamental prompting techniques
-- Structure your inputs and outputs
-- Have small prompts that do one thing, and only one thing, well
-- Craft your context tokens
+#### [Prompting](#prompting)  
 
-[Information Retrieval / RAG](#information-retrieval--rag)
-- RAG is only as good as the retrieved documents' relevance, density, and detail
-- Don’t forget keyword search; use it as a baseline and in hybrid search
-- Prefer RAG over fine-tuning for new knowledge	
-- Long-context models won't make RAG obsolete	
+- [Focus on getting the most out of fundamental prompting techniques](#focus-on-getting-the-most-out-of-fundamental-prompting-techniques)
+- [Structure your inputs and outputs](#structure-your-inputs-and-outputs)
+- [Have small prompts that do one thing, and only one thing, well](#have-small-prompts-that-do-one-thing-and-only-one-thing-well)
+- [Craft your context tokens](#craft-your-context-tokens)
 
-[Tuning and optimizing workflows](#tuning-and-optimizing-workflows)
-- Step-by-step, multi-turn “flows” can give large boosts	
-- Prioritize deterministic workflows for now	
-- Getting more diverse outputs beyond temperature	
-- Caching is underrated.	
-- When to finetune	
+#### [Information Retrieval / RAG](#information-retrieval--rag)
+- [RAG is only as good as the retrieved documents' relevance, density, and detail](#the-quality-of-your-rags-output-is-dependent-on-the-quality-of-retrieved-documents-which-in-turn-can-be-considered-along-a-few-factors)
+- [Don’t forget keyword search; use it as a baseline and in hybrid search](#dont-forget-keyword-search-use-it-as-a-baseline-and-in-hybrid-search)
+- [Prefer RAG over fine-tuning for new knowledge](#prefer-rag-over-fine-tuning-for-new-knowledge)
+- [Long-context models won't make RAG obsolete](#long-context-models-wont-make-rag-obsolete)
 
-[Evaluation & Monitoring](#evaluation--monitoring)
-- Create a few assertion-based unit tests from real input/output samples	
-- LLM-as-Judge can work (somewhat), but it's not a silver bullet	
-- The “intern test” for evaluating generations	
-- Overemphasizing certain evals can hurt overall performance	
-- Simplify annotation to binary tasks or pairwise comparisons	
-- (Reference-free) evals and guardrails can be used interchangeably	
-- LLMs will return output even when they shouldn't	
-- Hallucinations are a stubborn problem.	
+#### [Tuning and optimizing workflows](#tuning-and-optimizing-workflows)
+- [Step-by-step, multi-turn “flows” can give large boosts](#step-by-step-multi-turn-flows-can-give-large-boosts)
+- [Prioritize deterministic workflows for now](#prioritize-deterministic-workflows-for-now)
+- [Getting more diverse outputs beyond temperature](#getting-more-diverse-outputs-beyond-temperature)
+- [Caching is underrated](#caching-is-underrated)
+- [When to finetune](#when-to-finetune)
+
+#### [Evaluation & Monitoring](#evaluation--monitoring)
+- [Create a few assertion-based unit tests from real input/output samples](#create-a-few-assertion-based-unit-tests-from-real-inputoutput-samples)
+- [LLM-as-Judge can work (somewhat), but it's not a silver bullet](#llm-as-judge-can-work-somewhat-but-its-not-a-silver-bullet)
+- [The “intern test” for evaluating generations](#the-intern-test-for-evaluating-generations)
+- [Overemphasizing certain evals can hurt overall performance](#overemphasizing-certain-evals-can-hurt-overall-performance)
+- [Simplify annotation to binary tasks or pairwise comparisons](#simplify-annotation-to-binary-tasks-or-pairwise-comparisons)
+- [(Reference-free) evals and guardrails can be used interchangeably](#reference-free-evals-and-guardrails-can-be-used-interchangeably)
+- [LLMs will return output even when they shouldn't](#llms-will-return-output-even-when-they-shouldnt)
+- [Hallucinations are a stubborn problem](#hallucinations-are-a-stubborn-problem)
 
 ### [Operation: Day-to-day and org concerns](#operation-day-to-day-and-org-concerns)
 
-[Data](#data)
-- Check for development-prod skew	
-- Look at samples of LLM inputs and outputs every day	
+#### [Data](#data)
+- [Check for development-prod skew](#check-for-development-prod-skew)
+- [Look at samples of LLM inputs and outputs every day](#look-at-samples-of-llm-inputs-and-outputs-every-day)
 
-[Working with models](#working-with-models)
-- Generate structured output to ease downstream integration	
-- Migrating prompts across models is a pain in the ass	
-- Version and pin your models	
-- Choose the smallest model that gets the job done	
+#### [Working with models](#working-with-models)
+- [Generate structured output to ease downstream integration](#generate-structured-output-to-ease-downstream-integration)
+- [Migrating prompts across models is a pain in the ass](#migrating-prompts-across-models-is-a-pain-in-the-ass)
+- [Version and pin your models](#version-and-pin-your-models)
+- [Choose the smallest model that gets the job done](#choose-the-smallest-model-that-gets-the-job-done)
 
-[Product](#product)
-- Involve design early and often	
-- Design your UX for Human-In-The-Loop	
-- Prioritize your hierarchy of needs ruthlessly	
-- Calibrate your risk tolerance based on the use case	
+#### [Product](#product)
+- [Involve design early and often](#choose-the-smallest-model-that-gets-the-job-done)
+- [Design your UX for Human-In-The-Loop](#design-your-ux-for-human-in-the-loop)
+- [Prioritize your hierarchy of needs ruthlessly](#prioritize-your-hierarchy-of-needs-ruthlessly)
+- [Calibrate your risk tolerance based on the use case](#calibrate-your-risk-tolerance-based-on-the-use-case)
 
-[Team & Roles](#team--roles)
-- Focus on Process, Not Tools	
-- Always be experimenting	
-- Empower everyone to use new AI technology	
-- Don’t fall into the trap of “AI Engineering is all I need”	
+#### [Team & Roles](#team--roles)
+- [Focus on Process, Not Tools](#focus-on-process-not-tools)
+- [Always be experimenting](#always-be-experimenting)
+- [Empower everyone to use new AI technology](#empower-everyone-to-use-new-ai-technology)
+- [Don’t fall into the trap of “AI Engineering is all I need”](#dont-fall-into-the-trap-of-ai-engineering-is-all-i-need)
 
 ### Strategic	
-No GPUs before PMF
+
+#### No GPUs before PMF
 - Training from scratch (almost) never makes sense
 - Start with inference APIs, but don’t be afraid of self-hosting
 
-Iterate to something great	
+#### Iterate to something great	
 - The model isn’t the product, the system around it is	
 - Build trust by starting small	
 - Build LLMOps, but build it for the right reason: faster iteration	
 
-Start with prompting, evals, and data collection	
+#### Start with prompting, evals, and data collection	 
 - Prompt engineering comes first	
 - Build evals and kickstart a data flywheel	
 - The high-level trend of low-cost cognition
@@ -193,7 +195,7 @@ The other key optimization is the structure of your context. Your bag-of-docs re
 Beyond prompting, another effective way to steer an LLM is by providing knowledge as part of the prompt. This grounds the LLM on the provided context which is then used for in-context learning. This is known as retrieval-augmented generation (RAG). Practitioners have found RAG effective at providing knowledge and improving output, while requiring far less effort and cost compared to finetuning.
 RAG is only as good as the retrieved documents' relevance, density, and detail
 
-### The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors.
+### The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors
 
 The first and most obvious metric is relevance. This is typically quantified via ranking metrics such as [Mean Reciprocal Rank (MRR)](https://en.wikipedia.org/wiki/Mean_reciprocal_rank) or [Normalized Discounted Cumulative Gain (NDCG)](https://en.wikipedia.org/wiki/Discounted_cumulative_gain). MRR evaluates how well a system places the first relevant result in a ranked list while NDCG considers the relevance of all the results and their positions. They measure how good the system is at ranking relevant documents higher and irrelevant documents lower. For example, if we're retrieving user summaries to generate movie review summaries, we'll want to rank reviews for the specific movie higher while excluding reviews for other movies.
 
@@ -203,7 +205,7 @@ Second, we also want to consider information density. If two documents are equal
 
 Finally, consider the level of detail provided in the document. Imagine we're building a RAG system to generate SQL queries from natural language. We could simply provide table schemas with column names as context. But, what if we include column descriptions and some representative values? The additional detail could help the LLM better understand the semantics of the table and thus generate more correct SQL.
 
-### Don’t forget keyword search; use it as a baseline and in hybrid search.
+### Don’t forget keyword search; use it as a baseline and in hybrid search
 
 Given how prevalent the embedding-based RAG demo is, it's easy to forget or overlook the decades of research and solutions in information retrieval.
 
@@ -245,7 +247,7 @@ So don't throw your RAGs in the trash just yet. This pattern will remain useful 
 ## Tuning and optimizing workflows
 Prompting an LLM is just the beginning. To get the most juice out of them, we need to think beyond a single prompt and embrace workflows. For example, how could we split a single complex task into multiple simpler tasks? When is finetuning or caching helpful with increasing performance and reducing latency/cost? In this section, we share proven strategies and real-world examples to help you optimize and build reliable LLM workflows.
 
-### Step-by-step, multi-turn “flows” can give large boosts.
+### Step-by-step, multi-turn “flows” can give large boosts
 
 We already know that by decomposing a single big prompt into multiple smaller prompts, we can achieve better results. An example of this is [AlphaCodium](https://arxiv.org/abs/2401.08500): By switching from a single prompt to a multi-step workflow, they increased GPT-4 accuracy (pass@5) on CodeContests from 19% to 44%. The workflow includes:
 - Reflecting on the problem
@@ -289,7 +291,7 @@ In other words, increasing temperature does not guarantee that the LLM will samp
 
 Additionally, keeping a short list of recent outputs can help prevent redundancy. In our recommended products example, by instructing the LLM to avoid suggesting items from this recent list, or by rejecting and resampling outputs that are similar to recent suggestions, we can further diversify the responses. Another effective strategy is to vary the phrasing used in the prompts. For instance, incorporating phrases like "pick an item that the user would love using regularly" or "select a product that the user would likely recommend to friends" can shift the focus and thereby influence the variety of recommended products.
 
-### Caching is underrated.
+### Caching is underrated
 
 Caching saves cost and eliminates generation latency by removing the need to recompute responses for the same input. Furthermore, if a response has previously been guardrailed, we can serve these vetted responses and reduce the risk of serving harmful or inappropriate content.
 
@@ -395,7 +397,7 @@ While careful prompt engineering can help to some extent, we should complement i
 
 A corollary here is that LLMs may fail to produce outputs when they are expected to. This can happen for various reasons, from straightforward issues like long tail latencies from API providers to more complex ones such as outputs being blocked by content moderation filters. As such, it’s important to consistently log inputs and (potentially a lack of) outputs for debugging and monitoring.
 
-### Hallucinations are a stubborn problem.
+### Hallucinations are a stubborn problem
 
 Unlike content safety or PII defects which have a lot of attention and thus seldom occur, factual inconsistencies are stubbornly persistent and more challenging to detect. They're more common and occur at a baseline rate of 5 - 10%, and from what we've learned from LLM providers, it can be challenging to get it below 2%, even on simple tasks such as summarization.
 
