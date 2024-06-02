@@ -2,7 +2,7 @@
 title: "What We've Learned From A Year of Building with LLMs"
 description: A practical guide to building successful LLM products.
 sidebar: false
-image: images/mkdocs_social_card.png
+image: images/hamel_cover_img.png
 toc: true
 date: 2023-06-08
 author:
