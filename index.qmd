@@ -322,7 +322,7 @@ Unlike content safety or PII defects which have a lot of attention and thus seld
 
 To address this, we can combine prompt engineering (upstream of generation) and factual inconsistency guardrails (downstream of generation). For prompt engineering, techniques like CoT help reduce hallucination by getting the LLM to explain its reasoning before finally returning the output. Then, we can apply a [factual inconsistency guardrail](https://eugeneyan.com/writing/finetuning/) to assess the factuality of summaries and filter or regenerate hallucinations. In some cases, hallucinations can be deterministically detected. When using resources from RAG retrieval, if the output is structured and identifies what the resources are, you should be able to manually verify they’re sourced from the input context.
 
-## Operation: Day-to-day and org concerns
+# Operational: Day-to-day and org concerns
 
 ## Data
 
@@ -503,7 +503,7 @@ Here is a rough progression of the types of roles you need, and when you’ll ne
 
 Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., [hiring an MLE too early](https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/)) or building in the wrong order is a waste of time and money, and causes churn.  Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations. 
 
-## Strategic: Long-term business strategy (pending)
+# Strategic: Long-term business strategy (pending)
 
 PENDING RELEASE (tentatively 6th June)
 
