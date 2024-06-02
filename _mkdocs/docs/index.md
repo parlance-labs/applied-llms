@@ -380,7 +380,7 @@ When working on a new application, it’s tempting to use the biggest, most powe
 
 The benefits of a smaller model are lower latency and cost. While it may be weaker, techniques like chain-of-thought, n-shot prompts, and in-context learning can help smaller models punch above their weight. Beyond LLM APIs, fine-tuning our specific tasks can also help increase performance.
 
-Taken together, a carefully crafted workflow using a smaller model can often match, or even surpass, the output quality of a single large model, while being faster and cheaper. For example, this [tweet]([https://twitter.com/mattshumer_/status/1770823530394833242](https://twitter.com/mattshumer_/status/1770823530394833242)) shares anecdata of how Haiku + 10-shot prompt outperforms zero-shot Opus and GPT-4. In the long term, we expect to see more examples of [flow-engineering]([https://twitter.com/karpathy/status/1748043513156272416](https://twitter.com/karpathy/status/1748043513156272416)) with smaller models as the optimal balance of output quality, latency, and cost.
+Taken together, a carefully crafted workflow using a smaller model can often match, or even surpass, the output quality of a single large model, while being faster and cheaper. For example, this [tweet](https://twitter.com/mattshumer_/status/1770823530394833242) shares anecdata of how Haiku + 10-shot prompt outperforms zero-shot Opus and GPT-4. In the long term, we expect to see more examples of [flow-engineering](https://twitter.com/karpathy/status/1748043513156272416) with smaller models as the optimal balance of output quality, latency, and cost.
 
 As another example, take the humble classification task. Lightweight models like DistilBERT (67M parameters) are a surprisingly strong baseline. The 400M parameter DistilBART is another great option—when finetuned on open-source data, it could [identify hallucinations with an ROC-AUC of 0.84](https://eugeneyan.com/writing/finetuning/), surpassing most LLMs at less than 5% of latency and cost.
 
@@ -509,8 +509,13 @@ PENDING RELEASE (tentatively 6th June)
 
 --- 
 
-### Contact Us
-We would love to hear your thoughts on this post.  You can contact us at [contact@applied-llms.org](mailto:contact@applied-llms.org).  Many of us are open to various forms of consulting and advisory.  You can also find our individual contact information on our [about page](about.qmd).
+### Stay In Touch
+
+We would love to stay in touch with you regarding future blog posts, courses, and activitis.  You can subscribe to your newsletter below:
+
+<script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+
+You can also find our individual contact information on our [about page](about.qmd).
 
 ### Acknowledgements
 This series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far. 
@@ -522,29 +527,4 @@ Finally, we would like to thank all the teams who so generously shared your chal
 ### About the authors
 
 See the [about page](about.qmd) for more information on the authors.
-
-## Backstory
-
-A [couple of friends](about.qmd) and I threw around the idea of writing about our experience with LLMs and AI Engineering (image below). One thing led to another and that's how this three-part series came about. Here, we share our hard-won lessons, and advice to make it easier. This is also cross-posted on O'Reilly. We hope you'll find it useful!
-
-![](images/how-it-started.jpg){width=50%}
-
-<br>
-
-If you found this useful, please cite this write-up as:
-
-> Yan et al. (May 2024). What We've Learned From A Year of Building with LLMs. applied-llms.org.
-
-or
-
-```
-@article{lessons,
-  title   = {What We've Learned From A Year of Building with LLMs},
-  author  = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Liu, Jason and Shankar, Shreya},
-  journal = {applied-llms.org},
-  year    = {2024},
-  month   = {May},
-  url     = {https://applied-llms.org/lessons/}
-}
-```
 

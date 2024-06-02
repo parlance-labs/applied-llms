@@ -682,9 +682,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contact-us" class="md-nav__link">
+  <a href="#stay-in-touch" class="md-nav__link">
     <span class="md-ellipsis">
-      Contact Us
+      Stay In Touch
     </span>
   </a>
   
@@ -710,15 +710,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backstory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backstory
-    </span>
-  </a>
   
 </li>
       
@@ -1211,9 +1202,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contact-us" class="md-nav__link">
+  <a href="#stay-in-touch" class="md-nav__link">
     <span class="md-ellipsis">
-      Contact Us
+      Stay In Touch
     </span>
   </a>
   
@@ -1239,15 +1230,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backstory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backstory
-    </span>
-  </a>
   
 </li>
       
@@ -1477,7 +1459,7 @@ If the temperature is too high, you may get outputs that reference nonexistent p
 <h3 id="choose-the-smallest-model-that-gets-the-job-done">Choose the smallest model that gets the job done</h3>
 <p>When working on a new application, it’s tempting to use the biggest, most powerful model available. But once we’ve established that the task is technically feasible, it’s worth experimenting if a smaller model can achieve comparable results.</p>
 <p>The benefits of a smaller model are lower latency and cost. While it may be weaker, techniques like chain-of-thought, n-shot prompts, and in-context learning can help smaller models punch above their weight. Beyond LLM APIs, fine-tuning our specific tasks can also help increase performance.</p>
-<p>Taken together, a carefully crafted workflow using a smaller model can often match, or even surpass, the output quality of a single large model, while being faster and cheaper. For example, this <a href="[https://twitter.com/mattshumer_/status/1770823530394833242](https://twitter.com/mattshumer_/status/1770823530394833242)">tweet</a> shares anecdata of how Haiku + 10-shot prompt outperforms zero-shot Opus and GPT-4. In the long term, we expect to see more examples of <a href="[https://twitter.com/karpathy/status/1748043513156272416](https://twitter.com/karpathy/status/1748043513156272416)">flow-engineering</a> with smaller models as the optimal balance of output quality, latency, and cost.</p>
+<p>Taken together, a carefully crafted workflow using a smaller model can often match, or even surpass, the output quality of a single large model, while being faster and cheaper. For example, this <a href="https://twitter.com/mattshumer_/status/1770823530394833242">tweet</a> shares anecdata of how Haiku + 10-shot prompt outperforms zero-shot Opus and GPT-4. In the long term, we expect to see more examples of <a href="https://twitter.com/karpathy/status/1748043513156272416">flow-engineering</a> with smaller models as the optimal balance of output quality, latency, and cost.</p>
 <p>As another example, take the humble classification task. Lightweight models like DistilBERT (67M parameters) are a surprisingly strong baseline. The 400M parameter DistilBART is another great option—when finetuned on open-source data, it could <a href="https://eugeneyan.com/writing/finetuning/">identify hallucinations with an ROC-AUC of 0.84</a>, surpassing most LLMs at less than 5% of latency and cost.</p>
 <p>The point is, don’t overlook smaller models. While it’s easy to throw a massive model at every problem, with some creativity and experimentation, we can often find a more efficient solution. </p>
 <h2 id="product">Product</h2>
@@ -1561,32 +1543,17 @@ If the temperature is too high, you may get outputs that reference nonexistent p
 <h2 id="strategic-long-term-business-strategy-pending">Strategic: Long-term business strategy (pending)</h2>
 <p>PENDING RELEASE (tentatively 6th June)</p>
 <hr />
-<h3 id="contact-us">Contact Us</h3>
-<p>We would love to hear your thoughts on this post.  You can contact us at <a href="mailto:contact@applied-llms.org">contact@applied-llms.org</a>.  Many of us are open to various forms of consulting and advisory.  You can also find our individual contact information on our <a href="about.qmd">about page</a>.</p>
+<h3 id="stay-in-touch">Stay In Touch</h3>
+<p>We would love to stay in touch with you regarding future blog posts, courses, and activitis.  You can subscribe to your newsletter below:</p>
+<script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+
+<p>You can also find our individual contact information on our <a href="about.qmd">about page</a>.</p>
 <h3 id="acknowledgements">Acknowledgements</h3>
 <p>This series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far. </p>
 <p>The authors would like to thank Eugene for leading the bulk of the document integration and overall structure in addition to a large proportion of the lessons. Additionally, for primary editing responsibilities and document direction. The authors would like to thank Bryan for the spark that led to this writeup, restructuring the write-up into tactical, operational, and strategic sections and their intros, and for pushing us to think bigger on how we could reach and help the community. The authors would like to thank Charles for his deep dives on cost and LLMOps, as well as weaving the lessons to make them more coherent and tighter—you have him to thank for this being 30 instead of 40 pages! The authors thank Hamel and Jason for their insights from advising clients and being on the front lines, for their broad generalizable learnings from clients, and for deep knowledge of tools. And finally, thank you Shreya for reminding us of the importance of evals and rigorous production practices and for bringing her research and original results.</p>
 <p>Finally, we would like to thank all the teams who so generously shared your challenges and lessons in your own write-ups which we’ve referenced throughout this series, along with the AI communities for your vibrant participation and engagement with this group.</p>
 <h3 id="about-the-authors">About the authors</h3>
 <p>See the <a href="about.qmd">about page</a> for more information on the authors.</p>
-<h2 id="backstory">Backstory</h2>
-<p>A <a href="about.qmd">couple of friends</a> and I threw around the idea of writing about our experience with LLMs and AI Engineering (image below). One thing led to another and that's how this three-part series came about. Here, we share our hard-won lessons, and advice to make it easier. This is also cross-posted on O'Reilly. We hope you'll find it useful!</p>
-<p><img alt="" src="images/how-it-started.jpg" />{width=50%}</p>
-<p><br></p>
-<p>If you found this useful, please cite this write-up as:</p>
-<blockquote>
-<p>Yan et al. (May 2024). What We've Learned From A Year of Building with LLMs. applied-llms.org.</p>
-</blockquote>
-<p>or</p>
-<pre><code>@article{lessons,
-  title   = {What We've Learned From A Year of Building with LLMs},
-  author  = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Liu, Jason and Shankar, Shreya},
-  journal = {applied-llms.org},
-  year    = {2024},
-  month   = {May},
-  url     = {https://applied-llms.org/lessons/}
-}
-</code></pre>
 
 
 
