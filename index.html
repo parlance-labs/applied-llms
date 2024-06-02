@@ -201,7 +201,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#llms-will-return-output-even-when-they-shouldnt" id="toc-llms-will-return-output-even-when-they-shouldnt" class="nav-link" data-scroll-target="#llms-will-return-output-even-when-they-shouldnt">LLMs will return output even when they shouldn’t</a></li>
   <li><a href="#hallucinations-are-a-stubborn-problem" id="toc-hallucinations-are-a-stubborn-problem" class="nav-link" data-scroll-target="#hallucinations-are-a-stubborn-problem">Hallucinations are a stubborn problem</a></li>
   </ul></li>
-  <li><a href="#operation-day-to-day-and-org-concerns" id="toc-operation-day-to-day-and-org-concerns" class="nav-link" data-scroll-target="#operation-day-to-day-and-org-concerns">Operation: Day-to-day and org concerns</a></li>
+  </ul></li>
+  <li><a href="#operational-day-to-day-and-org-concerns" id="toc-operational-day-to-day-and-org-concerns" class="nav-link" data-scroll-target="#operational-day-to-day-and-org-concerns">Operational: Day-to-day and org concerns</a>
+  <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
   <ul class="collapse">
   <li><a href="#check-for-development-prod-skew" id="toc-check-for-development-prod-skew" class="nav-link" data-scroll-target="#check-for-development-prod-skew">Check for development-prod skew</a></li>
@@ -228,12 +230,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#empower-everyone-to-use-new-ai-technology" id="toc-empower-everyone-to-use-new-ai-technology" class="nav-link" data-scroll-target="#empower-everyone-to-use-new-ai-technology">Empower everyone to use new AI technology</a></li>
   <li><a href="#dont-fall-into-the-trap-of-ai-engineering-is-all-i-need" id="toc-dont-fall-into-the-trap-of-ai-engineering-is-all-i-need" class="nav-link" data-scroll-target="#dont-fall-into-the-trap-of-ai-engineering-is-all-i-need">Don’t fall into the trap of “AI Engineering is all I need”</a></li>
   </ul></li>
+  </ul></li>
   <li><a href="#strategic-long-term-business-strategy-pending" id="toc-strategic-long-term-business-strategy-pending" class="nav-link" data-scroll-target="#strategic-long-term-business-strategy-pending">Strategic: Long-term business strategy (pending)</a>
   <ul class="collapse">
   <li><a href="#stay-in-touch" id="toc-stay-in-touch" class="nav-link" data-scroll-target="#stay-in-touch">Stay In Touch</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   <li><a href="#about-the-authors" id="toc-about-the-authors" class="nav-link" data-scroll-target="#about-the-authors">About the authors</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -482,9 +484,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To address this, we can combine prompt engineering (upstream of generation) and factual inconsistency guardrails (downstream of generation). For prompt engineering, techniques like CoT help reduce hallucination by getting the LLM to explain its reasoning before finally returning the output. Then, we can apply a <a href="https://eugeneyan.com/writing/finetuning/">factual inconsistency guardrail</a> to assess the factuality of summaries and filter or regenerate hallucinations. In some cases, hallucinations can be deterministically detected. When using resources from RAG retrieval, if the output is structured and identifies what the resources are, you should be able to manually verify they’re sourced from the input context.</p>
 </section>
 </section>
-<section id="operation-day-to-day-and-org-concerns" class="level2">
-<h2 class="anchored" data-anchor-id="operation-day-to-day-and-org-concerns">Operation: Day-to-day and org concerns</h2>
 </section>
+<section id="operational-day-to-day-and-org-concerns" class="level1">
+<h1>Operational: Day-to-day and org concerns</h1>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>Just as the quality of ingredients determines the dish’s taste, the quality of input data constrains the performance of machine learning systems. In addition, output data is the only way to tell whether the product is working or not. All the authors focus tightly on the data, looking at inputs and outputs for several hours a week to better understand the data distribution: its modes, its edge cases, and the limitations of models of it.</p>
@@ -630,8 +632,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., <a href="https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/">hiring an MLE too early</a>) or building in the wrong order is a waste of time and money, and causes churn.&nbsp; Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations.&nbsp;</p>
 </section>
 </section>
-<section id="strategic-long-term-business-strategy-pending" class="level2">
-<h2 class="anchored" data-anchor-id="strategic-long-term-business-strategy-pending">Strategic: Long-term business strategy (pending)</h2>
+</section>
+<section id="strategic-long-term-business-strategy-pending" class="level1">
+<h1>Strategic: Long-term business strategy (pending)</h1>
 <p>PENDING RELEASE (tentatively 6th June)</p>
 <hr>
 <section id="stay-in-touch" class="level3">
@@ -651,7 +654,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>See the <a href="./about.html">about page</a> for more information on the authors.</p>
 
 
-</section>
 </section>
 </section>
 
