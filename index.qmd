@@ -4,7 +4,7 @@ description: A practical guide to building successful LLM products.
 sidebar: false
 image: images/hamel_cover_img.png
 toc: true
-date: 2023-06-08
+date: 2024-06-08
 author:
     - name: "Eugene Yan"
       url: "https://eugeneyan.com"
