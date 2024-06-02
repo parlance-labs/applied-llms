@@ -530,19 +530,17 @@ See the [about page](about.qmd) for more information on the authors.
 
 If you found this useful, please cite this write-up as:
 
-> Yan, Eugene, Bryan Bischof, Charles Frye, Hamel Husain, Shreya Shankar, and Jason Liu. ‘Applied LLMs - What We’ve Learned From A Year of Building with LLMs’. Applied LLMs, 8 June 2024. https://applied-llms.org/.
+> Yan, Eugene, Bryan Bischof, Charles Frye, Hamel Husain, Shreya Shankar, and Jason Liu. 2024. ‘Applied LLMs - What We’ve Learned From A Year of Building with LLMs’. Applied LLMs. 8 June 2024. https://applied-llms.org/.
 
 or 
 
-```
+```default
 @article{AppliedLLMs2024,
-  title = {Applied {{LLMs}} - {{What We}}'ve {{Learned From A Year}} of {{Building}} with {{LLMs}}},
+  title = {What We've Learned From A Year of Building with LLMs},
   author = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Shankar, Shreya and Liu, Jason},
+  journal = {Applied LLMs},
   year = {2024},
   month = {Jun},
-  journal = {Applied LLMs},
-  urldate = {2024-06-08},
   url = {https://applied-llms.org/}
 }
-
 ```
