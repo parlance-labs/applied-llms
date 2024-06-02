@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Applied LLMs"
-  image: images/mkdocs_social_card.png
+  image: images/hamel_cover_img.png
   favicon: favicon.ico
   twitter-card: true
   margin-footer: |
