@@ -14,10 +14,10 @@ author:
       url: "https://www.linkedin.com/in/charles-frye-38654abb/"
     - name: "Hamel Husain"
       url: "https://hamel.dev"
-    - name: "Shreya Shankar"
-      url: "https://www.sh-reya.com/"
     - name: "Jason Liu"
       url: "https://jxnl.co/"
+    - name: "Shreya Shankar"
+      url: "https://www.sh-reya.com/"
 format:
   html:
     anchor-sections: true
@@ -530,14 +530,14 @@ See the [about page](about.qmd) for more information on the authors.
 
 If you found this useful, please cite this write-up as:
 
-> Yan, Eugene, Bryan Bischof, Charles Frye, Hamel Husain, Shreya Shankar, and Jason Liu. 2024. ‘Applied LLMs - What We’ve Learned From A Year of Building with LLMs’. Applied LLMs. 8 June 2024. https://applied-llms.org/.
+> Yan, Eugene, Bryan Bischof, Charles Frye, Hamel Husain, Jason Liu, and Shreya Shankar. 2024. ‘Applied LLMs - What We’ve Learned From A Year of Building with LLMs’. Applied LLMs. 8 June 2024. https://applied-llms.org/.
 
 or 
 
 ```default
 @article{AppliedLLMs2024,
   title = {What We've Learned From A Year of Building with LLMs},
-  author = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Shankar, Shreya and Liu, Jason},
+  author = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Liu, Jason and Shankar, Shreya},
   journal = {Applied LLMs},
   year = {2024},
   month = {Jun},
