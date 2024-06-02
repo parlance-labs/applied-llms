@@ -511,7 +511,7 @@ PENDING RELEASE (tentatively 6th June)
 
 ### Stay In Touch
 
-We would love to stay in touch with you regarding future blog posts, courses, and activitis.  You can subscribe to your newsletter below:
+If you found this useful and want updates on write-ups, courses, and activities, subscribe below.
 
 <script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
 
