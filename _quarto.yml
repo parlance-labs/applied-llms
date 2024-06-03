@@ -15,8 +15,10 @@ website:
   open-graph: true
   navbar:
     left:
-      - text: About The Authors
+      - text: About
         file: about.qmd
+      - text: Courses
+        file: courses.qmd
   repo-url: https://github.com/parlance-labs/applied-llms
   site-url: https://applied-llms.org
 
