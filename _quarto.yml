@@ -24,7 +24,6 @@ website:
 
 format:
   html:
-    linkcolor: blue
     theme: 
       light: flatly
       dark: darkly
