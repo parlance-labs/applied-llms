@@ -11,11 +11,7 @@ This is built using [Quarto](https://quarto.org/).  After installing Quarto, you
 quarto preview 
 ```
 
-You can deploy the site to GitHub pages with:
-
-```bash
-quarto publish
-```
+When you merge, GitHub Actions will automatically deploy changes.
 
 # Generating Social Card
 
