@@ -21,10 +21,5 @@ You can make a copy of these slides and modify if you like.  The social card is 
 
 # TODOS
 
-- [ ] Add pictures to About page - waiting on Jason, Shreya, Bryan, Charles
-- [x] Setup Domain (Hamel)
 - [ ] Proofread
-- [x] Mailing list
-- [x] Cover Image
-- [x] Favicon
 - [ ] Consulting & Offerings
