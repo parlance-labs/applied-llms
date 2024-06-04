@@ -33,7 +33,7 @@ We've spent the past year building, and have discovered many sharp edges along t
 - [Operational](#operation-day-to-day-and-org-concerns): The organizational, day-to-day concerns of shipping products, and how to build an effective team. For product/technical leaders looking to deploy sustainably and reliably.
 - Strategic: The long-term, big-picture view, with opinionated takes such as "no GPU before PMF" and "focus on the system not the model", and how to iterate. Written with founders and executives in mind.
 
-Our intent is to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.
+We intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.
 
 Ready to ~~delve~~ dive in? Let’s go.
 
@@ -44,7 +44,7 @@ Ready to ~~delve~~ dive in? Let’s go.
 Here, we share best practices for core components of the emerging LLM stack: prompting tips to improve quality and reliability, evaluation strategies to assess output, retrieval-augmented generation ideas to improve grounding, how to design human-in-the-loop workflows, and more. While the technology is still nascent, we trust these lessons are broadly applicable and can help you ship robust LLM applications.
 
 ## Prompting
-We recommend to start with prompting when prototyping new applications. It’s easy to both underestimate and overestimate its importance. It’s underestimated because the right prompting techniques, when used correctly, can get us very far. It’s overestimated because even prompt-based applications require significant engineering around the prompt to work well.
+We recommend starting with prompting when prototyping new applications. It’s easy to both underestimate and overestimate its importance. It’s underestimated because the right prompting techniques, when used correctly, can get us very far. It’s overestimated because even prompt-based applications require significant engineering around the prompt to work well.
 
 ### Focus on getting the most out of fundamental prompting techniques
 
@@ -67,7 +67,7 @@ For example, when asking an LLM to summarize a meeting transcript, we can be exp
 
 Note that in recent times, [some doubt](https://arxiv.org/abs/2405.04776) has been cast on if this technique is as powerful as believed. Additionally, there’s significant debate as to exactly what is going on during inference when Chain-of-Thought is being used. Regardless, this technique is one to experiment with when possible.
 
-Providing relevant resources is a powerful mechanism to expand the model’s knowledge base, reduce hallucinations, and increase the user’s trust. Often accomplished via Retrieval Augmented Generation (RAG), providing the model with snippets of text that it can directly utilize in its response is an essential technique. When providing the relevant resources, it’s not enough to merely include them; don’t forget to tell the model to prioritize their use, refer to them directly, and sometimes to mention when none of the resources are sufficient. These help “ground” agent responses to a corpus of resources. 
+Providing relevant resources is a powerful mechanism to expand the model’s knowledge base, reduce hallucinations, and increase the user’s trust. Often accomplished via Retrieval Augmented Generation (RAG), providing the model with snippets of text that it can directly utilize in its response is an essential technique. When providing the relevant resources, it’s not enough to merely include them; don’t forget to tell the model to prioritize their use, refer to them directly, and to mention when none of the resources are sufficient. These help “ground” agent responses to a corpus of resources. 
 
 ### Structure your inputs and outputs
 
@@ -98,7 +98,7 @@ messages=[
 
 A common anti-pattern / code smell in software is the "[God Object](https://en.wikipedia.org/wiki/God_object)", where we have a single class or function that does everything. The same applies to prompts too.
 
-A prompt typically starts simple: A few sentences of instruction, a couple of examples, and we're good to go. But as we try to improve performance and handle more edge cases, complexity creeps in. More instructions. Multi-step reasoning. Dozens of examples. Before we know it, our initially simple prompt is now a 2,000 token frankenstein. And to add injury to insult, it has worse performance on the more common and straightforward inputs! GoDaddy shared this challenge as their [No. 1 lesson from building with LLMs](https://www.godaddy.com/resources/news/llm-from-the-trenches-10-lessons-learned-operationalizing-models-at-godaddy#h-1-sometimes-one-prompt-isn-t-enough).
+A prompt typically starts simple: A few sentences of instruction, a couple of examples, and we're good to go. But as we try to improve performance and handle more edge cases, complexity creeps in. More instructions. Multi-step reasoning. Dozens of examples. Before we know it, our initially simple prompt is now a 2,000 token Frankenstein. And to add injury to insult, it has worse performance on the more common and straightforward inputs! GoDaddy shared this challenge as their [No. 1 lesson from building with LLMs](https://www.godaddy.com/resources/news/llm-from-the-trenches-10-lessons-learned-operationalizing-models-at-godaddy#h-1-sometimes-one-prompt-isn-t-enough).
 
 Just like how we strive (read: struggle) to keep our systems and code simple, so should we for our prompts. Instead of having a single, catch-all prompt for the meeting transcript summarizer, we can break it into steps:  
 
@@ -112,9 +112,9 @@ As a result, we’ve split our single prompt into multiple prompts that are each
 
 Rethink, and challenge your assumptions about how much context you actually need to send to the agent. Be like Michaelangelo, do not build up your context sculpture—chisel away the superfluous material until the sculpture is revealed. RAG is a popular way to collate all of the potentially relevant blocks of marble, but what are you doing to extract what’s necessary?
 
-We’ve found that taking the final prompt sent to the model—with all of the context construction, and meta-prompting, and RAG results – putting it on a blank page and just reading it, really helps you rethink your context. We have found redundancy, self-contradictory language, and poor formatting using this method. 
+We’ve found that taking the final prompt sent to the model—with all of the context construction, and meta-prompting, and RAG results—putting it on a blank page and just reading it, really helps you rethink your context. We have found redundancy, self-contradictory language, and poor formatting using this method. 
 
-The other key optimization is the structure of your context. If your bag-of-docs representation isn’t helpful for humans, don’t assume it’s any good for agents. Think carefully about how you structure your context to underscore the relationships between parts of it, and make extraction as simple as possible.
+The other key optimization is the structure of your context. If your bag-of-docs representation isn’t helpful for humans, don’t assume it’s any good for agents. Think carefully about how you structure your context to underscore the relationships between parts of it and make extraction as simple as possible.
 
 More [prompting fundamentals](https://eugeneyan.com/writing/prompting/) such as prompting mental model, prefilling, context placement, etc.
 
