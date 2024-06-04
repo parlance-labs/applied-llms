@@ -9,10 +9,6 @@ All of the authors of "What We've Learned From A Year of Building with LLMs" are
 
 All sessions are recorded and available for viewing on-demand. You can [enroll through June 12th, 2024 here](https://maven.com/s/course/58a5d999b1).
 
-## Systematically improving your RAG applications
+## Systematically Improving RAG Applications
 
-If you're a manager or IC looking to systematically improve your RAG applications, take a look at this interest survey - it should take less than 5 minutes. 
-
-We'll cover how to improve feedback capture, understand user queries, and capture areas of improvement on your systems in a data-driven way.
-
-[Take the survey here](https://q7gjsgfstrp.typeform.com/ragcourse)
+Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.
