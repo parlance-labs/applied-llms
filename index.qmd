@@ -526,7 +526,7 @@ PENDING RELEASE (tentatively 6th June)
 
 --- 
 
-### Stay In Touch
+# Stay In Touch
 
 If you found this useful and want updates on write-ups, courses, and activities, subscribe below.
 
@@ -534,14 +534,14 @@ If you found this useful and want updates on write-ups, courses, and activities,
 
 You can also find our individual contact information on our [about page](about.qmd).
 
-### Acknowledgements
+## Acknowledgements
 This series started as a conversation in a group chat, where Bryan quipped that he was inspired to write “A Year of AI Engineering”. Then, ✨magic✨ happened, and we were all inspired to chip in and share what we’ve learned so far. 
 
 The authors would like to thank Eugene for leading the bulk of the document integration and overall structure in addition to a large proportion of the lessons. Additionally, for primary editing responsibilities and document direction. The authors would like to thank Bryan for the spark that led to this writeup, restructuring the write-up into tactical, operational, and strategic sections and their intros, and for pushing us to think bigger on how we could reach and help the community. The authors would like to thank Charles for his deep dives on cost and LLMOps, as well as weaving the lessons to make them more coherent and tighter—you have him to thank for this being 30 instead of 40 pages! The authors thank Hamel and Jason for their insights from advising clients and being on the front lines, for their broad generalizable learnings from clients, and for deep knowledge of tools. And finally, thank you Shreya for reminding us of the importance of evals and rigorous production practices and for bringing her research and original results.
 
 Finally, we would like to thank all the teams who so generously shared your challenges and lessons in your own write-ups which we’ve referenced throughout this series, along with the AI communities for your vibrant participation and engagement with this group.
 
-### About the authors
+## About the authors
 
 See the [about page](about.qmd) for more information on the authors.
 
