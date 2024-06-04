@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#mastering-llms",
+    "href": "courses.html#mastering-llms",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#systematically-improving-rag-applications",
+    "href": "courses.html#systematically-improving-rag-applications",
+    "title": "Courses",
+    "section": "Systematically Improving RAG Applications",
+    "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About The Authors",
@@ -47,27 +68,6 @@
     "title": "About The Authors",
     "section": "Shreya Shankar",
     "text": "Shreya Shankar\n\nShreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW."
-  },
-  {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#mastering-llms",
-    "href": "courses.html#mastering-llms",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#systematically-improving-your-rag-applications",
-    "href": "courses.html#systematically-improving-your-rag-applications",
-    "title": "Courses",
-    "section": "Systematically improving your RAG applications",
-    "text": "Systematically improving your RAG applications\nIf you’re a manager or IC looking to systematically improve your RAG applications, take a look at this interest survey - it should take less than 5 minutes.\nWe’ll cover how to improve feedback capture, understand user queries, and capture areas of improvement on your systems in a data-driven way.\nTake the survey here"
   },
   {
     "objectID": "index.html",

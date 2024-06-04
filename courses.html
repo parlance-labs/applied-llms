@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -139,7 +139,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#mastering-llms" id="toc-mastering-llms" class="nav-link active" data-scroll-target="#mastering-llms">Mastering LLMs</a></li>
-  <li><a href="#systematically-improving-your-rag-applications" id="toc-systematically-improving-your-rag-applications" class="nav-link" data-scroll-target="#systematically-improving-your-rag-applications">Systematically improving your RAG applications</a></li>
+  <li><a href="#systematically-improving-rag-applications" id="toc-systematically-improving-rag-applications" class="nav-link" data-scroll-target="#systematically-improving-rag-applications">Systematically Improving RAG Applications</a></li>
   </ul>
 </nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -177,11 +177,9 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <p>All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course <a href="https://maven.com/s/course/58a5d999b1">Mastering LLMs</a>. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.</p>
 <p>All sessions are recorded and available for viewing on-demand. You can <a href="https://maven.com/s/course/58a5d999b1">enroll through June 12th, 2024 here</a>.</p>
 </section>
-<section id="systematically-improving-your-rag-applications" class="level2">
-<h2 class="anchored" data-anchor-id="systematically-improving-your-rag-applications">Systematically improving your RAG applications</h2>
-<p>If you’re a manager or IC looking to systematically improve your RAG applications, take a look at this interest survey - it should take less than 5 minutes.</p>
-<p>We’ll cover how to improve feedback capture, understand user queries, and capture areas of improvement on your systems in a data-driven way.</p>
-<p><a href="https://q7gjsgfstrp.typeform.com/ragcourse">Take the survey here</a></p>
+<section id="systematically-improving-rag-applications" class="level2">
+<h2 class="anchored" data-anchor-id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
+<p>Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief <a href="https://q7gjsgfstrp.typeform.com/ragcourse">interest survey</a> (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.</p>
 
 
 </section>
@@ -410,6 +408,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/applied-llms\.org");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -444,7 +460,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -492,7 +512,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
