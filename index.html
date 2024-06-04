@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -309,28 +309,45 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <li><a href="#operation-day-to-day-and-org-concerns">Operational</a>: The organizational, day-to-day concerns of shipping products, and how to build an effective team. For product/technical leaders looking to deploy sustainably and reliably.</li>
 <li>Strategic: The long-term, big-picture view, with opinionated takes such as “no GPU before PMF” and “focus on the system not the model”, and how to iterate. Written with founders and executives in mind.</li>
 </ul>
-<p>Our intent is to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.</p>
+<p>We intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.</p>
 <p>Ready to <del>delve</del> dive in? Let’s go.</p>
 <hr>
 <section id="tactical-nuts-bolts-of-working-with-llms" class="level1">
 <h1>Tactical: Nuts &amp; bolts of working with LLMs</h1>
-<p>In this section, we share some best practices for the core components of the emerging LLM stack: prompting tips to improve quality and reliability, evaluation strategies to assess output, retrieval-augmented generation ideas to improve grounding, and more. We’ll also explore how to design human-in-the-loop workflows. While the technology is still rapidly developing, we hope that these lessons, the by-product of countless experiments we’ve collectively run, will stand the test of time and help you build and ship robust LLM applications.</p>
+<p>Here, we share best practices for core components of the emerging LLM stack: prompting tips to improve quality and reliability, evaluation strategies to assess output, retrieval-augmented generation ideas to improve grounding, how to design human-in-the-loop workflows, and more. While the technology is still nascent, we trust these lessons are broadly applicable and can help you ship robust LLM applications.</p>
 <section id="prompting" class="level2">
 <h2 class="anchored" data-anchor-id="prompting">Prompting</h2>
-<p>We recommend starting with prompting when developing new applications. It’s easy to both underestimate and overestimate its importance. It’s underestimated because the right prompting techniques, when used correctly, can get us very far. It’s overestimated because even prompt-based applications require significant engineering around the prompt to work well.</p>
+<p>We recommend starting with prompting when prototyping new applications. It’s easy to both underestimate and overestimate its importance. It’s underestimated because the right prompting techniques, when used correctly, can get us very far. It’s overestimated because even prompt-based applications require significant engineering around the prompt to work well.</p>
 <section id="focus-on-getting-the-most-out-of-fundamental-prompting-techniques" class="level3">
 <h3 class="anchored" data-anchor-id="focus-on-getting-the-most-out-of-fundamental-prompting-techniques">Focus on getting the most out of fundamental prompting techniques</h3>
 <p>A few prompting techniques have consistently helped with improving performance across a variety of models and tasks: n-shot prompts + in-context learning, chain-of-thought, and providing relevant resources.</p>
-<p>The idea of in-context learning via n-shot prompts is to provide the LLM with a few examples that demonstrate the task and align outputs to our expectations. A few tips: - If n is too low, the model may over-anchor on those specific examples, hurting its ability to generalize. As a rule of thumb, aim for n ≥ 5. Don’t be afraid to go as high as a few dozen. - Examples should be representative of the expected input distribution. If you’re building a movie summarizer, include samples from different genres in roughly the same proportion you’d expect to see in practice. - You don’t necessarily need to provide the full input-output pairs. In many cases, examples of desired outputs are sufficient. - If using an LLM which supports tool use, your n-shot examples should also use the tools you want the agent to use.</p>
-<p>In Chain-of-Thought (CoT) prompting, we encourage the LLM to explain its thought process before returning the final answer. Think of it as providing the LLM with a sketchpad so it doesn’t have to do it all in memory. The original approach was to simply add the phrase “Let’s think step-by-step” as part of the instructions, but, we’ve found it helpful to make the CoT more specific, where adding specificity via an extra sentence or two often reduces hallucination rates significantly. For example, when asking an LLM to summarize a meeting transcript, we can be explicit about the steps, such as: - First, list out the key decisions, follow-up items, and associated owners in a sketchpad. - Then, check that the details in the sketchpad are factually consistent with the transcript. - Finally, synthesize the key points into a concise summary.</p>
+<p>The idea of in-context learning via n-shot prompts is to provide the LLM with examples that demonstrate the task and align outputs to our expectations. A few tips:</p>
+<ul>
+<li>If n is too low, the model may over-anchor on those specific examples, hurting its ability to generalize. As a rule of thumb, aim for n ≥ 5. Don’t be afraid to go as high as a few dozen.<br>
+</li>
+<li>Examples should be representative of the prod distribution. If you’re building a movie summarizer, include samples from different genres in roughly the same proportion you’d expect to see in practice.<br>
+</li>
+<li>You don’t always need to provide the input-output pairs; examples of desired outputs may be sufficient.<br>
+</li>
+<li>If you plan for the LLM to use tools, include examples of using those tools.</li>
+</ul>
+<p>In Chain-of-Thought (CoT) prompting, we encourage the LLM to explain its thought process before returning the final answer. Think of it as providing the LLM with a sketchpad so it doesn’t have to do it all in memory. The original approach was to simply add the phrase “Let’s think step by step” as part of the instructions, but, we’ve found it helpful to make the CoT more specific, where adding specificity via an extra sentence or two often reduces hallucination rates significantly.</p>
+<p>For example, when asking an LLM to summarize a meeting transcript, we can be explicit about the steps:</p>
+<ul>
+<li>First, list out the key decisions, follow-up items, and associated owners in a sketchpad.<br>
+</li>
+<li>Then, check that the details in the sketchpad are factually consistent with the transcript.<br>
+</li>
+<li>Finally, synthesize the key points into a concise summary.</li>
+</ul>
 <p>Note that in recent times, <a href="https://arxiv.org/abs/2405.04776">some doubt</a> has been cast on if this technique is as powerful as believed. Additionally, there’s significant debate as to exactly what is going on during inference when Chain-of-Thought is being used. Regardless, this technique is one to experiment with when possible.</p>
-<p>Providing relevant resources is a powerful mechanism to expand the model’s knowledge base, reduce hallucinations, and increase the user’s trust. Often accomplished via Retrieval Augmented Generation (RAG), providing the model with snippets of text that it can directly utilize in its response is an essential technique. When providing the relevant resources, it’s not enough to merely include them; don’t forget to tell the model to prioritize their use, refer to them directly, and sometimes to mention when none of the resources are sufficient. These help “ground” agent responses to a corpus of resources.</p>
+<p>Providing relevant resources is a powerful mechanism to expand the model’s knowledge base, reduce hallucinations, and increase the user’s trust. Often accomplished via Retrieval Augmented Generation (RAG), providing the model with snippets of text that it can directly utilize in its response is an essential technique. When providing the relevant resources, it’s not enough to merely include them; don’t forget to tell the model to prioritize their use, refer to them directly, and to mention when none of the resources are sufficient. These help “ground” agent responses to a corpus of resources.</p>
 </section>
 <section id="structure-your-inputs-and-outputs" class="level3">
 <h3 class="anchored" data-anchor-id="structure-your-inputs-and-outputs">Structure your inputs and outputs</h3>
 <p>Structured input and output help models better understand the input as well as return output that can reliably integrate with downstream systems. Adding serialization formatting to your inputs can help provide more clues to the model as to the relationships between tokens in the context, additional metadata to specific tokens (like types), or relate the request to similar examples in the model’s training data.</p>
-<p>As an example, many questions on the internet about writing SQL begin by specifying the SQL schema. Thus, you may expect that effective prompting for Text-to-SQL should include structured schema definitions; <a href="https://www.researchgate.net/publication/371223615_SQL-PaLM_Improved_Large_Language_ModelAdaptation_for_Text-to-SQL">indeed</a></p>
-<p>Structured output serves a similar purpose, but it also simplifies integration into downstream components of your system. <a href="https://github.com/jxnl/instructor">Instructor</a> and <a href="https://github.com/outlines-dev/outlines">Outlines</a> work well for structured output. (If you’re importing an LLM API SDK, use Instructor; if you’re importing Huggingface for a self-hosted model, use Outlines.) Structured input expresses tasks clearly and resembles how the training data is formatted, increasing the probability of better output.</p>
+<p>As an example, many questions on the internet about writing SQL begin by specifying the SQL schema. Thus, you can expect that effective prompting for Text-to-SQL should include <a href="https://www.researchgate.net/publication/371223615_SQL-PaLM_Improved_Large_Language_ModelAdaptation_for_Text-to-SQL">structured schema definitions</a>.</p>
+<p>Structured input expresses tasks clearly and resembles how the training data is formatted, increasing the probability of better output. Structured output simplifies integration into downstream components of your system. <a href="https://github.com/jxnl/instructor">Instructor</a> and <a href="https://github.com/outlines-dev/outlines">Outlines</a> work well for structured output. (If you’re importing an LLM API SDK, use Instructor; if you’re importing Huggingface for a self-hosted model, use Outlines.)</p>
 <p>When using structured input, be aware that each LLM family has their own preferences. Claude prefers <code>&lt;xml&gt;</code> while GPT favors Markdown and JSON. With XML, you can even pre-fill Claude’s responses by providing a <code>&lt;response&gt;</code> tag like so.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>messages<span class="op">=</span>[</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    {</span>
@@ -348,15 +365,21 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <section id="have-small-prompts-that-do-one-thing-and-only-one-thing-well" class="level3">
 <h3 class="anchored" data-anchor-id="have-small-prompts-that-do-one-thing-and-only-one-thing-well">Have small prompts that do one thing, and only one thing, well</h3>
 <p>A common anti-pattern / code smell in software is the “<a href="https://en.wikipedia.org/wiki/God_object">God Object</a>”, where we have a single class or function that does everything. The same applies to prompts too.</p>
-<p>A prompt typically starts simple: A few sentences of instruction, a couple of examples, and we’re good to go. But as we try to improve performance and handle more edge cases, complexity creeps in. More instructions. Multi-step reasoning. Dozens of examples. Before we know it, our initially simple prompt is now a 2,000 token frankenstein. And to add injury to insult, it has worse performance on the more common and straightforward inputs! GoDaddy shared this challenge as their <a href="https://www.godaddy.com/resources/news/llm-from-the-trenches-10-lessons-learned-operationalizing-models-at-godaddy#h-1-sometimes-one-prompt-isn-t-enough">No.&nbsp;1 lesson from building with LLMs</a>.</p>
-<p>Just like how we strive (read: struggle) to keep our systems and code simple, so should we for our prompts. Instead of having a single, catch-all prompt for the meeting transcript summarizer, we can break it into steps to: - Extract key decisions, action items, and owners into structured format - Check extracted details against the original transcription for consistency - Generate a concise summary from the structured details</p>
+<p>A prompt typically starts simple: A few sentences of instruction, a couple of examples, and we’re good to go. But as we try to improve performance and handle more edge cases, complexity creeps in. More instructions. Multi-step reasoning. Dozens of examples. Before we know it, our initially simple prompt is now a 2,000 token Frankenstein. And to add injury to insult, it has worse performance on the more common and straightforward inputs! GoDaddy shared this challenge as their <a href="https://www.godaddy.com/resources/news/llm-from-the-trenches-10-lessons-learned-operationalizing-models-at-godaddy#h-1-sometimes-one-prompt-isn-t-enough">No.&nbsp;1 lesson from building with LLMs</a>.</p>
+<p>Just like how we strive (read: struggle) to keep our systems and code simple, so should we for our prompts. Instead of having a single, catch-all prompt for the meeting transcript summarizer, we can break it into steps:</p>
+<ul>
+<li>Extract key decisions, action items, and owners into structured format</li>
+<li>Check extracted details against the original transcription for consistency</li>
+<li>Generate a concise summary from the structured details</li>
+</ul>
 <p>As a result, we’ve split our single prompt into multiple prompts that are each simple, focused, and easy to understand. And by breaking them up, we can now iterate and eval each prompt individually.</p>
 </section>
 <section id="craft-your-context-tokens" class="level3">
 <h3 class="anchored" data-anchor-id="craft-your-context-tokens">Craft your context tokens</h3>
-<p>Rethink, and challenge your assumptions about how much context you actually need to send to the agent. Be like Michaelangelo, do not build up your context sculpture – chisel away the superfluous material until the sculpture is revealed. RAG is a popular way to collate all of the potentially relevant blocks of marble, but what are you doing to extract what’s necessary?</p>
-<p>We’ve found that taking the final prompt sent to the model – with all of the context construction, and meta-prompting, and RAG results – putting it on a blank page and just reading it, really helps you rethink your context. We have found redundancy, self-contradictory language, and poor formatting using this method.</p>
-<p>The other key optimization is the structure of your context. Your bag-of-docs representation isn’t helpful for humans, don’t assume it’s any good for agents. Think carefully about how you structure your context to underscore the relationships between parts of it, and make extraction as simple as possible.</p>
+<p>Rethink, and challenge your assumptions about how much context you actually need to send to the agent. Be like Michaelangelo, do not build up your context sculpture—chisel away the superfluous material until the sculpture is revealed. RAG is a popular way to collate all of the potentially relevant blocks of marble, but what are you doing to extract what’s necessary?</p>
+<p>We’ve found that taking the final prompt sent to the model—with all of the context construction, and meta-prompting, and RAG results—putting it on a blank page and just reading it, really helps you rethink your context. We have found redundancy, self-contradictory language, and poor formatting using this method.</p>
+<p>The other key optimization is the structure of your context. If your bag-of-docs representation isn’t helpful for humans, don’t assume it’s any good for agents. Think carefully about how you structure your context to underscore the relationships between parts of it and make extraction as simple as possible.</p>
+<p>More <a href="https://eugeneyan.com/writing/prompting/">prompting fundamentals</a> such as prompting mental model, prefilling, context placement, etc.</p>
 </section>
 </section>
 <section id="information-retrieval-rag" class="level2">
@@ -910,6 +933,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/applied-llms\.org");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -944,7 +985,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -992,7 +1037,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
