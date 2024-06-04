@@ -180,11 +180,13 @@ Finally, there’s cost. During inference, the Transformer’s time complexity s
 So don't throw your RAGs in the trash just yet. This pattern will remain useful even as context sizes grow.
 
 ## Tuning and optimizing workflows
-Prompting an LLM is just the beginning. To get the most juice out of them, we need to think beyond a single prompt and embrace workflows. For example, how could we split a single complex task into multiple simpler tasks? When is finetuning or caching helpful with increasing performance and reducing latency/cost? In this section, we share proven strategies and real-world examples to help you optimize and build reliable LLM workflows.
+
+Prompting an LLM is just the beginning. To get the most juice out of them, we need to think beyond a single prompt and embrace workflows. For example, how could we split a single complex task into multiple simpler tasks? When is finetuning or caching helpful with increasing performance and reducing latency/cost? Here, we share proven strategies and real-world examples to help you optimize and build reliable LLM workflows.
 
 ### Step-by-step, multi-turn “flows” can give large boosts
 
-We already know that by decomposing a single big prompt into multiple smaller prompts, we can achieve better results. An example of this is [AlphaCodium](https://arxiv.org/abs/2401.08500): By switching from a single prompt to a multi-step workflow, they increased GPT-4 accuracy (pass@5) on CodeContests from 19% to 44%. The workflow includes:
+It's common knowledge that decomposing a single big prompt into multiple smaller prompts can achieve better results. For example, [AlphaCodium](https://arxiv.org/abs/2401.08500): By switching from a single prompt to a multi-step workflow, they increased GPT-4 accuracy (pass@5) on CodeContests from 19% to 44%. The workflow includes:
+
 - Reflecting on the problem
 - Reasoning on the public tests
 - Generating possible solutions
@@ -192,35 +194,33 @@ We already know that by decomposing a single big prompt into multiple smaller pr
 - Generating synthetic tests
 - Iterating on the solutions on public and synthetic tests.
 
-Small tasks with clear objectives make for the best agent or flow prompts. It’s not required that every agent prompt requests structured output, but structured outputs help a lot to interface with whatever system is orchestrating the agent’s interactions with the environment.
+Small tasks with clear objectives make for the best agent or flow prompts. It’s not required that every agent prompt requests structured output, but structured outputs help a lot to interface with whatever system is orchestrating the agent’s interactions with the environment. Some things to try:
 
-Some things to try:
-- An explicit planning step, as tightly specified as possible. Consider having [predefined plans to choose from](https://youtu.be/hGXhFa3gzBs?si=gNEGYzux6TuB1del).
-- Rewriting the original user prompts into agent prompts. Be careful, this process is lossy!
-- Agent behaviors as linear chains, DAGs, and State-Machines; different dependency and logic relationships can be more and less appropriate for different scales. Can you squeeze performance optimization out of different task architectures?
+- A tightly-specified, explicit planning step. Also, consider having predefined plans to choose from.
+- Rewriting the original user prompts into agent prompts, though this process may be lossy!
+- Agent behaviors as linear chains, DAGs, and state machines; different dependency and logic relationships can be more and less appropriate for different scales. Can you squeeze performance optimization out of different task architectures?
 - Planning validations; your planning can include instructions on how to evaluate the responses from other agents to make sure the final assembly works well together.
-- Prompt engineering with fixed upstream state—make sure your agent prompts are evaluated against a collection of variants of what may happen before.
+- Prompt engineering with fixed upstream state—make sure your agent prompts are evaluated against a collection of variants of what may have happen before.
 
 ### Prioritize deterministic workflows for now
+
 While AI agents can dynamically react to user requests and the environment, their non-deterministic nature makes them a challenge to deploy. Each step an agent takes has a chance of failing, and the chances of recovering from the error are poor. Thus, the likelihood that an agent completes a multi-step task successfully decreases exponentially as the number of steps increases. As a result, teams building agents find it difficult to deploy reliable agents.
 
-A promising approach is to have agent systems that produce deterministic plans which are then  executed in a structured, reproducible way. In the first step, given a high-level goal or prompt, the agent generates a plan. Then, the plan is executed deterministically. This allows each step to be more predictable and reliable. Benefits include:
+A potential approach is to have agent systems produce deterministic plans which are then executed in a structured, reproducible way. First, given a high-level goal or prompt, the agent generates a plan. Then, the plan is executed deterministically. This allows each step to be more predictable and reliable. Benefits include:
+
 - Generated plans can serve as few-shot samples to prompt or finetune an agent.
-- Deterministic execution makes the system more reliable, and thus easier to test and debug. Furthermore, failures can be traced to the specific steps in the plan.
+- Deterministic execution makes the system more reliable, and thus easier to test and debug. In addition, failures can be traced to the specific steps in the plan.
 - Generated plans can be represented as directed acyclic graphs (DAGs) which are easier, relative to a static prompt, to understand and adapt to new situations.
 
 The most successful agent builders may be those with strong experience managing junior engineers because the process of generating plans is similar to how we instruct and manage juniors. We give juniors clear goals and concrete plans, instead of vague open-ended directions, and we should do the same for our agents too. 
 
-In the end, the key to reliable, working agents will likely be found in adopting more structured, deterministic approaches, as well as collecting data to refine prompts and finetune models.  Without this, we’ll build agents that may work exceptionally well some of the time, but on average, disappoint users which leads to poor retention.
+In the end, the key to reliable, working agents will likely be found in adopting more structured, deterministic approaches, as well as collecting data to refine prompts and finetune models.  Without this, we’ll build agents that may work exceptionally well some of the time, but on average, disappoint users.
 
 ### Getting more diverse outputs beyond temperature
 
 Suppose your task requires diversity in an LLM’s output. Maybe you’re writing an LLM pipeline to suggest products to buy from your catalog given a list of products the user bought previously. When running your prompt multiple times, you might notice that the resulting recommendations are too similar—so you might increase the temperature parameter in your LLM requests.
 
-Briefly, increasing the temperature parameter makes LLM responses more varied. At sampling time, the probability distributions of the next token become flatter, meaning that tokens which are usually less likely get chosen more often. Still, when increasing temperature, you may notice some failure modes related to output diversity. For example,
-Some products from the catalog that could be a good fit may never be output by the LLM.
-The same handful of products might be overrepresented in outputs, if they are highly likely to follow the prompt based on what the LLM has learned at training time.
-If the temperature is too high, you may get outputs that reference nonexistent products (or gibberish!)
+Briefly, increasing the temperature parameter makes LLM responses more varied. At sampling time, the probability distributions of the next token become flatter, meaning that tokens that are usually less likely get chosen more often. Still, when increasing temperature, you may notice some failure modes related to output diversity. For example, some products from the catalog that could be a good fit may never be output by the LLM. The same handful of products might be overrepresented in outputs, if they are highly likely to follow the prompt based on what the LLM has learned at training time. If the temperature is too high, you may get outputs that reference nonexistent products (or gibberish!)
 
 In other words, increasing temperature does not guarantee that the LLM will sample outputs from the probability distribution you expect (e.g., uniform random). Nonetheless, we have other tricks to increase output diversity. The simplest way is to adjust elements within the prompt. For example, if the prompt template includes a list of items, such as historical purchases, shuffling the order of these items each time they're inserted into the prompt can make a significant difference. 
 
@@ -232,17 +232,18 @@ Caching saves cost and eliminates generation latency by removing the need to rec
 
 One straightforward approach to caching is to use unique IDs for the items being processed, such as if we're summarizing new articles or [product reviews](https://www.cnbc.com/2023/06/12/amazon-is-using-generative-ai-to-summarize-product-reviews.html). When a request comes in, we can check to see if a summary already exists in the cache. If so, we can return it immediately; if not, we generate, guardrail, and serve it, and then store it in the cache for future requests.
 
-For more open-ended queries, we can borrow techniques from the field of search, which also leverages caching for open-ended inputs. Features like autocomplete and spelling correction also help normalize user input and thus increase the cache hit rate.
+For more open-ended queries, we can borrow techniques from the field of search, which also leverages caching for open-ended inputs. Features like autocomplete, spelling correction, and suggested queries also help normalize user input and thus increase the cache hit rate.
 
 ### When to finetune
 
 We may have some tasks where even the most cleverly designed prompts fall short. For example, even after significant prompt engineering, our system may still be a ways from returning reliable, high-quality output. If so, then it may be necessary to finetune a model for your specific task. 
 
 Successful examples include:
+
 - [Honeycomb's Natural Language Query Assistant](https://www.honeycomb.io/blog/introducing-query-assistant): Initially, the "programming manual" was provided in the prompt together with n-shot examples for in-context learning. While this worked decently, fine-tuning the model led to better output on the syntax and rules of the domain-specific language.
 - [Rechat's Lucy](https://www.youtube.com/watch?v=B_DMMlDuJB0): The LLM needed to generate responses in a very specific format that combined structured and unstructured data for the frontend to render correctly. Fine-tuning was essential to get it to work consistently.
 
-Nonetheless, while fine-tuning can be effective, it comes with significant costs. We have to annotate fine-tuning data, finetune and evaluate models, and eventually self-host them. Thus, consider if the higher upfront cost is worth it. If prompting gets you 90% of the way there, then fine-tuning may not be worth the investment. However, if we do decide to finetune, to reduce the cost of collecting human annotated data, we can [generate and finetune on synthetic data](https://eugeneyan.com/writing/synthetic/), or [bootstrap on open-source data](https://eugeneyan.com/writing/finetuning/).
+Nonetheless, while fine-tuning can be effective, it comes with significant costs. We have to annotate fine-tuning data, finetune and evaluate models, and eventually self-host them. Thus, consider if the higher upfront cost is worth it. If prompting gets you 90% of the way there, then fine-tuning may not be worth the investment. However, if we do decide to finetune, to reduce the cost of collecting human-annotated data, we can [generate and finetune on synthetic data](https://eugeneyan.com/writing/synthetic/), or [bootstrap on open-source data](https://eugeneyan.com/writing/finetuning/).
 
 ## Evaluation & Monitoring
 Evaluating LLMs can be a minefield. The inputs and the outputs of LLMs are arbitrary text, and the tasks we set them to are varied. Nonetheless, rigorous and thoughtful evals are critical—it’s no coincidence that technical leaders at OpenAI [work on evaluation and give feedback on individual evals](https://twitter.com/eugeneyan/status/1701692908074873036). 
