@@ -126,15 +126,17 @@ More [prompting fundamentals](https://eugeneyan.com/writing/prompting/) such as 
 ## Information Retrieval / RAG
 
 Beyond prompting, another effective way to steer an LLM is by providing knowledge as part of the prompt. This grounds the LLM on the provided context which is then used for in-context learning. This is known as retrieval-augmented generation (RAG). Practitioners have found RAG effective at providing knowledge and improving output, while requiring far less effort and cost compared to finetuning.
-RAG is only as good as the retrieved documents' relevance, density, and detail
 
-### The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors
+
+### RAG is only as good as the retrieved documents' relevance, density, and detail
+
+The quality of your RAG's output is dependent on the quality of retrieved documents, which in turn can be considered along a few factors
 
 The first and most obvious metric is relevance. This is typically quantified via ranking metrics such as [Mean Reciprocal Rank (MRR)](https://en.wikipedia.org/wiki/Mean_reciprocal_rank) or [Normalized Discounted Cumulative Gain (NDCG)](https://en.wikipedia.org/wiki/Discounted_cumulative_gain). MRR evaluates how well a system places the first relevant result in a ranked list while NDCG considers the relevance of all the results and their positions. They measure how good the system is at ranking relevant documents higher and irrelevant documents lower. For example, if we're retrieving user summaries to generate movie review summaries, we'll want to rank reviews for the specific movie higher while excluding reviews for other movies.
 
 Like traditional recommendation systems, the rank of retrieved items will have a significant impact on how the LLM performs on downstream tasks. To measure the impact, run a RAG-based task but with the retrieved items shuffled—how does the RAG output perform?
 
-Second, we also want to consider information density. If two documents are equally relevant, we should prefer one that’s more concise and has lesser extraneous details. Returning to our movie example, we might consider the movie transcript and all user reviews to be relevant in a broad sense. Nonetheless, the top-rated reviews and editorial reviews will likely be more dense in information.
+Second, we also want to consider information density. If two documents are equally relevant, we should prefer one that’s more concise and has fewer extraneous details. Returning to our movie example, we might consider the movie transcript and all user reviews to be relevant in a broad sense. Nonetheless, the top-rated reviews and editorial reviews will likely be more dense in information.
 
 Finally, consider the level of detail provided in the document. Imagine we're building a RAG system to generate SQL queries from natural language. We could simply provide table schemas with column names as context. But, what if we include column descriptions and some representative values? The additional detail could help the LLM better understand the semantics of the table and thus generate more correct SQL.
 
@@ -142,7 +144,7 @@ Finally, consider the level of detail provided in the document. Imagine we're bu
 
 Given how prevalent the embedding-based RAG demo is, it's easy to forget or overlook the decades of research and solutions in information retrieval.
 
-Nonetheless, while embeddings are undoubtedly a powerful tool, they are not the be all and end all. First, while they excel at capturing high-level semantic similarity, they may struggle with more specific, keyword-based queries, like when users search for names (e.g., Ilya), acronyms (e.g., RAG), or IDs (e.g., claude-3-sonnet). Keyword-based search, such as BM25, are explicitly designed for this. And after years of keyword-based search, users have likely taken it for granted and may get frustrated if the document they expect to retrieve isn't being returned. 
+Nonetheless, while embeddings are undoubtedly a powerful tool, they are not the be-all and end-all. First, while they excel at capturing high-level semantic similarity, they may struggle with more specific, keyword-based queries, like when users search for names (e.g., Ilya), acronyms (e.g., RAG), or IDs (e.g., claude-3-sonnet). Keyword-based search, such as BM25, is explicitly designed for this. Finally, after years of keyword-based search, users have likely taken it for granted and may get frustrated if the document they expect to retrieve isn't being returned. 
 
 > Vector embeddings *do not* magically solve search. In fact, the heavy lifting is in the step before you re-rank with semantic similarity search. Making a genuine improvement over BM25 or full-text search is hard. — [Aravind Srinivas, CEO Perplexity.ai](https://x.com/AravSrinivas/status/1737886080555446552)
 
@@ -154,13 +156,13 @@ In most cases, a hybrid will work best: keyword matching for the obvious matches
 
 ### Prefer RAG over fine-tuning for new knowledge
 
-Both RAG and fine-tuning can be used to incorporate new information into LLMs and increase performance on specific tasks. Thus, which should we try first?
+Both RAG and fine-tuning can be used to incorporate new information into LLMs and increase performance on specific tasks. However, which should we prioritize?
 
-Recent research suggests that RAG may have an edge. [One study](https://arxiv.org/abs/2312.05934) compared RAG against unsupervised finetuning (aka continued pretraining), evaluating both on a subset of MMLU and current events. They found that RAG consistently outperformed fine-tuning for knowledge encountered during training as well as entirely new knowledge. In [another paper](https://arxiv.org/abs/2401.08406), they compared RAG against supervised finetuning on an agricultural dataset. Similarly, the performance boost from RAG was greater than fine-tuning, especially for GPT-4 (see Table 20 of the paper).
+Recent research suggests RAG may have an edge. [One study](https://arxiv.org/abs/2312.05934) compared RAG against unsupervised finetuning (aka continued pretraining), evaluating both on a subset of MMLU and current events. They found that RAG consistently outperformed fine-tuning for knowledge encountered during training as well as entirely new knowledge. In [another paper](https://arxiv.org/abs/2401.08406), they compared RAG against supervised finetuning on an agricultural dataset. Similarly, the performance boost from RAG was greater than fine-tuning, especially for GPT-4 (see Table 20).
 
-Beyond improved performance, RAG comes with several practical advantages too. First, compared to continuous pretraining or fine-tuning, it's easier—and cheaper!—to keep retrieval indices up-to-date. Second, if our retrieval indices have problematic documents that contain toxic or biased content, we can easily drop or modify the offending documents.
+Beyond improved performance, RAG has other practical advantages. First, compared to continuous pretraining or fine-tuning, it's easier—and cheaper!—to keep retrieval indices up-to-date. Second, if our retrieval indices have problematic documents that contain toxic or biased content, we can easily drop or modify the offending documents. Consider it an andon cord for [documents that ask us to add glue to pizza](https://x.com/petergyang/status/1793480607198323196).
 
-In addition, the R in RAG provides finer grained control over how we retrieve documents. For example, if we’re hosting a RAG system for multiple organizations, by partitioning the retrieval indices, we can ensure that each organization can only retrieve documents from their own index. This ensures that we don’t inadvertently expose information from one organization to another.
+In addition, the R in RAG provides finer-grained control over how we retrieve documents. For example, if we’re hosting a RAG system for multiple organizations, by partitioning the retrieval indices, we can ensure that each organization can only retrieve documents from their own index. This ensures that we don’t inadvertently expose information from one organization to another.
 
 ### Long-context models won't make RAG obsolete
 
@@ -171,11 +173,11 @@ With Gemini 1.5 providing context windows of up to 10M tokens in size, some have
 
 While it's true that long contexts will be a game-changer for use cases such as analyzing multiple documents or chatting with PDFs, the rumors of RAG's demise are greatly exaggerated.
 
-First, even with a context window of 10M tokens, we'd still need a way to select information to feed into the model. Second, beyond the narrow needle-in-a-haystack eval, we've yet to see convincing data that models can effectively reason over such a large context. Thus, without good retrieval (and ranking), we risk overwhelming the model with distractors, or may even fill the context window with completely irrelevant information.
+First, even with a context size of 10M tokens, we'd still need a way to select relevant context. Second, beyond the narrow needle-in-a-haystack eval, we've yet to see convincing data that models can effectively reason over large context sizes. Thus, without good retrieval (and ranking), we risk overwhelming the model with distractors, or may even fill the context window with completely irrelevant information.
 
-Finally, there’s cost. The Transformer’s inference cost scales quadratically (or linearly in both space and time) with context length. Just because there exists a model that could read your organization’s entire Google Drive contents before answering each question doesn’t mean that’s a good idea. Consider an analogy to how we use RAM: we still read and write from disk, even though there exist compute instances with [RAM running into the tens of terabytes](https://aws.amazon.com/ec2/instance-types/high-memory/).
+Finally, there’s cost. During inference, the Transformer’s time complexity scales linearly with context length. Just because there exists a model that can read your org’s entire Google Drive contents before answering each question doesn’t mean that’s a good idea. Consider an analogy to how we use RAM: we still read and write from disk, even though there exist compute instances with [RAM running into the tens of terabytes](https://aws.amazon.com/ec2/instance-types/high-memory/).
 
-So don't throw your RAGs in the trash just yet. This pattern will remain useful even as context windows grow in size.
+So don't throw your RAGs in the trash just yet. This pattern will remain useful even as context sizes grow.
 
 ## Tuning and optimizing workflows
 Prompting an LLM is just the beginning. To get the most juice out of them, we need to think beyond a single prompt and embrace workflows. For example, how could we split a single complex task into multiple simpler tasks? When is finetuning or caching helpful with increasing performance and reducing latency/cost? In this section, we share proven strategies and real-world examples to help you optimize and build reliable LLM workflows.
