@@ -4,6 +4,7 @@ description: A practical guide to building successful LLM products.
 sidebar: false
 image: images/hamel_cover_img.png
 toc: true
+number-sections: true
 date: 2024-06-08
 author:
     - name: "Eugene Yan"
@@ -21,6 +22,7 @@ author:
 format:
   html:
     anchor-sections: true
+    smooth-scroll: true
     comments:
       utterances:
         repo: parlance-labs/applied-llms
