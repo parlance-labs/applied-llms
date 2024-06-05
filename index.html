@@ -180,7 +180,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tactical-nuts-bolts-of-working-with-llms" id="toc-tactical-nuts-bolts-of-working-with-llms" class="nav-link active" data-scroll-target="#tactical-nuts-bolts-of-working-with-llms"><span class="header-section-number">1</span> Tactical: Nuts &amp; bolts of working with LLMs</a>
+  <li><a href="#tactical-nuts-bolts-of-working-with-llms" id="toc-tactical-nuts-bolts-of-working-with-llms" class="nav-link active" data-scroll-target="#tactical-nuts-bolts-of-working-with-llms"><span class="header-section-number">1</span> Tactical: Nuts &amp; Bolts of Working with LLMs</a>
   <ul class="collapse">
   <li><a href="#prompting" id="toc-prompting" class="nav-link" data-scroll-target="#prompting"><span class="header-section-number">1.1</span> Prompting</a>
   <ul class="collapse">
@@ -216,7 +216,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
   <li><a href="#hallucinations-are-a-stubborn-problem" id="toc-hallucinations-are-a-stubborn-problem" class="nav-link" data-scroll-target="#hallucinations-are-a-stubborn-problem"><span class="header-section-number">1.4.8</span> Hallucinations are a stubborn problem</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#operational-day-to-day-and-org-concerns" id="toc-operational-day-to-day-and-org-concerns" class="nav-link" data-scroll-target="#operational-day-to-day-and-org-concerns"><span class="header-section-number">2</span> Operational: Day-to-day and org concerns</a>
+  <li><a href="#operational-day-to-day-and-org-concerns" id="toc-operational-day-to-day-and-org-concerns" class="nav-link" data-scroll-target="#operational-day-to-day-and-org-concerns"><span class="header-section-number">2</span> Operational: Day-to-day and Org concerns</a>
   <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">2.1</span> Data</a>
   <ul class="collapse">
@@ -314,7 +314,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <p>Ready to <del>delve</del> dive in? Let’s go.</p>
 <hr>
 <section id="tactical-nuts-bolts-of-working-with-llms" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Tactical: Nuts &amp; bolts of working with LLMs</h1>
+<h1 data-number="1"><span class="header-section-number">1</span> Tactical: Nuts &amp; Bolts of Working with LLMs</h1>
 <p>Here, we share best practices for core components of the emerging LLM stack: prompting tips to improve quality and reliability, evaluation strategies to assess output, retrieval-augmented generation ideas to improve grounding, how to design human-in-the-loop workflows, and more. While the technology is still nascent, we trust these lessons are broadly applicable and can help you ship robust LLM applications.</p>
 <section id="prompting" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="prompting"><span class="header-section-number">1.1</span> Prompting</h2>
@@ -561,10 +561,10 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 </section>
 </section>
 <section id="operational-day-to-day-and-org-concerns" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Operational: Day-to-day and org concerns</h1>
+<h1 data-number="2"><span class="header-section-number">2</span> Operational: Day-to-day and Org concerns</h1>
 <section id="data" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="data"><span class="header-section-number">2.1</span> Data</h2>
-<p>Just as the quality of ingredients determines the dish’s taste, the quality of input data constrains the performance of machine learning systems. In addition, output data is the only way to tell whether the product is working or not. All the authors focus tightly on the data, looking at inputs and outputs for several hours a week to better understand the data distribution: its modes, its edge cases, and the limitations of models of it.</p>
+<p>Just as the quality of ingredients determines the taste of a dish, the quality of input data constrains the performance of machine learning systems. In addition, output data is the only way to tell whether the product is working or not. All the authors focus on the data, looking at inputs and outputs for several hours a week to better understand the data distribution: its modes, its edge cases, and the limitations of models of it.</p>
 <section id="check-for-development-prod-skew" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="check-for-development-prod-skew"><span class="header-section-number">2.1.1</span> Check for development-prod skew</h3>
 <p>A common source of errors in traditional machine learning pipelines is <em>train-serve skew</em>. This happens when the data used in training differs from what the model encounters in production. Although we can use LLMs without training or fine-tuning, hence there’s no training set, a similar issue arises with development-prod data skew. Essentially, the data we test our systems on during development should mirror what the systems will face in production. If not, we might find our production accuracy suffering.</p>
