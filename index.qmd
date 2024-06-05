@@ -458,9 +458,9 @@ This aligns with a recent [a16z report](https://a16z.com/generative-ai-enterpris
 
 ## Team & Roles
 
-No job function is easy to define, but writing a job description for the work in this new space is more challenging than others. We’ll forgo venn diagrams of intersecting job titles, or suggestions for job descriptions. We will, however, submit to the existence of a new role—the AI engineer—and discuss its place. Importantly, we’ll discuss the rest of the team and how responsibilities should be assigned.
+No job function is easy to define, but writing a job description for the work in this new space is more challenging than others. We’ll forgo Venn diagrams of intersecting job titles, or suggestions for job descriptions. We will, however, submit to the existence of a new role—the AI engineer—and discuss its place. Importantly, we’ll discuss the rest of the team and how responsibilities should be assigned.
 
-### Focus on process, not tools
+### Focus on the process, not tools
 
 When faced with new paradigms, such as LLMs, software engineers tend to favor tools. As a result, we overlook the problem and process the tool was supposed to solve. In doing so, many engineers assume accidental complexity, which has negative consequences for the team's long-term productivity.
 
@@ -474,11 +474,11 @@ In addition to accidental complexity, tools are often underspecified. For exampl
 
 EvalGen guides the user through a best practice of crafting LLM evaluations, namely:
 
-1. Defining domain-specific tests (bootstrapped automatically from the prompt). These are defined as either assertions with code or with LLM-as-a-Judge.
-2. The importance of aligning the tests with human judgment, so that the user can check that the tests capture the specified criteria.
-3. Iterating on your tests as the system (prompts, etc) changes. 
+- Defining domain-specific tests (bootstrapped automatically from the prompt). These are defined as either assertions with code or with LLM-as-a-Judge.
+- The importance of aligning the tests with human judgment, so that the user can check that the tests capture the specified criteria.
+- Iterating on your tests as the system (prompts, etc) changes. 
   
-EvalGen provides developers with a mental model of the evaluation building process without anchoring them to a specific tool. We have found that after providing AI Engineers with this context, they often decide to select leaner tools or build their own.  
+EvalGen provides developers with a mental model of the evaluation-building process without anchoring them to a specific tool. We have found that after providing AI Engineers with this context, they often decide to select leaner tools or build their own.  
 
 There are too many components of LLMs beyond prompt writing and evaluations to list exhaustively here.  However, it is important that AI Engineers seek to understand the processes before adopting tools.
 
@@ -486,7 +486,7 @@ There are too many components of LLMs beyond prompt writing and evaluations to l
 
 ML products are deeply intertwined with experimentation. Not only the A/B, Randomized Control Trials kind, but the frequent attempts at modifying the smallest possible components of your system, and doing offline evaluation. The reason why everyone is so hot for evals is not actually about trustworthiness and confidence—it’s about enabling experiments! The better your evals, the faster you can iterate on experiments, and thus the faster you can converge on the best version of your system. 
 
-It’s common to try different approaches to solving the same problem because experimentation is so cheap now. The high-cost of collecting data and training a model is minimized—prompt engineering costs little more than human time. Position your team so that everyone is taught the basics of prompt engineering. This encourages everyone to experiment and leads to diverse ideas from across the organization.
+It’s common to try different approaches to solving the same problem because experimentation is so cheap now. The high cost of collecting data and training a model is minimized—prompt engineering costs little more than human time. Position your team so that everyone is taught [the basics of prompt engineering](https://eugeneyan.com/writing/prompting/). This encourages everyone to experiment and leads to diverse ideas from across the organization.
 
 Additionally, don’t only experiment to explore—also use them to exploit! Have a working version of a new task? Consider having someone else on the team approach it differently. Try doing it another way that’ll be faster. Investigate prompt techniques like Chain-of-Thought or Few-Shot to make it higher quality. Don’t let your tooling hold you back on experimentation; if it is, rebuild it, or buy something to make it better. 
 
@@ -496,9 +496,9 @@ Finally, during product/project planning, set aside time for building evals and 
 
 As generative AI increases in adoption, we want the entire team—not just the experts—to understand and feel empowered to use this new technology. There’s no better way to develop intuition for how LLMs work (e.g., latencies, failure modes, UX) than to, well, use them. LLMs are relatively accessible: You don’t need to know how to code to improve performance for a pipeline, and everyone can start contributing via prompt engineering and evals.
 
-A big part of this is education. It can start as simple as the basics of prompt engineering, where techniques like n-shot prompting and CoT help condition the model towards the desired output. Folks who have the knowledge can also educate about the more technical aspects, such as how LLMs are autoregressive in nature. In other words, while input tokens are processed in parallel, output tokens are generated sequentially. As a result, latency is more a function of output length than input length—this is a key consideration when designing UXes and setting performance expectations.
+A big part of this is education. It can start as simple as [the basics of prompt engineering](https://eugeneyan.com/writing/prompting/), where techniques like n-shot prompting and CoT help condition the model towards the desired output. Folks who have the knowledge can also educate about the more technical aspects, such as how LLMs are autoregressive when generating output. In other words, while input tokens are processed in parallel, output tokens are generated sequentially. As a result, latency is more a function of output length than input length—this is a key consideration when designing UXes and setting performance expectations.
 
-We can also go further and provide opportunities for hands-on experimentation and exploration. A hackathon perhaps? While it may seem expensive to have an entire team spend a few days hacking on speculative projects, the outcomes may surprise you. We know of a team that, through a hackathon, accelerated and almost completed their three-year roadmap within a year. Another team had a hackathon that led to paradigm shifting UXes that are now possible thanks to LLMs, which are now prioritized for the year and beyond.
+We can go further and provide opportunities for hands-on experimentation and exploration. A hackathon perhaps? While it may seem expensive to have a team spend a few days hacking on speculative projects, the outcomes may surprise you. We know of a team that, through a hackathon, accelerated and almost completed their three-year roadmap within a year. Another team had a hackathon that led to paradigm-shifting UXes that are now possible thanks to LLMs, which have been prioritized for the year and beyond.
 
 ### Don’t fall into the trap of “AI Engineering is all I need”
 
@@ -515,9 +515,9 @@ For example, evaluation and measurement are crucial for scaling a product beyond
 
 Here is a rough progression of the types of roles you need, and when you’ll need them, throughout the journey of building an AI product:
 
-1. First, focus on building a product. This might include an AI engineer, but it doesn’t have to. AI Engineers are valuable for prototyping and iterating quickly on the product (UX, plumbing, etc). 
-2. Next, create the right foundations by instrumenting your system and collecting data. Depending on the type and scale of data, you might need platform and/or data engineers. You must also have systems for querying and analyzing this data to debug issues.
-3. Next, you will eventually want to optimize your AI system. This doesn’t necessarily involve training models. The basics include steps like designing metrics, building evaluation systems, running experiments, optimizing RAG retrieval, debugging stochastic systems, and more. MLEs are really good at this (though AI engineers can pick them up too). It usually doesn’t make sense to hire an MLE unless you have completed the prerequisite steps.
+- First, focus on building a product. This might include an AI engineer, but it doesn’t have to. AI Engineers are valuable for prototyping and iterating quickly on the product (UX, plumbing, etc). 
+- Next, create the right foundations by instrumenting your system and collecting data. Depending on the type and scale of data, you might need platform and/or data engineers. You must also have systems for querying and analyzing this data to debug issues.
+- Next, you will eventually want to optimize your AI system. This doesn’t necessarily involve training models. The basics include steps like designing metrics, building evaluation systems, running experiments, optimizing RAG retrieval, debugging stochastic systems, and more. MLEs are really good at this (though AI engineers can pick them up too). It usually doesn’t make sense to hire an MLE unless you have completed the prerequisite steps.
 
 Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., [hiring an MLE too early](https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/)) or building in the wrong order is a waste of time and money, and causes churn.  Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations. 
 
