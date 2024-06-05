@@ -522,7 +522,9 @@ Aside from this, you need a domain expert at all times. At small companies, this
 
 # Strategic: Long-term business strategy (pending)
 
-PENDING RELEASE (tentatively 6th June)
+PENDING RELEASE (tentatively 6th June; sneak preview image below)
+
+![](images/models-prices.png)
 
 --- 
 
