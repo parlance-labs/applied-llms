@@ -44,7 +44,7 @@ Ready to ~~delve~~ dive in? Let’s go.
 
 --- 
 
-# Tactical: Nuts & bolts of working with LLMs
+# Tactical: Nuts & Bolts of Working with LLMs
 
 Here, we share best practices for core components of the emerging LLM stack: prompting tips to improve quality and reliability, evaluation strategies to assess output, retrieval-augmented generation ideas to improve grounding, how to design human-in-the-loop workflows, and more. While the technology is still nascent, we trust these lessons are broadly applicable and can help you ship robust LLM applications.
 
@@ -338,11 +338,11 @@ Unlike content safety or PII defects which have a lot of attention and thus seld
 
 To address this, we can combine prompt engineering (upstream of generation) and factual inconsistency guardrails (downstream of generation). For prompt engineering, techniques like CoT help reduce hallucination by getting the LLM to explain its reasoning before finally returning the output. Then, we can apply a [factual inconsistency guardrail](https://eugeneyan.com/writing/finetuning/) to assess the factuality of summaries and filter or regenerate hallucinations. In some cases, hallucinations can be deterministically detected. When using resources from RAG retrieval, if the output is structured and identifies what the resources are, you should be able to manually verify they’re sourced from the input context.
 
-# Operational: Day-to-day and org concerns
+# Operational: Day-to-day and Org concerns
 
 ## Data
 
-Just as the quality of ingredients determines the dish's taste, the quality of input data constrains the performance of machine learning systems. In addition, output data is the only way to tell whether the product is working or not. All the authors focus tightly on the data, looking at inputs and outputs for several hours a week to better understand the data distribution: its modes, its edge cases, and the limitations of models of it.
+Just as the quality of ingredients determines the taste of a dish, the quality of input data constrains the performance of machine learning systems. In addition, output data is the only way to tell whether the product is working or not. All the authors focus on the data, looking at inputs and outputs for several hours a week to better understand the data distribution: its modes, its edge cases, and the limitations of models of it.
 
 ### Check for development-prod skew
 
