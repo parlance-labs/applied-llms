@@ -455,6 +455,7 @@ When deciding on the language model and level of scrutiny of an application, con
 This aligns with a recent [a16z report](https://a16z.com/generative-ai-enterprise-2024/) showing that many companies are moving faster with internal LLM applications compared to external ones (image below). By experimenting with AI for internal productivity, organizations can start capturing value while learning how to manage risk in a more controlled environment. Then, as they gain confidence, they can expand to customer-facing use cases.
 
 ![](https://a16z.com/wp-content/uploads/2024/03/How-willing-are-enterprises-to-use-LLMs-for-different-use-cases_-1-scaled.jpg)
+Proportion of enterprise LLM use across internal and external-facing use cases ([source: a16z report](https://a16z.com/generative-ai-enterprise-2024/))
 
 ## Team & Roles
 
