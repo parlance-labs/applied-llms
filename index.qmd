@@ -452,7 +452,9 @@ If we try to tackle all these requirements at once, we're never going to ship an
 
 When deciding on the language model and level of scrutiny of an application, consider the use case and audience. For a customer-facing chatbot offering medical or financial advice, we’ll need a very high bar for safety and accuracy. Mistakes or bad output could cause real harm and erode trust. But for less critical applications, such as a recommender system, or internal-facing applications like content classification or summarization, excessively strict requirements only slow progress without adding much value.
 
-This aligns with a recent [a16z report](https://a16z.com/generative-ai-enterprise-2024/) showing that many companies are moving faster with internal LLM applications compared to external ones. By experimenting with AI for internal productivity, organizations can start capturing value while learning how to manage risk in a more controlled environment. Then, as they gain confidence, they can expand to customer-facing use cases.
+This aligns with a recent [a16z report](https://a16z.com/generative-ai-enterprise-2024/) showing that many companies are moving faster with internal LLM applications compared to external ones (image below). By experimenting with AI for internal productivity, organizations can start capturing value while learning how to manage risk in a more controlled environment. Then, as they gain confidence, they can expand to customer-facing use cases.
+
+![](https://a16z.com/wp-content/uploads/2024/03/How-willing-are-enterprises-to-use-LLMs-for-different-use-cases_-1-scaled.jpg)
 
 ## Team & Roles
 
