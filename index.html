@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -844,7 +844,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <p>In 1971, the researchers at Xerox PARC predicted the future: the world of networked personal computers that we are now living in. They helped birth that future by playing pivotal roles in the invention of the technologies that made it possible, from Ethernet and graphics rendering to the mouse and the window.</p>
 <p>But they also engaged in a simple exercise: they looked at applications that were very useful (e.g.&nbsp;video displays) but were not yet economical (i.e.&nbsp;enough RAM to drive a video display was many thousands of dollars). Then they looked at historic price trends for that technology (a la Moore’s Law) and predicted when those technologies would become economical.</p>
 <p>We can do the same for LLM technologies, even though we don’t have something quite as clean as transistors per dollar to work with. Take a popular, long-standing benchmark, like the Massively-Multitask Language Understanding dataset, and a consistent input approach (five-shot prompting). Then, compare the cost to run language models with various performance levels on this benchmark over time.</p>
-<p><img src="https://applied-llms.org/images/models-prices.png" class="img-fluid"> Figure. For a fixed cost, capabilities are rapidly increasing. For a fixed capability level, costs are rapidly decreasing. Created by co-author Charles Frye using public data on May 13, 2024.</p>
+<p><img src="images/models-prices.png" class="img-fluid"> Figure. For a fixed cost, capabilities are rapidly increasing. For a fixed capability level, costs are rapidly decreasing. Created by co-author Charles Frye using public data on May 13, 2024.</p>
 <p>In the four years since the launch of OpenAI’s davinci model as an API, the cost of running a model with equivalent performance on that task at the scale of one million tokens (about one hundred copies of this document) has dropped from $20 to less than 10¢ – a halving time of just six months. Similarly, the cost to run Meta’s LLaMA 3 8B, via an API provider or on your own, is just 20¢ per million tokens as of May of 2024, and it has similar performance to OpenAI’s text-davinci-003, the model that enabled ChatGPT. That model also cost about $20 per million tokens when it was released in late November of 2023. That’s two orders of magnitude in just 18 months – the same timeframe in which Moore’s Law predicts a mere doubling.</p>
 <p>Now, let’s consider an application of LLMs that is very useful (powering generative video game characters, a la <a href="https://arxiv.org/abs/2304.03442">Park et al</a>) but is not yet economical (their cost was estimated at $625 per hour <a href="https://arxiv.org/abs/2310.02172">here</a>). Since that paper was published in August of 2023, the cost has dropped roughly one order of magnitude, to $62.50 per hour. We might expect it to drop to $6.25 per hour in another nine months.</p>
 <p>Meanwhile, when Pac-Man was released in 1980, $1 of today’s money would buy you a credit, good to play for a few minutes or tens of minutes – call it six games per hour, or $6 per hour. This napkin math suggests that a compelling LLM-enhanced gaming experience will become economical sometime in 2025.</p>
@@ -1119,6 +1119,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/applied-llms\.org");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1153,7 +1171,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1201,7 +1223,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
