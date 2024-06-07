@@ -1,6 +1,6 @@
 ---
 title: "What We've Learned From A Year of Building with LLMs"
-description: A practical guide to building successful LLM products.
+description: "A practical guide to building successful LLM products, covering the tactical, operational, and strategic."
 sidebar: false
 image: images/hamel_cover_img.png
 toc: true
