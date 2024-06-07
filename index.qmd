@@ -669,7 +669,7 @@ But they also engaged in a simple exercise: they looked at applications that wer
 
 We can do the same for LLM technologies, even though we don’t have something quite as clean as transistors per dollar to work with. Take a popular, long-standing benchmark, like the Massively-Multitask Language Understanding dataset, and a consistent input approach (five-shot prompting). Then, compare the cost to run language models with various performance levels on this benchmark over time.
 
-![](https://applied-llms.org/images/models-prices.png)
+![](images/models-prices.png)
 Figure. For a fixed cost, capabilities are rapidly increasing. For a fixed capability level, costs are rapidly decreasing. Created by co-author Charles Frye using public data on May 13, 2024.
 
 In the four years since the launch of OpenAI’s davinci model as an API, the cost of running a model with equivalent performance on that task at the scale of one million tokens (about one hundred copies of this document) has dropped from $20 to less than 10¢ – a halving time of just six months. Similarly, the cost to run Meta’s LLaMA 3 8B, via an API provider or on your own, is just 20¢ per million tokens as of May of 2024, and it has similar performance to OpenAI’s text-davinci-003, the model that enabled ChatGPT. That model also cost about $20 per million tokens when it was released in late November of 2023. That’s two orders of magnitude in just 18 months – the same timeframe in which Moore’s Law predicts a mere doubling.
