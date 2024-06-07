@@ -6,7 +6,7 @@ title: "About The Authors"
 
 ![](images/eugene.png){width=70 style="float:left"} 
 
-Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He's currently a Senior Applied Scientist at Amazon where he builds [RecSys for millions worldwide](https://eugeneyan.com/speaking/recsys2022-keynote/) worldwide and applies [LLMs to serve customers better](https://eugeneyan.com/speaking/ai-eng-summit/). Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at [eugeneyan.com](https://eugeneyan.com/) and [ApplyingML.com](https://applyingml.com/).
+Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He's currently a Senior Applied Scientist at Amazon where he builds [RecSys for millions worldwide](https://eugeneyan.com/speaking/recsys2022-keynote/) and applies [LLMs to serve customers better](https://eugeneyan.com/speaking/ai-eng-summit/). Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes & speaks about ML, RecSys, LLMs, and engineering at [eugeneyan.com](https://eugeneyan.com/) and [ApplyingML.com](https://applyingml.com/).
 
 ## Bryan Bischof
 
