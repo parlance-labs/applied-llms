@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#mastering-llms",
-    "href": "courses.html#mastering-llms",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#systematically-improving-rag-applications",
-    "href": "courses.html#systematically-improving-rag-applications",
-    "title": "Courses",
-    "section": "Systematically Improving RAG Applications",
-    "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About The Authors",
@@ -70,11 +49,32 @@
     "text": "Shreya Shankar\n\nShreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW."
   },
   {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#mastering-llms",
+    "href": "courses.html#mastering-llms",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 12th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#systematically-improving-rag-applications",
+    "href": "courses.html#systematically-improving-rag-applications",
+    "title": "Courses",
+    "section": "Systematically Improving RAG Applications",
+    "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "What We’ve Learned From A Year of Building with LLMs",
     "section": "",
-    "text": "Also published on O’Reilly Media in three parts: Tactical, Operational, Strategic.\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
+    "text": "Also published on O’Reilly Media in three parts: Tactical, Operational, Strategic. Also see podcast.\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
   },
   {
     "objectID": "index.html#prompting",
