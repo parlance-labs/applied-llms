@@ -1,0 +1,14 @@
+---
+title: "Courses"
+description: "Courses By The Authors"
+---
+
+## Mastering LLMs
+
+All of the authors of "What We've Learned From A Year of Building with LLMs" are also instructors in the course [Mastering LLMs](https://maven.com/s/course/58a5d999b1). Due to its immense popularity, the course became a rolling conference with a variety of external speakers. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.  
+
+All sessions are recorded and available for viewing on-demand. You can [enroll through June 12th, 2024 here](https://maven.com/s/course/58a5d999b1).
+
+## Systematically Improving RAG Applications
+
+Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.

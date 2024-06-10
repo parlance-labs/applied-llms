@@ -18,7 +18,7 @@ website:
     left:
       - text: Courses
         file: courses.qmd
-      - text: About
+      - text: Team
         file: about.qmd
   repo-url: https://github.com/parlance-labs/applied-llms
   site-url: https://applied-llms.org
