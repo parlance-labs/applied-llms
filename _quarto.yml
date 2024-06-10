@@ -21,7 +21,7 @@ website:
       - text: Services
         file: services.qmd
       - text: Job Board
-        href: https://567-labs.notion.site/AI-Job-Board-2434ce1b4cb9443dad60e0d578133135 
+        href: https://jobs.applied-llms.org/ 
       - text: Team
         file: about.qmd
   repo-url: https://github.com/parlance-labs/applied-llms
