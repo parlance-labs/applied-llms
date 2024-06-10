@@ -1,0 +1,41 @@
+---
+title: Consulting
+description: "Consulting services"
+---
+
+## Problems We Solve
+
+You should consider hiring us if:
+
+- You are hitting a plateau in getting your AI to do what you want.
+- Your LLMs need to be cheaper or faster.
+- You are overwhelmed by tools & frameworks.
+- You feel lost on what to prioritize and what experiments you should run.
+- You need outside expertise to evaluate your needs and vet potential talent.
+
+## Services
+
+We offer two types of services:
+
+### 1. Strategic Consulting
+
+We will save your engineering team time and money by steering them away from common pitfalls, selecting the best tools, and walking them through an approach to building AI products. Furthermore, we will introduce you to talent, vendors and partners to accelerate your goals.  
+
+### 2. Comprehensive Consulting
+
+Everything in strategic consulting, plus we build and deploy components of AI products for you.  We will work with your team to understand your needs, build a roadmap, and execute on it.
+
+## Pricing
+
+The cost of our services depends on the scope of the project.  However, the following are typical prices for our services:
+
+- Strategic Consulting: $18,750 / month
+- Comprehensive Consulting: $98,500 / month
+
+To get started, please [fill out this quick form](https://llms.typeform.com/to/M8f89mlM).
+
+## Why Us
+
+We have a [track record](https://applied-llms.org/about.html) of building and deploying AI products in a variety of industries.  We have experience with a wide range of tools and frameworks and can route you to the best expert for your task. 
+
+To get in touch, please fill out [this form](https://llms.typeform.com/to/M8f89mlM).
