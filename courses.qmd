@@ -13,6 +13,6 @@ All sessions are recorded and available for viewing on-demand. You can [enroll t
 
 Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.
 
-## On-Site Workshops For Enterprise Teams
+## Workshops For Enterprise Teams
 
-We offer 2-day, on-site workshops to help your team get up to speed on the fundamentals of AI such as RAG, evals, fine-tuning, tools and more.  To get started, please [fill out this quick form](https://llms.typeform.com/to/joksdY1k).  Workshops start at $115,800.
+We offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, evals, fine-tuning, tools and more.  To get started, please [fill out this quick form](https://llms.typeform.com/to/joksdY1k).  Workshops start at $115,800.
