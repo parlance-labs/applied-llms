@@ -32,7 +32,7 @@ Everything in strategic consulting, plus we build and deploy components of AI pr
 
 ### 3. Workshops For Enterprise Teams
 
-We offer 3-day, on-site workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more.  
+We offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more.  
 
 ## Pricing
 
