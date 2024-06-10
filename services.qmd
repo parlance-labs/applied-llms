@@ -36,6 +36,6 @@ To get started, please [fill out this quick form](https://llms.typeform.com/to/M
 
 ## Why Us
 
-We have a [track record](https://applied-llms.org/about.html) of building and deploying AI products in a variety of industries.  We have experience with a wide range of tools and frameworks and can route you to the best expert for your task. 
+We have a [track record](about.qmd) of building and deploying AI products in a variety of industries.  We have experience with a wide range of tools and frameworks and can route you to the best expert for your task. 
 
 To get in touch, please fill out [this form](https://llms.typeform.com/to/M8f89mlM). If you have questions, you can also reach out to us at `consulting@applied-llms.org`
