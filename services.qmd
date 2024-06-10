@@ -30,7 +30,7 @@ We will save your engineering team time and money by steering them away from com
 
 Everything in strategic consulting, plus we build and deploy components of AI products for you.  We will work with your team to understand your needs, build a roadmap, and execute on it.
 
-### 3. Workshops
+### 3. On-Site Workshops For Enterprise Teams
 
 We offer 2-day, on-site workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more.  
 
