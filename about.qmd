@@ -1,5 +1,6 @@
 ---
 title: "About The Authors"
+metadata-files: ["_subscribe.yml"]
 ---
 
 ## Eugene Yan

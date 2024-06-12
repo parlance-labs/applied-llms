@@ -1,6 +1,8 @@
 ---
 title: Services
 description: "Paid consulting services we offer"
+metadata-files: 
+    - "_subscribe.yml"
 ---
 
 ## Problems We Solve

@@ -1,0 +1,24 @@
+margin-footer: |
+  <div class="margin-subscribe">
+    <p>Join 300+ readers getting updates on how to apply LLMs effectively</p>
+    <script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
+  </div>
+  <style>
+    .margin-subscribe {
+      border: none;
+      /* Same color as header */
+      background-color: #375a7f;
+      padding: 0.5em 0.5em 0 0.5em;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .margin-subscribe p {
+      margin-bottom: 0;
+      font-size: 0.9em;
+      text-align: center;
+      color: white;
+    }
+  </style>

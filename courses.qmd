@@ -1,6 +1,7 @@
 ---
 title: "Courses"
 description: "Courses By The Authors"
+metadata-files: ["_subscribe.yml"]
 ---
 
 ## Mastering LLMs

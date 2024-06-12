@@ -6,6 +6,8 @@ image: images/hamel_cover_img.png
 toc: true
 number-sections: true
 date: 2024-06-08
+metadata-files: 
+    - "_subscribe.yml"
 author:
     - name: "Eugene Yan"
       url: "https://eugeneyan.com"
