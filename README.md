@@ -22,5 +22,5 @@ You can make a copy of these slides and modify if you like.  The social card is 
 
 # TODOS
 
-- [ ] Proofread
-- [ ] Consulting & Offerings
+- [x] Proofread
+- [x] Consulting & Offerings
