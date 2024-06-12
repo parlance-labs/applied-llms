@@ -9,7 +9,7 @@ website:
   twitter-card: true
   margin-footer: |
     <div class="margin-subscribe">
-      <p>Join 300+ readers getting updates on how to apply LLMs effectively!</p>
+      <p>Join 300+ readers getting updates on how to apply LLMs effectively</p>
       <script async data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
     </div>
     <style>
