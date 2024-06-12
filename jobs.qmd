@@ -1,4 +1,5 @@
 ---
+image: /images/jobs_seo.png
 ---
 
 ::: {.column-screen}
