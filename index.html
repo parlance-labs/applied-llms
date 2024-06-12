@@ -164,7 +164,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <span class="menu-text">Services</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./jobs.html"> 
+    <a class="nav-link" href="https://jobs.applied-llms.org/" target="_blank"> 
 <span class="menu-text">Job Board</span></a>
   </li>  
   <li class="nav-item">
@@ -1167,6 +1167,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
