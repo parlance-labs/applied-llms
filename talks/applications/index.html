@@ -82,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-Speaker','listing-Venue','listing-Category','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-title','listing-Speaker','listing-Venue','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-Speaker","listing-Venue","listing-Category","listing-date","listing-description"],
+      searchColumns: ["listing-title","listing-Speaker","listing-Venue","listing-date","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -251,9 +251,6 @@ window.Quarto = {
          <option value="listing-Venue" data-direction="asc">
           Venue
         </option>
-         <option value="listing-Category" data-direction="asc">
-          Category
-        </option>
          <option value="listing-date-sort" data-direction="asc">
           Date - Oldest
         </option>
@@ -283,9 +280,6 @@ window.Quarto = {
 <a class="sort" data-sort="listing-Venue" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Venue</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-Category" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Category</a>
-</th>
-<th>
 <a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
 </th>
 <th>
@@ -294,7 +288,7 @@ window.Quarto = {
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="applications,llm-conf-2024" data-listing-date-sort="1718064000000" data-listing-file-modified-sort="1718256845705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="63" data-listing-word-count-sort="12476" data-listing-title-sort="LLMs on the command line" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="applications,llm-conf-2024" data-listing-date-sort="1718064000000" data-listing-file-modified-sort="1718257584662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="63" data-listing-word-count-sort="12476" data-listing-title-sort="LLMs on the command line" data-listing-filename-sort="index.qmd">
 <td>
 <a href="../../talks/applications/simon_llm_cli/index.html" class="title listing-title">LLMs on the command line</a>
 </td>
@@ -303,9 +297,6 @@ window.Quarto = {
 </td>
 <td>
 <span class="listing-Venue">Mastering LLMs Conf</span>
-</td>
-<td>
-<span class="listing-Category">applications</span>
 </td>
 <td>
 <span class="listing-date">Jun 11, 2024</span>
