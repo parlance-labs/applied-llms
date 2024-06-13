@@ -15,7 +15,7 @@ website:
       - text: Services
         file: services.qmd
       - text: Job Board
-        href: https://jobs.applied-llms.org/
+        href: https://applied-llms.org/jobs
         target: _blank
       - text: Team
         file: about.qmd
