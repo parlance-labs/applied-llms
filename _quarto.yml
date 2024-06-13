@@ -16,7 +16,6 @@ website:
         file: services.qmd
       - text: Job Board
         href: https://applied-llms.org/jobs
-        target: _blank
       - text: Team
         file: about.qmd
   repo-url: https://github.com/parlance-labs/applied-llms

@@ -1,4 +1,6 @@
 ---
+title: "Applied LLMs Job Board"
+description: "Quality opportunities for execs/senior ICs, with a 10-year post-termination expiration period, vetted by the team."
 image: /images/jobs_seo.png
 ---
 
