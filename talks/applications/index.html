@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Examples and best practices of building applications with LLMs">
 
-<title>Applied LLMs - About The Authors</title>
+<title>Applied LLMs - Building Applications</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-Speaker','listing-Venue','listing-Category','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-Speaker","listing-Venue","listing-Category","listing-date","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TL6F6S3QZP"></script>
 
 <script type="text/javascript">
@@ -79,19 +111,44 @@ gtag('js', new Date());
 gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Applied LLMs - About The Authors">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://applied-llms.org/images/hamel_cover_img.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Applied LLMs - Building Applications">
+<meta property="og:description" content="Examples and best practices of building applications with LLMs">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1483922/208359222-2b7e938e-27c4-4556-aacb-f5a81ce77b2d.png">
 <meta property="og:site_name" content="Applied LLMs">
-<meta property="og:image:height" content="540">
-<meta property="og:image:width" content="960">
-<meta name="twitter:title" content="Applied LLMs - About The Authors">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://applied-llms.org/images/hamel_cover_img.png">
-<meta name="twitter:image-height" content="540">
-<meta name="twitter:image-width" content="960">
+<meta name="twitter:title" content="Applied LLMs - Building Applications">
+<meta name="twitter:description" content="Examples and best practices of building applications with LLMs">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/1483922/208359222-2b7e938e-27c4-4556-aacb-f5a81ce77b2d.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -102,7 +159,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Applied LLMs</span>
     </a>
   </div>
@@ -113,15 +170,15 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./courses.html"> 
+    <a class="nav-link" href="../../courses.html"> 
 <span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks/index.html"> 
+    <a class="nav-link" href="../../talks/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./services.html"> 
+    <a class="nav-link" href="../../services.html"> 
 <span class="menu-text">Services</span></a>
   </li>  
   <li class="nav-item">
@@ -129,7 +186,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <span class="menu-text">Job Board</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
 </ul>
@@ -145,53 +202,21 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#eugene-yan" id="toc-eugene-yan" class="nav-link active" data-scroll-target="#eugene-yan">Eugene Yan</a></li>
-  <li><a href="#bryan-bischof" id="toc-bryan-bischof" class="nav-link" data-scroll-target="#bryan-bischof">Bryan Bischof</a></li>
-  <li><a href="#charles-frye" id="toc-charles-frye" class="nav-link" data-scroll-target="#charles-frye">Charles Frye</a></li>
-  <li><a href="#hamel-husain" id="toc-hamel-husain" class="nav-link" data-scroll-target="#hamel-husain">Hamel Husain</a></li>
-  <li><a href="#jason-liu" id="toc-jason-liu" class="nav-link" data-scroll-target="#jason-liu">Jason Liu</a></li>
-  <li><a href="#shreya-shankar" id="toc-shreya-shankar" class="nav-link" data-scroll-target="#shreya-shankar">Shreya Shankar</a></li>
-  </ul>
-</nav>
-    <div class="quarto-margin-footer"><div class="margin-footer-item">
-<div class="margin-subscribe">
-<p>
-Join 2000+ readers getting updates on how to apply LLMs effectively
-</p>
-<script async="" data-uid="b3e2fda9e7" src="https://appliedllms.ck.page/b3e2fda9e7/index.js"></script>
-</div>
-<style>
-  .margin-subscribe {
-    border: none;
-    /* Same color as header */
-    background-color: #375a7f;
-    padding: 0.5em 0.5em 0 0.5em;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .margin-subscribe p {
-    margin-bottom: 0;
-    font-size: 0.9em;
-    text-align: center;
-    color: white;
-  }
-</style>
-</div></div></div>
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About The Authors</h1>
+<h1 class="title">Building Applications</h1>
 </div>
 
+<div>
+  <div class="description">
+    Examples and best practices of building applications with LLMs
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -206,40 +231,95 @@ Join 2000+ readers getting updates on how to apply LLMs effectively
 </header>
 
 
-<section id="eugene-yan" class="level2">
-<h2 class="anchored" data-anchor-id="eugene-yan">Eugene Yan</h2>
-<p><img src="images/eugene.png" class="img-fluid" style="float:left" width="70"></p>
-<p>Eugene Yan designs, builds, and operates machine learning systems that serve customers at scale. He’s currently a Senior Applied Scientist at Amazon where he builds <a href="https://eugeneyan.com/speaking/recsys2022-keynote/">RecSys for millions worldwide</a> and applies <a href="https://eugeneyan.com/speaking/ai-eng-summit/">LLMs to serve customers better</a>. Previously, he led machine learning at Lazada (acquired by Alibaba) and a Healthtech Series A. He writes &amp; speaks about ML, RecSys, LLMs, and engineering at <a href="https://eugeneyan.com/">eugeneyan.com</a> and <a href="https://applyingml.com/">ApplyingML.com</a>.</p>
-</section>
-<section id="bryan-bischof" class="level2">
-<h2 class="anchored" data-anchor-id="bryan-bischof">Bryan Bischof</h2>
-<p><img src="images/bryan.jpg" class="img-fluid" style="float:left" width="70"></p>
-<p>Bryan Bischof is the Head of AI at Hex, where he leads the team of engineers building Magic – the data science and analytics copilot. Bryan has worked all over the data stack leading teams in analytics, machine learning engineering, data platform engineering, and AI engineering. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D.&nbsp;is in pure mathematics.</p>
-</section>
-<section id="charles-frye" class="level2">
-<h2 class="anchored" data-anchor-id="charles-frye">Charles Frye</h2>
-<p><img src="images/charles.jpg" class="img-fluid" style="float:left" width="70"></p>
-<p>Charles Frye teaches people to build AI applications. After publishing research in <a href="https://pubmed.ncbi.nlm.nih.gov/24316346/">psychopharmacology</a> and <a href="https://journals.physiology.org/doi/full/10.1152/jn.00172.2016">neurobiology</a>, he got his Ph.D.&nbsp;at the University of California, Berkeley, for dissertation work on <a href="https://arxiv.org/abs/2003.10397">neural network optimization</a>. He has taught thousands the entire stack of AI application development, from linear algebra fundamentals to GPU arcana and building defensible businesses, through educational and consulting work at Weights and Biases, <a href="https://fullstackdeeplearning.com">Full Stack Deep Learning</a>, and Modal.</p>
-</section>
-<section id="hamel-husain" class="level2">
-<h2 class="anchored" data-anchor-id="hamel-husain">Hamel Husain</h2>
-<p><img src="images/hamel.png" class="img-fluid" style="float:left" width="70"></p>
-<p>Hamel Husain is a machine learning engineer with over 25 years of <a href="https://www.linkedin.com/in/hamelhusain/">experience</a>. He has worked with innovative companies such as Airbnb and GitHub, which included <a href="https://openai.com/index/introducing-text-and-code-embeddings#:~:text=models%20on%20the-,CodeSearchNet,),-evaluation%20suite%20where">early LLM research used by OpenAI</a> for code understanding. He has also led and contributed to numerous popular <a href="https://hamel.dev/oss/opensource.html">open-source machine-learning tools</a>. Hamel is currently an <a href="https://hamel.dev/hire.html">independent consultant</a> helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.</p>
-</section>
-<section id="jason-liu" class="level2">
-<h2 class="anchored" data-anchor-id="jason-liu">Jason Liu</h2>
-<p><img src="images/jason.jpg" class="img-fluid" style="float:left" width="70"></p>
-<p>Jason Liu is a distinguished machine learning <a href="https://jxnl.co/services/">consultant</a> known for leading teams to successfully ship AI products. Jason’s technical expertise covers personalization algorithms, search optimization, synthetic data generation, and MLOps systems. His experience includes companies like Stitch Fix, where he created a recommendation framework and observability tools that handled 350 million daily requests. Additional roles have included Meta, NYU, and startups such as Limitless AI and Trunk Tools.</p>
-</section>
-<section id="shreya-shankar" class="level2">
-<h2 class="anchored" data-anchor-id="shreya-shankar">Shreya Shankar</h2>
-<p><img src="images/shreya.jpg" class="img-fluid" style="float:left" width="70"></p>
-<p>Shreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-Speaker" data-direction="asc">
+          Speaker
+        </option>
+         <option value="listing-Venue" data-direction="asc">
+          Venue
+        </option>
+         <option value="listing-Category" data-direction="asc">
+          Category
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-description" data-direction="asc">
+          Description
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-Speaker" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Speaker</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-Venue" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Venue</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-Category" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Category</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Description</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="applications,llm-conf-2024" data-listing-date-sort="1718064000000" data-listing-file-modified-sort="1718255874400" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="63" data-listing-word-count-sort="12470" data-listing-title-sort="LLMs on the command line" data-listing-filename-sort="index.qmd">
+<td>
+<a href="../../talks/applications/simon_llm_cli/index.html" class="title listing-title">LLMs on the command line</a>
+</td>
+<td>
+<span class="listing-Speaker">Simon Willison</span>
+</td>
+<td>
+<span class="listing-Venue">Mastering LLMs Conference</span>
+</td>
+<td>
+<span class="listing-Category">applications</span>
+</td>
+<td>
+<span class="listing-date">Jun 11, 2024</span>
+</td>
+<td>
+<span class="listing-description">The Unix command-line philosophy has always been about joining different tools together to solve larger problems. LLMs are a fantastic addition to this environment: they can help wire together different tools and can directly participate themselves, processing text directly as part of more complex pipelines. Simon shows how to bring these worlds together, using LLMs - both remote and local - to…</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
