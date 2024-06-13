@@ -178,6 +178,9 @@ llm similar links \
 
 ## Full Transcript
 
+::: {.callout-tip collapse="true"}
+## Expand to see transcript
+
 <br>[0:00] Simon Willison: Hey, hey everyone, it's great to be here. So yeah, the talk today, it's about command line tools and large language models. And effectively the argument I want to make is that the Unix command line dating back probably 50 years now is it turns out the perfect environment to play around with this new cutting edge technology, because the Unix philosophy has always been about tools that output things that get piped into other tools as input. And that's really what a language model is, right?
 <br>[0:27] Simon Willison: An LLM is a, it's effectively a function that you pipe a prompt to, and then you get a response back out, or you pipe a big chunk of context to, and you get a response that you can do things with. So I realized this last year and also realized that nobody had grabbed the namespace on PyPI, the Python Packaging Index, for the term LLM. So I leapt at that. I was like, okay, this is an opportunity to grab a really cool name for something. And I built this…
 <br>[0:54] Simon Willison: LittleTool, which originally was just a command line tool for talking to OpenAI. So you could be in your terminal and you could type LLM, say hi in French, and that would fire it through the OpenAI API and get back response and print it to your terminal. That was all it did. And then over time, as other model providers became interesting, and as local models emerged that you could run on your computer, I realized there was an opportunity to have this tool do way more than that.
@@ -349,3 +352,5 @@ llm similar links \
 <br>[1:06:30] Hugo Bowne-Anderson: Amazing. So everyone, next step, pip install LLM or pipx install LLM and let us know on Discord how you go. I just want to thank everyone for joining once again. And thank you, Simon, for all of your expertise and wisdom. And it's always fun to chat.
 <br>[1:06:46] Simon Willison: Thanks for having me. And I will drop a marked down document with all of the links and demos and things in Discord at some point in the next six hours. So I'll drop that into the Discord channel.
 <br>[1:06:58] Hugo Bowne-Anderson: Fantastic. All right. See you all on Discord. And thanks once again, Simon.
+
+:::
