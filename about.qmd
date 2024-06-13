@@ -25,7 +25,7 @@ Charles Frye teaches people to build AI applications. After publishing research 
 
 ![](images/hamel.png){width=70 style="float:left"} 
 
-Hamel Husain is a machine learning engineer with over 25 years of [experience](https://www.linkedin.com/in/hamelhusain/). He has worked with innovative companies such as Airbnb and GitHub, which included <a href="https://openai.com/index/introducing-text-and-code-embeddings#:~:text=models%20on%20the-,CodeSearchNet,),-evaluation%20suite%20where">early LLM research used by OpenAI</a> for code understanding. He has also led and contributed to numerous popular [open-source machine-learning tools](https://hamel.dev/oss/opensource.html). Hamel is currently an [independent consultant](https://hamel.dev/hire.html) helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.
+[Hamel Husain](https://hamel.dev) is a machine learning engineer with over 25 years of experience. He has worked with innovative companies such as Airbnb and GitHub, which included <a href="https://openai.com/index/introducing-text-and-code-embeddings#:~:text=models%20on%20the-,CodeSearchNet,),-evaluation%20suite%20where">early LLM research used by OpenAI</a> for code understanding. He has also led and contributed to numerous popular [open-source machine-learning tools](https://hamel.dev/oss/opensource.html). Hamel is currently an independent consultant helping companies operationalize Large Language Models (LLMs) to accelerate their AI product journey.
 
 ## Jason Liu
 
