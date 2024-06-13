@@ -2,10 +2,14 @@
 title: LLMs on the command line
 date: 2024-06-11
 Speaker: Simon Willison
-Venue: Mastering LLMs Conference
+Venue: Mastering LLMs Conf
 Category: applications
 abstract: |
     The Unix command-line philosophy has always been about joining different tools together to solve larger problems. LLMs are a fantastic addition to this environment: they can help wire together different tools and can directly participate themselves, processing text directly as part of more complex pipelines. Simon shows how to bring these worlds together, using LLMs - both remote and local - to unlock powerful tools and solve all kinds of interesting productivity and automation problems. 
+
+    Simon will show how to bring these worlds together, using LLMs - both remote and local - to unlock powerful tools and solve all kinds of interesting productivity and automation problems. He'll cover LLM, his plugin-based command-line toolkit for accessing over a hundred different LLMs - and show how it can be used to automate prompts and compare them across different models.
+
+    LLM logs prompts and responses to SQLite, which can then be explored and analyzed further using Datasette. Other CLI tools covered will include ollama, llamafile, shot-scraper, files-to-prompt, ttok and LLM's support for calculating, storing and querying embeddings.
 categories: ["applications", "llm-conf-2024"]
 ---
 
