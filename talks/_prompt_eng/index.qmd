@@ -1,0 +1,10 @@
+---
+title: Prompt Engineering
+search: false
+description: Effective prompt engineering techniques for LLMs
+metadata-files: ["../_listing_meta.yml"]
+listing:
+  contents:
+   - "**index.qmd"
+   - "/*.qmd"
+---

@@ -1,0 +1,11 @@
+---
+id: conf
+title: Talks
+metadata-files: ["_listing_root.yml"]
+listing:
+  contents: 
+   - "/*.qmd"
+   - "/*/index.qmd"
+---
+
+A directory of relevant talks and presentations.  The talks are categorized by the following topics:

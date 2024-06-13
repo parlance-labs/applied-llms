@@ -12,6 +12,8 @@ website:
     left:
       - text: Courses
         file: courses.qmd
+      - text: Talks
+        file: talks/index.qmd
       - text: Services
         file: services.qmd
       - text: Job Board
@@ -20,6 +22,12 @@ website:
         file: about.qmd
   repo-url: https://github.com/parlance-labs/applied-llms
   site-url: https://applied-llms.org
+  # sidebar:
+  #   - title: Talks
+  #     pinned: true
+  #     collapse-level: 1
+  #     style: docked
+  #     contents: talks/**
 
 format:
   html:
