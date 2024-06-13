@@ -1,8 +1,8 @@
 search: false
 image: "https://user-images.githubusercontent.com/1483922/208359222-2b7e938e-27c4-4556-aacb-f5a81ce77b2d.png"
 listing:
-  fields: [title, Speaker, Venue, Category, date, description]
+  fields: [title, Speaker, Venue, date, description]
   type: table
-  sort-ui: [title, Speaker, Venue, Category, date, description]
-  filter-ui: [title, Speaker, Venue, Category, date, description]
+  sort-ui: [title, Speaker, Venue, date, description]
+  filter-ui: [title, Speaker, Venue, date, description]
   max-description-length: 400

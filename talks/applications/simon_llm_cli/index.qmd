@@ -3,7 +3,8 @@ title: LLMs on the command line
 date: 2024-06-11
 Speaker: Simon Willison
 Venue: Mastering LLMs Conf
-Category: applications
+metadata-files: 
+  - "../../../_subscribe.yml"
 abstract: |
     The Unix command-line philosophy has always been about joining different tools together to solve larger problems. LLMs are a fantastic addition to this environment: they can help wire together different tools and can directly participate themselves, processing text directly as part of more complex pipelines. Simon shows how to bring these worlds together, using LLMs - both remote and local - to unlock powerful tools and solve all kinds of interesting productivity and automation problems. 
 
