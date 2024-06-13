@@ -12,8 +12,6 @@ website:
     left:
       - text: Courses
         file: courses.qmd
-      - text: Talks
-        file: talks/index.qmd
       - text: Services
         file: services.qmd
       - text: Job Board
