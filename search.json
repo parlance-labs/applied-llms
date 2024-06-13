@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "services.html",
-    "href": "services.html",
-    "title": "Services",
-    "section": "",
-    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
-  },
-  {
-    "objectID": "services.html#problems-we-solve",
-    "href": "services.html#problems-we-solve",
-    "title": "Services",
-    "section": "",
-    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
-  },
-  {
-    "objectID": "services.html#services",
-    "href": "services.html#services",
-    "title": "Services",
-    "section": "Services",
-    "text": "Services\nWe offer three types of services:\n\n1. Strategic Consulting\nWe will save your engineering team time and money by steering them away from common pitfalls, selecting the best tools, and walking them through an approach to building AI products. Furthermore, we will introduce you to talent, vendors and partners to accelerate your goals.\n\n\n2. Comprehensive Consulting\nEverything in strategic consulting, plus we build and deploy components of AI products for you. We will work with your team to understand your needs, build a roadmap, and execute on it.\n\n\n3. Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more."
-  },
-  {
-    "objectID": "services.html#pricing",
-    "href": "services.html#pricing",
-    "title": "Services",
-    "section": "Pricing",
-    "text": "Pricing\nThe cost of our services depends on the scope of the project. However, the following are typical prices for our services:\n\nStrategic Consulting: $19,750 / month\nWorkshops: $115,800\nComprehensive Consulting: $645,000 total, for an engagement that will last a minimum of 3 months.\n\nTo get started, please fill out this quick form."
-  },
-  {
-    "objectID": "services.html#why-us",
-    "href": "services.html#why-us",
-    "title": "Services",
-    "section": "Why Us",
-    "text": "Why Us\nWe have a track record of building and deploying AI products in a variety of industries. Our services are led by Hamel and Jason, with access to experts in the field including open-source maintainers and operators who are building with AI.\nTo get in touch, please fill out this form. If you have questions, you can also reach out to us at consulting@applied-llms.org"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "What We’ve Learned From A Year of Building with LLMs",
@@ -133,6 +98,69 @@
     "text": "6.1 About the authors\nSee the about page for more information on the authors.\nIf you found this useful, please cite this write-up as:\n\nYan, Eugene, Bryan Bischof, Charles Frye, Hamel Husain, Jason Liu, and Shreya Shankar. 2024. ‘Applied LLMs - What We’ve Learned From A Year of Building with LLMs’. Applied LLMs. 8 June 2024. https://applied-llms.org/.\n\nor\n@article{AppliedLLMs2024,\n  title = {What We've Learned From A Year of Building with LLMs},\n  author = {Yan, Eugene and Bischof, Bryan and Frye, Charles and Husain, Hamel and Liu, Jason and Shankar, Shreya},\n  journal = {Applied LLMs},\n  year = {2024},\n  month = {Jun},\n  url = {https://applied-llms.org/}\n}"
   },
   {
+    "objectID": "services.html",
+    "href": "services.html",
+    "title": "Services",
+    "section": "",
+    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
+  },
+  {
+    "objectID": "services.html#problems-we-solve",
+    "href": "services.html#problems-we-solve",
+    "title": "Services",
+    "section": "",
+    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
+  },
+  {
+    "objectID": "services.html#services",
+    "href": "services.html#services",
+    "title": "Services",
+    "section": "Services",
+    "text": "Services\nWe offer three types of services:\n\n1. Strategic Consulting\nWe will save your engineering team time and money by steering them away from common pitfalls, selecting the best tools, and walking them through an approach to building AI products. Furthermore, we will introduce you to talent, vendors and partners to accelerate your goals.\n\n\n2. Comprehensive Consulting\nEverything in strategic consulting, plus we build and deploy components of AI products for you. We will work with your team to understand your needs, build a roadmap, and execute on it.\n\n\n3. Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more."
+  },
+  {
+    "objectID": "services.html#pricing",
+    "href": "services.html#pricing",
+    "title": "Services",
+    "section": "Pricing",
+    "text": "Pricing\nThe cost of our services depends on the scope of the project. However, the following are typical prices for our services:\n\nStrategic Consulting: $19,750 / month\nWorkshops: $115,800\nComprehensive Consulting: $645,000 total, for an engagement that will last a minimum of 3 months.\n\nTo get started, please fill out this quick form."
+  },
+  {
+    "objectID": "services.html#why-us",
+    "href": "services.html#why-us",
+    "title": "Services",
+    "section": "Why Us",
+    "text": "Why Us\nWe have a track record of building and deploying AI products in a variety of industries. Our services are led by Hamel and Jason, with access to experts in the field including open-source maintainers and operators who are building with AI.\nTo get in touch, please fill out this form. If you have questions, you can also reach out to us at consulting@applied-llms.org"
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 19th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#mastering-llms",
+    "href": "courses.html#mastering-llms",
+    "title": "Courses",
+    "section": "",
+    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 19th, 2024 here."
+  },
+  {
+    "objectID": "courses.html#systematically-improving-rag-applications",
+    "href": "courses.html#systematically-improving-rag-applications",
+    "title": "Courses",
+    "section": "Systematically Improving RAG Applications",
+    "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
+  },
+  {
+    "objectID": "courses.html#workshops-for-enterprise-teams",
+    "href": "courses.html#workshops-for-enterprise-teams",
+    "title": "Courses",
+    "section": "Workshops For Enterprise Teams",
+    "text": "Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, evals, fine-tuning, tools and more. To get started, please fill out this quick form. Workshops start at $115,800."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About The Authors",
@@ -180,33 +208,5 @@
     "title": "About The Authors",
     "section": "Shreya Shankar",
     "text": "Shreya Shankar\n\nShreya Shankar is an ML engineer and PhD student in computer science at UC Berkeley. She was the first ML engineer at 2 startups, building AI-powered products from scratch that serve thousands of users daily. As a researcher, her work focuses on addressing data challenges in production ML systems through a human-centered approach. Her work has appeared in top data management and human-computer interaction venues like VLDB, SIGMOD, CIDR, and CSCW."
-  },
-  {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 19th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#mastering-llms",
-    "href": "courses.html#mastering-llms",
-    "title": "Courses",
-    "section": "",
-    "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are also instructors in the course Mastering LLMs. It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.\nAll sessions are recorded and available for viewing on-demand. You can enroll through June 19th, 2024 here."
-  },
-  {
-    "objectID": "courses.html#systematically-improving-rag-applications",
-    "href": "courses.html#systematically-improving-rag-applications",
-    "title": "Courses",
-    "section": "Systematically Improving RAG Applications",
-    "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
-  },
-  {
-    "objectID": "courses.html#workshops-for-enterprise-teams",
-    "href": "courses.html#workshops-for-enterprise-teams",
-    "title": "Courses",
-    "section": "Workshops For Enterprise Teams",
-    "text": "Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, evals, fine-tuning, tools and more. To get started, please fill out this quick form. Workshops start at $115,800."
   }
 ]
