@@ -46,6 +46,8 @@ The cost of our services depends on the scope of the project.  However, the foll
 
 To get started, please [fill out this quick form](https://llms.typeform.com/to/M8f89mlM).
 
+Money-Back Guarantee: *The quality of our work is guaranteed. If you do not believe we have met mutually established objectives, we will continue to work toward those goals with you for no additional fee. If, after such an additional attempt, you still believe we have not met your objectives, we will refund your fees in total.*
+
 ## Why Us
 
 We have a [track record](about.qmd) of building and deploying AI products in a variety of industries.  Our services are led by Hamel and Jason, with access to experts in the field including open-source maintainers and operators who are building with AI.
