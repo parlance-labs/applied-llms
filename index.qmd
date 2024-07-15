@@ -524,6 +524,8 @@ Here is a rough progression of the types of roles you need, and when you’ll ne
 
 Aside from this, you need a domain expert at all times. At small companies, this would ideally be the founding team—and at bigger companies, product managers can play this role. Being aware of the progression and timing of roles is critical. Hiring folks at the wrong time (e.g., [hiring an MLE too early](https://jxnl.co/writing/2024/04/08/hiring-mle-at-early-stage-companies/)) or building in the wrong order is a waste of time and money, and causes churn.  Furthermore, regularly checking in with an MLE (but not hiring them full-time) during phases 1-2 will help the company build the right foundations. 
 
+More on how to interview and hire ML/AI Engineers [here](https://eugeneyan.com/writing/how-to-interview), where we discuss: (i) what to interview for, (ii) how to conduct phone screens, interview loops, and debriefs, and (iii) tips for interviewers and hiring managers. 
+
 # Strategy: Building with LLMs without Getting Out-Maneuvered
 
 Successful products require thoughtful planning and prioritization, not endless prototyping or following the latest model releases or trends. In this final section, we look around the corners and think about the strategic considerations for building great AI products. We also examine key trade-offs teams will face, like when to build and when to buy, and suggest a “playbook” for early LLM application development strategy.
