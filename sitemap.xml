@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://applied-llms.org/about.html</loc>
-    <lastmod>2024-06-26T00:25:45.488Z</lastmod>
-  </url>
-  <url>
-    <loc>https://applied-llms.org/services.html</loc>
-    <lastmod>2024-06-26T00:25:45.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://applied-llms.org/talks/index.html</loc>
-    <lastmod>2024-06-26T00:25:45.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://applied-llms.org/talks/applications/simon_llm_cli/index.html</loc>
-    <lastmod>2024-06-26T00:25:45.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://applied-llms.org/jobs.html</loc>
-    <lastmod>2024-06-26T00:25:45.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://applied-llms.org/talks/applications/index.html</loc>
-    <lastmod>2024-06-26T00:25:45.500Z</lastmod>
-  </url>
-  <url>
     <loc>https://applied-llms.org/index.html</loc>
-    <lastmod>2024-06-26T00:25:45.500Z</lastmod>
+    <lastmod>2024-07-15T15:49:15.387Z</lastmod>
   </url>
   <url>
     <loc>https://applied-llms.org/courses.html</loc>
-    <lastmod>2024-06-26T00:25:45.488Z</lastmod>
+    <lastmod>2024-07-15T15:49:15.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/jobs.html</loc>
+    <lastmod>2024-07-15T15:49:15.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/talks/applications/index.html</loc>
+    <lastmod>2024-07-15T15:49:15.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/talks/applications/simon_llm_cli/index.html</loc>
+    <lastmod>2024-07-15T15:49:15.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/talks/index.html</loc>
+    <lastmod>2024-07-15T15:49:15.395Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/about.html</loc>
+    <lastmod>2024-07-15T15:49:15.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://applied-llms.org/services.html</loc>
+    <lastmod>2024-07-15T15:49:15.391Z</lastmod>
   </url>
 </urlset>
