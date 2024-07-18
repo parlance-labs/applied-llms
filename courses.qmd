@@ -8,6 +8,8 @@ metadata-files: ["_subscribe.yml"]
 
 All of the authors of "What We've Learned From A Year of Building with LLMs" are also instructors in the course + conference [Mastering LLMs](https://parlance-labs.com/education/). It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.  
 
+**The material is available for free on the [Parlance Labs](https://parlance-labs.com/education/) website.**  The course includes over 30 talks on RAG, evals, fine-tuning, building applications, and more.
+
 ## Systematically Improving RAG Applications
 
 Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.
