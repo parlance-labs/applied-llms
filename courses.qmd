@@ -6,9 +6,7 @@ metadata-files: ["_subscribe.yml"]
 
 ## Mastering LLMs
 
-All of the authors of "What We've Learned From A Year of Building with LLMs" are also instructors in the course [Mastering LLMs](https://maven.com/s/course/58a5d999b1). It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.  
-
-All sessions are recorded and available for viewing on-demand. You can [enroll through June 19th, 2024 here](https://maven.com/s/course/58a5d999b1).
+All of the authors of "What We've Learned From A Year of Building with LLMs" are also instructors in the course + conference [Mastering LLMs](https://parlance-labs.com/education/). It is designed for developers and data scientists who want to learn how to build, deploy, and scale Large Language Models (LLMs) in their organizations.  
 
 ## Systematically Improving RAG Applications
 
