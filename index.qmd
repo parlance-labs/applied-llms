@@ -284,6 +284,8 @@ Here’s an example of a [simple but effective approach](https://hamel.dev/blog/
 
 LLM-as-Judge is not a silver bullet though. There are subtle aspects of language where even the strongest models fail to evaluate reliably. In addition, we've found that [conventional classifiers](https://eugeneyan.com/writing/finetuning/) and reward models can achieve higher accuracy than LLM-as-Judge, and with lower cost and latency. For code generation, LLM-as-Judge can be weaker than more direct evaluation strategies like execution-evaluation.
 
+> [Read more](https://eugeneyan.com/writing/llm-evaluators/) on techniques, alignment workflows, finetuning models, critiques, etc. for LLM-evaluators
+
 ### The “intern test” for evaluating generations
 
 We like to use the following “intern test” when evaluating generations: If you took the exact input to the language model, including the context, and gave it to an average college student in the relevant major as a task, could they succeed? How long would it take?
