@@ -8,10 +8,6 @@ metadata-files: ["_subscribe.yml"]
 
 All of the authors of "What We've Learned From A Year of Building with LLMs" are instructors in an online course covering RAG, fine-tuning, evals, building applications and more.  **The material is [available for free here](https://parlance-labs.com/education/).**
 
-## Systematically Improving RAG Applications
-
-Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.
-
 ## AI Mastery for Busy Executives
 
 A free 8-day email course for executives, where we cover:
@@ -21,8 +17,8 @@ A free 8-day email course for executives, where we cover:
 - A curated list of our preferred AI tools and vendors
 - Real-world case studies
 
-[Sign up here](https://ai-execs.com/).
+**[Sign up here](https://ai-execs.com/).**
 
-## Workshops For Enterprise Teams
+## Systematically Improving RAG Applications
 
-We offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, evals, fine-tuning, tools and more.  To get started, please [fill out this quick form](https://llms.typeform.com/to/joksdY1k).  Workshops start at $115,800.
+Take the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief [interest survey](https://q7gjsgfstrp.typeform.com/ragcourse) (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods.
