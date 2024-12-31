@@ -36,7 +36,7 @@ format:
 **We have a [series of courses](courses.qmd) that cover some of these topics in more depth.** 
 
 1. (Free) [Mastering LLMs](https://hamel.dev/blog/posts/course/)
-2. (Free) [AI Mastery for Busy Executives](https://ai-execs.com)
+2. (Free) [AI Essentials for Executives](https://ai-execs.com)
 3. [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook)
 
 :::
