@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "What We’ve Learned From A Year of Building with LLMs",
     "section": "",
-    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\n(Free) Mastering LLMs\n(Free) AI Essentials for Executives\nSystematically Improving RAG Applications\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
+    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\n(Free) Mastering LLMs\n(Free) AI Essentials for Tech Executives\nSystematically Improving RAG Applications\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
   },
   {
     "objectID": "index.html#prompting",
@@ -161,11 +161,11 @@
     "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are instructors in an online course covering RAG, fine-tuning, evals, building applications and more. The material is available for free here."
   },
   {
-    "objectID": "courses.html#ai-essentials-for-executives",
-    "href": "courses.html#ai-essentials-for-executives",
+    "objectID": "courses.html#ai-essentials-for-tech-executives",
+    "href": "courses.html#ai-essentials-for-tech-executives",
     "title": "Courses",
-    "section": "AI Essentials for Executives",
-    "text": "AI Essentials for Executives\nA free course for executives, where we cover:\n\nThe most common hiring mistakes (and how to avoid them)\nStrategies to drive ROI instead of creating vanity projects\nA curated list of our preferred AI tools and vendors\nReal-world case studies\n\nView the course here."
+    "section": "AI Essentials for Tech Executives",
+    "text": "AI Essentials for Tech Executives\nA free course for executives, where we cover:\n\nThe most common hiring mistakes (and how to avoid them)\nStrategies to drive ROI instead of creating vanity projects\nA curated list of our preferred AI tools and vendors\nReal-world case studies\n\nView the course here."
   },
   {
     "objectID": "courses.html#systematically-improving-rag-applications",
