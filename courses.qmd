@@ -8,16 +8,16 @@ metadata-files: ["_subscribe.yml"]
 
 All of the authors of "What We've Learned From A Year of Building with LLMs" are instructors in an online course covering RAG, fine-tuning, evals, building applications and more.  **The material is [available for free here](https://parlance-labs.com/education/).**
 
-## AI Mastery for Busy Executives
+## AI Essentials for Executives
 
-A free 8-day email course for executives, where we cover:
+A free course for executives, where we cover:
 
 - The most common hiring mistakes (and how to avoid them)
 - Strategies to drive ROI instead of creating vanity projects
 - A curated list of our preferred AI tools and vendors
 - Real-world case studies
 
-**[Sign up here](https://ai-execs.com/).**
+**[View the course here](https://ai-execs.com/).**
 
 ## Systematically Improving RAG Applications
 
