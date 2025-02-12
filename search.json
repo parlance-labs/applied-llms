@@ -1,52 +1,10 @@
 [
   {
-    "objectID": "services.html",
-    "href": "services.html",
-    "title": "Services",
-    "section": "",
-    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
-  },
-  {
-    "objectID": "services.html#problems-we-solve",
-    "href": "services.html#problems-we-solve",
-    "title": "Services",
-    "section": "",
-    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
-  },
-  {
-    "objectID": "services.html#services",
-    "href": "services.html#services",
-    "title": "Services",
-    "section": "Services",
-    "text": "Services\nWe offer three types of services:\n\n1. Strategic Consulting\nWe will save your engineering team time and money by steering them away from common pitfalls, selecting the best tools, and walking them through an approach to building AI products. Furthermore, we will introduce you to talent, vendors and partners to accelerate your goals.\n\n\n2. Comprehensive Consulting\nEverything in strategic consulting, plus we build and deploy components of AI products for you. We will work with your team to understand your needs, build a roadmap, and execute on it.\n\n\n3. Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more."
-  },
-  {
-    "objectID": "services.html#pricing",
-    "href": "services.html#pricing",
-    "title": "Services",
-    "section": "Pricing",
-    "text": "Pricing\nThe cost of our services depends on the scope of the project. However, the following are typical prices for our services:\n\nStrategic Consulting: $183,600 for a 3-month engagement.\n2-day Workshop: $125,800\nComprehensive Consulting: $975,000 total, for an engagement that will last a minimum of 3 months.\n\nAll of our work has a money-back guarantee1. To get started, please fill out this quick form."
-  },
-  {
-    "objectID": "services.html#why-us",
-    "href": "services.html#why-us",
-    "title": "Services",
-    "section": "Why Us",
-    "text": "Why Us\nWe have a track record of building and deploying AI products in a variety of industries. Our services are led by Hamel and Jason, with access to experts in the field including open-source maintainers and operators who are building with AI.\nTo get in touch, please fill out this form. If you have questions, you can also reach out to us at consulting@applied-llms.org"
-  },
-  {
-    "objectID": "services.html#footnotes",
-    "href": "services.html#footnotes",
-    "title": "Services",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe quality of our work is guaranteed. If you do not believe we have met mutually established objectives, we will continue to work toward those goals with you for no additional fee. If, after such an additional attempt, you still believe we have not met your objectives, we will refund your fees in total.↩︎"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "What We’ve Learned From A Year of Building with LLMs",
     "section": "",
-    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\n(Free) Mastering LLMs\n(Free) AI Essentials for Tech Executives\nSystematically Improving RAG Applications\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
+    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\n(Free) Mastering LLMs\n(Free) AI Essentials for Tech Executives\nConsitently Improving Any AI Application With Evals\nSystematically Improving RAG Applications\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
   },
   {
     "objectID": "index.html#prompting",
@@ -161,6 +119,13 @@
     "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are instructors in an online course covering RAG, fine-tuning, evals, building applications and more. The material is available for free here."
   },
   {
+    "objectID": "courses.html#consitently-improving-any-ai-application-with-evals",
+    "href": "courses.html#consitently-improving-any-ai-application-with-evals",
+    "title": "Courses",
+    "section": "Consitently Improving Any AI Application With Evals",
+    "text": "Consitently Improving Any AI Application With Evals\nLearn a systematic approaches for improving AI applications, regardless of the domain or use-case. A 4-week course with weekly live sessions. See the course page here."
+  },
+  {
     "objectID": "courses.html#ai-essentials-for-tech-executives",
     "href": "courses.html#ai-essentials-for-tech-executives",
     "title": "Courses",
@@ -173,6 +138,48 @@
     "title": "Courses",
     "section": "Systematically Improving RAG Applications",
     "text": "Systematically Improving RAG Applications\nTake the next step after Mastering LLMs by enhancing your RAG applications. Complete our brief interest survey (less than 5 minutes) to discover how to improve feedback capture, understand user queries, and identify areas for improvement using data-driven methods."
+  },
+  {
+    "objectID": "services.html",
+    "href": "services.html",
+    "title": "Services",
+    "section": "",
+    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
+  },
+  {
+    "objectID": "services.html#problems-we-solve",
+    "href": "services.html#problems-we-solve",
+    "title": "Services",
+    "section": "",
+    "text": "You should consider hiring us if:\n\nYou feel lost on what to prioritize and what experiments you should run.\n\nGoal: get to an MVP quickly.\n\nYou need your team to get quickly upskilled on AI, and vet potential hires.\n\nGoal: become self-sufficient in months.\n\nYou are hitting a plateau in making your AI better.\n\nGoal: processes to consistently measure & improve your AI.\n\nYour LLMs need to be cheaper or faster.\n\nGoal: tools that help you make the best tradeoffs between performance, cost and latency.\n\nYou are overwhelmed by tools & frameworks.\n\nGoal: curated tools and infrastructure specific to your use case."
+  },
+  {
+    "objectID": "services.html#services",
+    "href": "services.html#services",
+    "title": "Services",
+    "section": "Services",
+    "text": "Services\nWe offer three types of services:\n\n1. Strategic Consulting\nWe will save your engineering team time and money by steering them away from common pitfalls, selecting the best tools, and walking them through an approach to building AI products. Furthermore, we will introduce you to talent, vendors and partners to accelerate your goals.\n\n\n2. Comprehensive Consulting\nEverything in strategic consulting, plus we build and deploy components of AI products for you. We will work with your team to understand your needs, build a roadmap, and execute on it.\n\n\n3. Workshops For Enterprise Teams\nWe offer 3-day workshops to help your team get up to speed on the fundamentals of AI such as RAG, Evals, Fine-Tuning, and more."
+  },
+  {
+    "objectID": "services.html#pricing",
+    "href": "services.html#pricing",
+    "title": "Services",
+    "section": "Pricing",
+    "text": "Pricing\nThe cost of our services depends on the scope of the project. However, the following are typical prices for our services:\n\nStrategic Consulting: $183,600 for a 3-month engagement.\n2-day Workshop: $125,800\nComprehensive Consulting: $975,000 total, for an engagement that will last a minimum of 3 months.\n\nAll of our work has a money-back guarantee1. To get started, please fill out this quick form."
+  },
+  {
+    "objectID": "services.html#why-us",
+    "href": "services.html#why-us",
+    "title": "Services",
+    "section": "Why Us",
+    "text": "Why Us\nWe have a track record of building and deploying AI products in a variety of industries. Our services are led by Hamel and Jason, with access to experts in the field including open-source maintainers and operators who are building with AI.\nTo get in touch, please fill out this form. If you have questions, you can also reach out to us at consulting@applied-llms.org"
+  },
+  {
+    "objectID": "services.html#footnotes",
+    "href": "services.html#footnotes",
+    "title": "Services",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe quality of our work is guaranteed. If you do not believe we have met mutually established objectives, we will continue to work toward those goals with you for no additional fee. If, after such an additional attempt, you still believe we have not met your objectives, we will refund your fees in total.↩︎"
   },
   {
     "objectID": "talks/applications/simon_llm_cli/index.html#chapters",

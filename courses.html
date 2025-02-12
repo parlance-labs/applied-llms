@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-04dd6a5ca28aac96903e51a8fbffbcaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b3883a83b6cdceb4314f965facc5c958.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -147,6 +147,7 @@ gtag('config', 'G-TL6F6S3QZP', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#mastering-llms" id="toc-mastering-llms" class="nav-link active" data-scroll-target="#mastering-llms">Mastering LLMs</a></li>
+  <li><a href="#consitently-improving-any-ai-application-with-evals" id="toc-consitently-improving-any-ai-application-with-evals" class="nav-link" data-scroll-target="#consitently-improving-any-ai-application-with-evals">Consitently Improving Any AI Application With Evals</a></li>
   <li><a href="#ai-essentials-for-tech-executives" id="toc-ai-essentials-for-tech-executives" class="nav-link" data-scroll-target="#ai-essentials-for-tech-executives">AI Essentials for Tech Executives</a></li>
   <li><a href="#systematically-improving-rag-applications" id="toc-systematically-improving-rag-applications" class="nav-link" data-scroll-target="#systematically-improving-rag-applications">Systematically Improving RAG Applications</a></li>
   </ul>
@@ -208,6 +209,10 @@ Join 2000+ readers getting updates on how to apply LLMs effectively
 <section id="mastering-llms" class="level2">
 <h2 class="anchored" data-anchor-id="mastering-llms">Mastering LLMs</h2>
 <p>All of the authors of “What We’ve Learned From A Year of Building with LLMs” are instructors in an online course covering RAG, fine-tuning, evals, building applications and more. <strong>The material is <a href="https://parlance-labs.com/education/">available for free here</a>.</strong></p>
+</section>
+<section id="consitently-improving-any-ai-application-with-evals" class="level2">
+<h2 class="anchored" data-anchor-id="consitently-improving-any-ai-application-with-evals">Consitently Improving Any AI Application With Evals</h2>
+<p>Learn a systematic approaches for improving AI applications, regardless of the domain or use-case. A 4-week course with weekly live sessions. See <a href="https://maven.com/parlance-labs/evals">the course page here</a>.</p>
 </section>
 <section id="ai-essentials-for-tech-executives" class="level2">
 <h2 class="anchored" data-anchor-id="ai-essentials-for-tech-executives">AI Essentials for Tech Executives</h2>
@@ -454,6 +459,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -569,6 +576,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
