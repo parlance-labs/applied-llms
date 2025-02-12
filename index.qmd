@@ -37,6 +37,7 @@ format:
 
 1. (Free) [Mastering LLMs](https://hamel.dev/blog/posts/course/)
 2. (Free) [AI Essentials for Tech Executives](https://ai-execs.com)
+3. [Consitently Improving Any AI Application With Evals](https://maven.com/parlance-labs/evals)
 3. [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook)
 
 :::
