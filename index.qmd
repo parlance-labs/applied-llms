@@ -35,7 +35,7 @@ format:
 
 **We have a [series of courses](courses.qmd) that cover some of these topics in more depth.** 
 
-1. [Consitently Improving Any AI Application With Evals](https://maven.com/parlance-labs/evals)
+1. [Rapidly Improve AI Products With Evals](https://maven.com/parlance-labs/evals)
 2. [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook)
 3. [Mastering LLMs](https://hamel.dev/blog/posts/course/)
 4. [AI Essentials for Tech Executives](https://ai-execs.com)
