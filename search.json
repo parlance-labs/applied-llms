@@ -126,11 +126,11 @@
     "text": "All of the authors of “What We’ve Learned From A Year of Building with LLMs” are instructors in an online course covering RAG, fine-tuning, evals, building applications and more. The material is available for free here."
   },
   {
-    "objectID": "courses.html#consitently-improving-any-ai-application-with-evals",
-    "href": "courses.html#consitently-improving-any-ai-application-with-evals",
+    "objectID": "courses.html#ai-evals-for-engineers",
+    "href": "courses.html#ai-evals-for-engineers",
     "title": "Courses",
-    "section": "Consitently Improving Any AI Application With Evals",
-    "text": "Consitently Improving Any AI Application With Evals\nLearn a systematic approaches for improving AI applications, regardless of the domain or use-case. A 4-week course with weekly live sessions. See the course page here."
+    "section": "AI Evals For Engineers",
+    "text": "AI Evals For Engineers\nLearn a systematic approaches for improving AI applications, regardless of the domain or use-case. A 4-week course with weekly live sessions. See the course page here."
   },
   {
     "objectID": "courses.html#ai-essentials-for-tech-executives",
@@ -151,7 +151,7 @@
     "href": "index.html",
     "title": "What We’ve Learned From A Year of Building with LLMs",
     "section": "",
-    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\nRapidly Improve AI Products With Evals\nSystematically Improving RAG Applications\nMastering LLMs\nAI Essentials for Tech Executives\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
+    "text": "See Our Courses on Building with LLMs\n\n\n\nWe have a series of courses that cover some of these topics in more depth.\n\nAI Evals For Engineers\nSystematically Improving RAG Applications\nMastering LLMs\nAI Essentials for Tech Executives\nIt’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they’re getting better and cheaper every year. Coupled with a parade of demos on social media, there will be an estimated $200B investment in AI by 2025. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.\nWe’ve spent the past year building, and have discovered many sharp edges along the way. While we don’t claim to speak for the entire industry, we’d like to share what we’ve learned to help you avoid our mistakes and iterate faster. These are organized into three sections:\nWe intend to make this a practical guide to building successful products with LLMs, drawing from our own experiences and pointing to examples from around the industry.\nReady to delve dive in? Let’s go."
   },
   {
     "objectID": "index.html#prompting",
