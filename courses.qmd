@@ -4,13 +4,13 @@ description: "Courses By The Authors"
 metadata-files: ["_subscribe.yml"]
 ---
 
+## AI Evals For Engineers & Technical PMs
+
+Learn a systematic approaches for improving AI applications, regardless of the domain or use-case.  A 4-week course with weekly live sessions. See [the course page here](https://maven.com/parlance-labs/evals).
+
 ## Mastering LLMs
 
 All of the authors of "What We've Learned From A Year of Building with LLMs" are instructors in an online course covering RAG, fine-tuning, evals, building applications and more.  **The material is [available for free here](https://parlance-labs.com/education/).**
-
-## AI Evals For Engineers
-
-Learn a systematic approaches for improving AI applications, regardless of the domain or use-case.  A 4-week course with weekly live sessions. See [the course page here](https://maven.com/parlance-labs/evals).
 
 ## AI Essentials for Tech Executives
 
