@@ -6,7 +6,7 @@ metadata-files: ["_subscribe.yml"]
 
 ## AI Evals For Engineers & Technical PMs
 
-Learn a systematic approaches for improving AI applications, regardless of the domain or use-case.  A 4-week course with weekly live sessions. See [the course page here](https://maven.com/parlance-labs/evals).
+Learn a systematic approaches for improving AI applications, regardless of the domain or use-case.  A 4-week course with weekly live sessions. See [the course page is here, 10% off code for applied-llms readers](https://maven.com/parlance-labs/evals?promoCode=applied-llms).
 
 ## Mastering LLMs
 
