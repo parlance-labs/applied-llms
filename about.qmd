@@ -13,7 +13,7 @@ Eugene Yan designs, builds, and operates machine learning systems that serve cus
 
 ![](images/bryan.jpg){width=70 style="float:left"} 
 
-Bryan Bischof is the Head of AI at Hex, where he leads the team of engineers building Magic – the data science and analytics copilot. Bryan has worked all over the data stack leading teams in analytics, machine learning engineering, data platform engineering, and AI engineering. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D. is in pure mathematics. 
+Bryan leads AI at Theory. Bryan has worked all across the data, ML, and AI stacks. Most recently, Bryan Bischof was the Head of AI at Hex, where he led the team of engineers building Magic—the data science and analytics copilot. He started the data team at Blue Bottle Coffee, led several projects at Stitch Fix, and built the data teams at Weights and Biases. Bryan previously co-authored the book Building Production Recommendation Systems with O’Reilly, and teaches Data Science and Analytics in the graduate school at Rutgers. His Ph.D. is in pure mathematics.
 
 ## Charles Frye
 
