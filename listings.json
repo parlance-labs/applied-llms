@@ -1,14 +1,14 @@
 [
   {
-    "listing": "/talks/index.html",
-    "items": [
-      "/talks/applications/index.html"
-    ]
-  },
-  {
     "listing": "/talks/applications/index.html",
     "items": [
       "/talks/applications/simon_llm_cli/index.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/applications/index.html"
     ]
   }
 ]
