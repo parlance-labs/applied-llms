@@ -6,8 +6,8 @@ image: images/hamel_cover_img.png
 toc: true
 number-sections: true
 date: 2024-06-08
-metadata-files: 
-    - "_subscribe.yml"
+metadata-files:
+    - "_evals-guide.yml"
 author:
     - name: "Eugene Yan"
       url: "https://eugeneyan.com"
@@ -29,18 +29,6 @@ format:
       utterances:
         repo: parlance-labs/applied-llms
 ---
-
-:::{.callout-important}
-## See Our Courses on Building with LLMs
-
-**We have a [series of courses](courses.qmd) that cover some of these topics in more depth.** 
-
-1. [Rapidly Improve AI Products With Evals](https://maven.com/parlance-labs/evals)
-2. [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook)
-3. [Mastering LLMs](https://hamel.dev/blog/posts/course/)
-4. [AI Essentials for Tech Executives](https://ai-execs.com)
-
-:::
 
 It’s an exciting time to build with large language models (LLMs). Over the past year, LLMs have become “good enough” for real-world applications. And they're getting better and cheaper every year.  Coupled with a parade of demos on social media, there will be an [estimated $200B investment in AI by 2025](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html){target="_blank}. Furthermore, provider APIs have made LLMs more accessible, allowing everyone, not just ML engineers and scientists, to build intelligence into their products. Nonetheless, while the barrier to entry for building with AI has been lowered, creating products and systems that are effective—beyond a demo—remains deceptively difficult.
 
@@ -294,6 +282,14 @@ Here’s an example of a [simple but effective approach](https://hamel.dev/blog/
 LLM-as-Judge is not a silver bullet though. There are subtle aspects of language where even the strongest models fail to evaluate reliably. In addition, we've found that [conventional classifiers](https://eugeneyan.com/writing/finetuning/) and reward models can achieve higher accuracy than LLM-as-Judge, and with lower cost and latency. For code generation, LLM-as-Judge can be weaker than more direct evaluation strategies like execution-evaluation.
 
 > [Read more](https://eugeneyan.com/writing/llm-evaluators/) on techniques, alignment workflows, finetuning models, critiques, etc. for LLM-evaluators
+
+<!-- EVALS INLINE CTA START (Evaluation & Monitoring section) -->
+:::{.callout-tip .evals-inline-cta}
+Want to do this on your own stack with feedback from people who do it for a living? Hamel and Shreya teach a 4-week live course covering error analysis, judge calibration, and the rest of what's in this section.
+
+[**See cohort dates & syllabus →**](https://evals.info)
+:::
+<!-- EVALS INLINE CTA END -->
 
 ### The “intern test” for evaluating generations
 
@@ -710,7 +706,15 @@ Take, for example, self-driving cars. The first car was driven by a neural netwo
 
 Across industry and academia, we've observed the ups and downs for the past year: Year 1 of N for LLM applications. We hope that the lessons we've learned—from [tactics](#tactical-nuts-bolts-of-working-with-llms) like evals, prompt engineering, and guardrails, to [operational](#operational-day-to-day-and-org-concerns) techniques and building teams to [strategic](#strategy-building-with-llms-without-getting-out-maneuvered) perspectives like which capabilities to build internally—help you in year 2 and beyond, as we all build on this exciting new technology together.
 
---- 
+<!-- BOTTOM CTA START -->
+:::{.callout-important .bottom-cta}
+If you got something out of this, two of us (Hamel and Shreya) teach a live course where engineers and technical PMs actually build the eval system for an app they're working on. 4 weeks, about 3–4 hrs/week.
+
+[**See cohort dates & syllabus →**](https://evals.info)
+:::
+<!-- BOTTOM CTA END -->
+
+---
 
 # Stay In Touch
 

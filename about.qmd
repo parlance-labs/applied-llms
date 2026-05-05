@@ -1,6 +1,6 @@
 ---
 title: "About The Authors"
-metadata-files: ["_subscribe.yml"]
+metadata-files: ["_evals-guide.yml"]
 ---
 
 ## Eugene Yan

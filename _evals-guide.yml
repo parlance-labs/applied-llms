@@ -1,0 +1,21 @@
+margin-footer: |
+  <div class="margin-evals-guide">
+    <a href="https://evals.info">New: AI Evals course by the authors →</a>
+  </div>
+  <style>
+    .margin-evals-guide {
+      padding: 0.7em 0.9em;
+      border-left: 4px solid #375a7f;
+      background-color: rgba(55, 90, 127, 0.08);
+      border-radius: 0 4px 4px 0;
+      font-size: 1em;
+    }
+    .margin-evals-guide a {
+      color: #375a7f;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .margin-evals-guide a:hover {
+      text-decoration: underline;
+    }
+  </style>

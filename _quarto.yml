@@ -10,14 +10,7 @@ website:
   open-graph: true
   navbar:
     left:
-      - text: Courses
-        file: courses.qmd
-      - text: Services
-        file: services.qmd
-      - text: Job Board
-        href: https://jobs.applied-llms.org/
-        target: _blank
-      - text: Team
+      - text: Authors
         file: about.qmd
   repo-url: https://github.com/parlance-labs/applied-llms
   site-url: https://applied-llms.org
